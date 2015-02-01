@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "508909301A74311B00844EAC"
-               BuildableName = "willGiveIOSApp.app"
-               BlueprintName = "willGiveIOSApp"
-               ReferencedContainer = "container:willGiveIOSApp.xcodeproj">
+               BlueprintIdentifier = "5053C7FA1A7E034D00431CAD"
+               BuildableName = "NavigationBetweenViewControllers.app"
+               BlueprintName = "NavigationBetweenViewControllers"
+               ReferencedContainer = "container:NavigationBetweenViewControllers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "508909471A74311B00844EAC"
-               BuildableName = "willGiveIOSAppTests.xctest"
-               BlueprintName = "willGiveIOSAppTests"
-               ReferencedContainer = "container:willGiveIOSApp.xcodeproj">
+               BlueprintIdentifier = "5053C80F1A7E034D00431CAD"
+               BuildableName = "NavigationBetweenViewControllersTests.xctest"
+               BlueprintName = "NavigationBetweenViewControllersTests"
+               ReferencedContainer = "container:NavigationBetweenViewControllers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "508909471A74311B00844EAC"
-               BuildableName = "willGiveIOSAppTests.xctest"
-               BlueprintName = "willGiveIOSAppTests"
-               ReferencedContainer = "container:willGiveIOSApp.xcodeproj">
+               BlueprintIdentifier = "5053C80F1A7E034D00431CAD"
+               BuildableName = "NavigationBetweenViewControllersTests.xctest"
+               BlueprintName = "NavigationBetweenViewControllersTests"
+               ReferencedContainer = "container:NavigationBetweenViewControllers.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "508909301A74311B00844EAC"
-            BuildableName = "willGiveIOSApp.app"
-            BlueprintName = "willGiveIOSApp"
-            ReferencedContainer = "container:willGiveIOSApp.xcodeproj">
+            BlueprintIdentifier = "5053C7FA1A7E034D00431CAD"
+            BuildableName = "NavigationBetweenViewControllers.app"
+            BlueprintName = "NavigationBetweenViewControllers"
+            ReferencedContainer = "container:NavigationBetweenViewControllers.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +75,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "508909301A74311B00844EAC"
-            BuildableName = "willGiveIOSApp.app"
-            BlueprintName = "willGiveIOSApp"
-            ReferencedContainer = "container:willGiveIOSApp.xcodeproj">
+            BlueprintIdentifier = "5053C7FA1A7E034D00431CAD"
+            BuildableName = "NavigationBetweenViewControllers.app"
+            BlueprintName = "NavigationBetweenViewControllers"
+            ReferencedContainer = "container:NavigationBetweenViewControllers.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "508909301A74311B00844EAC"
-            BuildableName = "willGiveIOSApp.app"
-            BlueprintName = "willGiveIOSApp"
-            ReferencedContainer = "container:willGiveIOSApp.xcodeproj">
+            BlueprintIdentifier = "5053C7FA1A7E034D00431CAD"
+            BuildableName = "NavigationBetweenViewControllers.app"
+            BlueprintName = "NavigationBetweenViewControllers"
+            ReferencedContainer = "container:NavigationBetweenViewControllers.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "508909301A74311B00844EAC"
-               BuildableName = "willGiveIOSApp.app"
-               BlueprintName = "willGiveIOSApp"
-               ReferencedContainer = "container:willGiveIOSApp.xcodeproj">
+               BlueprintIdentifier = "5053C9141A7EBF2500431CAD"
+               BuildableName = "TableView.app"
+               BlueprintName = "TableView"
+               ReferencedContainer = "container:TableView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "508909471A74311B00844EAC"
-               BuildableName = "willGiveIOSAppTests.xctest"
-               BlueprintName = "willGiveIOSAppTests"
-               ReferencedContainer = "container:willGiveIOSApp.xcodeproj">
+               BlueprintIdentifier = "5053C9291A7EBF2500431CAD"
+               BuildableName = "TableViewTests.xctest"
+               BlueprintName = "TableViewTests"
+               ReferencedContainer = "container:TableView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "508909471A74311B00844EAC"
-               BuildableName = "willGiveIOSAppTests.xctest"
-               BlueprintName = "willGiveIOSAppTests"
-               ReferencedContainer = "container:willGiveIOSApp.xcodeproj">
+               BlueprintIdentifier = "5053C9291A7EBF2500431CAD"
+               BuildableName = "TableViewTests.xctest"
+               BlueprintName = "TableViewTests"
+               ReferencedContainer = "container:TableView.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "508909301A74311B00844EAC"
-            BuildableName = "willGiveIOSApp.app"
-            BlueprintName = "willGiveIOSApp"
-            ReferencedContainer = "container:willGiveIOSApp.xcodeproj">
+            BlueprintIdentifier = "5053C9141A7EBF2500431CAD"
+            BuildableName = "TableView.app"
+            BlueprintName = "TableView"
+            ReferencedContainer = "container:TableView.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +75,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "508909301A74311B00844EAC"
-            BuildableName = "willGiveIOSApp.app"
-            BlueprintName = "willGiveIOSApp"
-            ReferencedContainer = "container:willGiveIOSApp.xcodeproj">
+            BlueprintIdentifier = "5053C9141A7EBF2500431CAD"
+            BuildableName = "TableView.app"
+            BlueprintName = "TableView"
+            ReferencedContainer = "container:TableView.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "508909301A74311B00844EAC"
-            BuildableName = "willGiveIOSApp.app"
-            BlueprintName = "willGiveIOSApp"
-            ReferencedContainer = "container:willGiveIOSApp.xcodeproj">
+            BlueprintIdentifier = "5053C9141A7EBF2500431CAD"
+            BuildableName = "TableView.app"
+            BlueprintName = "TableView"
+            ReferencedContainer = "container:TableView.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  willGiveIOSApp
+//  TableView
 //
-//  Created by Cyrus Zhang on 1/24/15.
+//  Created by Cyrus Zhang on 2/1/15.
 //  Copyright (c) 2015 Cyrus Zhang. All rights reserved.
 //
 
@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
         return true
     }
 
