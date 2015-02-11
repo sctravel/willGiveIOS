@@ -192,28 +192,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mh-aF-Hrd">
-                                <rect key="frame" x="0.0" y="449" width="600" height="51"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="J0T-1u-Wiz" kind="show" id="ZDf-hd-g2i"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="miF-cl-w5N" userLabel="innerView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mh-aF-Hrd">
+                                        <rect key="frame" x="0.0" y="436" width="600" height="51"/>
+                                        <color key="backgroundColor" white="0.80482456140350866" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="4GL-jn-Mwv"/>
+                                        </constraints>
+                                        <state key="normal" title="No QR code detected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="J0T-1u-Wiz" kind="show" id="ZDf-hd-g2i"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1mh-aF-Hrd" secondAttribute="trailing" id="27V-H8-9l4"/>
+                                    <constraint firstAttribute="bottom" secondItem="1mh-aF-Hrd" secondAttribute="bottom" id="9Hi-pa-4x1"/>
+                                    <constraint firstItem="1mh-aF-Hrd" firstAttribute="leading" secondItem="miF-cl-w5N" secondAttribute="leading" id="su2-ts-Jiz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1mh-aF-Hrd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Od3-C3-Uha"/>
-                            <constraint firstAttribute="bottom" secondItem="1mh-aF-Hrd" secondAttribute="bottom" constant="50" id="dxg-Jg-3Rq"/>
-                            <constraint firstAttribute="centerX" secondItem="1mh-aF-Hrd" secondAttribute="centerX" id="gp7-hG-KCE"/>
+                            <constraint firstAttribute="trailing" secondItem="miF-cl-w5N" secondAttribute="trailing" id="Ipk-TI-ygY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="miF-cl-w5N" secondAttribute="bottom" id="kmh-cY-K9A"/>
+                            <constraint firstItem="miF-cl-w5N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="p4z-tZ-E8F"/>
+                            <constraint firstItem="miF-cl-w5N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z4v-y9-458"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Scan QR Code" id="lOE-gt-Dhp"/>
                     <connections>
                         <outlet property="DetailPageButton" destination="1mh-aF-Hrd" id="S9Z-1K-Ogj"/>
+                        <outlet property="detailPageButton" destination="1mh-aF-Hrd" id="FnY-MO-JKE"/>
+                        <outlet property="innerView" destination="miF-cl-w5N" id="1kc-kJ-lhr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

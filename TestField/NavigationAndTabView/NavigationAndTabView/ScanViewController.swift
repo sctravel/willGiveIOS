@@ -10,9 +10,9 @@ import UIKit
 import AVFoundation
 
 class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-
-    @IBOutlet weak var DetailPageButton: UIButton!
     
+    @IBOutlet weak var innerView: UIView!
+    @IBOutlet weak var detailPageButton: UIButton!
     
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -78,24 +78,24 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
         videoPreviewLayer?.frame = view.layer.bounds
-        view.layer.addSublayer(videoPreviewLayer)
+        innerView.layer.addSublayer(videoPreviewLayer)
         
         // Start video capture.
         captureSession?.startRunning()
         
         // Move the message label to the top view
-        view.bringSubviewToFront(DetailPageButton)
+        innerView.bringSubviewToFront(detailPageButton)
+        
+        
+        NSLog("initialize GreenBox...")
+        
         
         // Initialize QR Code Frame to highlight the QR code
         qrCodeFrameView = UIView()
         qrCodeFrameView?.layer.borderColor = UIColor.greenColor().CGColor
         qrCodeFrameView?.layer.borderWidth = 2
-        view.addSubview(qrCodeFrameView!)
-        view.bringSubviewToFront(qrCodeFrameView!)
-        
-        
-        NSLog("in initializeGreenBox...")
-        
+        innerView.addSubview(qrCodeFrameView!)
+        innerView.bringSubviewToFront(qrCodeFrameView!)
 
     }
 
@@ -107,8 +107,9 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRectZero
-            DetailPageButton.setTitle("No QR code is detected", forState: UIControlState.Normal)
-            DetailPageButton.enabled = false
+            detailPageButton.setTitle("No QR code is detected", forState: UIControlState.Normal)
+            detailPageButton.backgroundColor = UIColor.grayColor();
+            detailPageButton.enabled = false
             return
         }
         
@@ -121,9 +122,10 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             qrCodeFrameView?.frame = barCodeObject.bounds;
             
             if metadataObj.stringValue != nil {
-                DetailPageButton.setTitle(metadataObj.stringValue
+                detailPageButton.setTitle(metadataObj.stringValue
 , forState: UIControlState.Normal)
-                DetailPageButton.enabled = true
+                detailPageButton.backgroundColor = UIColor.greenColor();
+                detailPageButton.enabled = true
             }
         }
     }
