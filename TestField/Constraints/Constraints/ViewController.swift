@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  NavigationAndTabView
+//  Constraints
 //
-//  Created by Cyrus Zhang on 1/31/15.
+//  Created by Cyrus Zhang on 2/10/15.
 //  Copyright (c) 2015 Cyrus Zhang. All rights reserved.
 //
 
@@ -20,6 +20,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func buttonTapped(sender: UIButton) {
+        if sender.titleForState(.Normal) == "X" {
+            sender.setTitle("A very long title for this button", forState: .Normal)
+        } else {
+            sender.setTitle("X", forState: .Normal)
+        }
+    }
+    
 }
 

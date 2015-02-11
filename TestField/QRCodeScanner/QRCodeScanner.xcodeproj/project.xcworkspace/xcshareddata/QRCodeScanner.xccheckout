@@ -14,11 +14,11 @@
 		<string>https://github.com/sctravel/willGiveIOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>QRCodeScanner/QRCodeScanner.xcodeproj</string>
+	<string>TestField/QRCodeScanner/QRCodeScanner.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0DD384CDEBB7287AD809439FC83D8948EC3AF239</key>
-		<string>../../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/sctravel/willGiveIOS.git</string>

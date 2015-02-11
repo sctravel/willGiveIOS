@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NavigationAndTabView/DetailPageViewController.swift"
+            timestampString = "444877471.590348"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NavigationAndTabView/Charity.swift"
+            timestampString = "444876178.515709"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "Charity"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NavigationAndTabView/ExploreTableViewController.swift"
+            timestampString = "444874767.639072"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ExploreTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NavigationAndTabView.ExploreTableViewController.Charities.getter : Swift.Array&lt;NavigationAndTabView.Charity&gt;"
+                  moduleName = "NavigationAndTabView"
+                  urlString = "file:///Users/cyruszhang/Documents/repo/willGiveIOS/TestField/NavigationAndTabView/NavigationAndTabView/ExploreTableViewController.swift"
+                  timestampString = "444876178.938645"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NavigationAndTabView.ExploreTableViewController.Charities.materializeForSet : Swift.Array&lt;NavigationAndTabView.Charity&gt;"
+                  moduleName = "NavigationAndTabView"
+                  urlString = "file:///Users/cyruszhang/Documents/repo/willGiveIOS/TestField/NavigationAndTabView/NavigationAndTabView/ExploreTableViewController.swift"
+                  timestampString = "444876178.939256"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NavigationAndTabView.ExploreTableViewController.init (NavigationAndTabView.ExploreTableViewController.Type)(style : C.UITableViewStyle) -&gt; NavigationAndTabView.ExploreTableViewController"
+                  moduleName = "NavigationAndTabView"
+                  urlString = "file:///Users/cyruszhang/Documents/repo/willGiveIOS/TestField/NavigationAndTabView/NavigationAndTabView/ExploreTableViewController.swift"
+                  timestampString = "444876178.939673"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NavigationAndTabView.ExploreTableViewController.init (NavigationAndTabView.ExploreTableViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; NavigationAndTabView.ExploreTableViewController"
+                  moduleName = "NavigationAndTabView"
+                  urlString = "file:///Users/cyruszhang/Documents/repo/willGiveIOS/TestField/NavigationAndTabView/NavigationAndTabView/ExploreTableViewController.swift"
+                  timestampString = "444876178.939996"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NavigationAndTabView.ExploreTableViewController.init (NavigationAndTabView.ExploreTableViewController.Type)() -&gt; NavigationAndTabView.ExploreTableViewController"
+                  moduleName = "NavigationAndTabView"
+                  urlString = "file:///Users/cyruszhang/Documents/repo/willGiveIOS/TestField/NavigationAndTabView/NavigationAndTabView/ExploreTableViewController.swift"
+                  timestampString = "444876178.940242"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NavigationAndTabView.ExploreTableViewController.init (NavigationAndTabView.ExploreTableViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; NavigationAndTabView.ExploreTableViewController"
+                  moduleName = "NavigationAndTabView"
+                  urlString = "file:///Users/cyruszhang/Documents/repo/willGiveIOS/TestField/NavigationAndTabView/NavigationAndTabView/ExploreTableViewController.swift"
+                  timestampString = "444876178.940484"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NavigationAndTabView/DetailPageViewController.swift"
+            timestampString = "444875069.665146"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "DetailPageViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NavigationAndTabView.DetailPageViewController.charity.getter : NavigationAndTabView.Charity"
+                  moduleName = "NavigationAndTabView"
+                  urlString = "file:///Users/cyruszhang/Documents/repo/willGiveIOS/TestField/NavigationAndTabView/NavigationAndTabView/DetailPageViewController.swift"
+                  timestampString = "444876191.883611"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NavigationAndTabView.DetailPageViewController.charity.materializeForSet : NavigationAndTabView.Charity"
+                  moduleName = "NavigationAndTabView"
+                  urlString = "file:///Users/cyruszhang/Documents/repo/willGiveIOS/TestField/NavigationAndTabView/NavigationAndTabView/DetailPageViewController.swift"
+                  timestampString = "444876191.884154"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NavigationAndTabView.DetailPageViewController.init (NavigationAndTabView.DetailPageViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; NavigationAndTabView.DetailPageViewController"
+                  moduleName = "NavigationAndTabView"
+                  urlString = "file:///Users/cyruszhang/Documents/repo/willGiveIOS/TestField/NavigationAndTabView/NavigationAndTabView/DetailPageViewController.swift"
+                  timestampString = "444876191.884367"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NavigationAndTabView.DetailPageViewController.init (NavigationAndTabView.DetailPageViewController.Type)() -&gt; NavigationAndTabView.DetailPageViewController"
+                  moduleName = "NavigationAndTabView"
+                  urlString = "file:///Users/cyruszhang/Documents/repo/willGiveIOS/TestField/NavigationAndTabView/NavigationAndTabView/DetailPageViewController.swift"
+                  timestampString = "444876191.884582"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NavigationAndTabView.DetailPageViewController.init (NavigationAndTabView.DetailPageViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; NavigationAndTabView.DetailPageViewController"
+                  moduleName = "NavigationAndTabView"
+                  urlString = "file:///Users/cyruszhang/Documents/repo/willGiveIOS/TestField/NavigationAndTabView/NavigationAndTabView/DetailPageViewController.swift"
+                  timestampString = "444876191.884789"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Constraints" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJf-MX-qRc">
+                                <rect key="frame" x="232" y="570" width="137" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="A pretty long button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yet-LA-rXy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bca-1K-hCR">
+                                <rect key="frame" x="178" y="570" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.26666668059999998" green="0.9215686917" blue="0.87843143940000001" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vYw-ic-xaS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ga1-Iz-6iI">
+                                <rect key="frame" x="232" y="519" width="137" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.98039221759999995" blue="0.2196078598" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fAr-Bd-5ho"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KJf-MX-qRc" firstAttribute="top" secondItem="Ga1-Iz-6iI" secondAttribute="bottom" constant="40" id="5pV-n1-hIe"/>
+                            <constraint firstAttribute="bottom" secondItem="KJf-MX-qRc" secondAttribute="bottom" id="8pB-da-yxD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bca-1K-hCR" secondAttribute="bottom" id="E9Q-Ic-hYh"/>
+                            <constraint firstItem="Ga1-Iz-6iI" firstAttribute="width" secondItem="KJf-MX-qRc" secondAttribute="width" id="EaC-vg-fgD"/>
+                            <constraint firstItem="Ga1-Iz-6iI" firstAttribute="centerX" secondItem="KJf-MX-qRc" secondAttribute="centerX" id="rEX-bH-k2w"/>
+                            <constraint firstItem="KJf-MX-qRc" firstAttribute="leading" secondItem="Bca-1K-hCR" secondAttribute="trailing" constant="8" id="rJq-5e-3Kx"/>
+                            <constraint firstAttribute="centerX" secondItem="KJf-MX-qRc" secondAttribute="centerX" id="vz0-aO-wCk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
