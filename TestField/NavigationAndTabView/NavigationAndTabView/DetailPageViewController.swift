@@ -11,7 +11,7 @@ import UIKit
 
 class DetailPageViewController: UIViewController {
 
-    var charity = Charity(Id: 0, Name: "PlaceHolder")
+    var charity = Charity(recipientId: 0, name: "PlaceHolder")
     
     @IBOutlet weak var IdLabel: UILabel!
     @IBOutlet weak var NameLabel: UILabel!
@@ -21,8 +21,8 @@ class DetailPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        IdLabel.text = "\(charity.Id!)"
-        NameLabel.text = charity.Name
+        IdLabel.text = "\(charity.recipientId)"
+        NameLabel.text = charity.name
         
         let Image = UIImage(named: "charitable_giving.jpg")
         ImageView.image = Image

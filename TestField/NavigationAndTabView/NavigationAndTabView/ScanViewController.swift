@@ -41,7 +41,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         NSLog("Getting in detail page")
         
         // pass data into the detail page
-        detailView.charity = Charity(Id: 10, Name: "World's best charity")
+        detailView.charity = Charity(recipientId: 10, name: "World's best charity")
     }
 
     func showQRscanWindow() {
@@ -84,6 +84,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         captureSession?.startRunning()
         
         // Move the message label to the top view
+        detailPageButton.enabled = false
         innerView.bringSubviewToFront(detailPageButton)
         
         

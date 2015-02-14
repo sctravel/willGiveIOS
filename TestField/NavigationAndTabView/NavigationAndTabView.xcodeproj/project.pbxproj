@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50020E601A8EFD3C00711685 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50020E5F1A8EFD3C00711685 /* Constants.swift */; };
 		501C59D41A81D3C60086A1D1 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C59D31A81D3C60086A1D1 /* DetailPageViewController.swift */; };
 		501C59D61A843EDC0086A1D1 /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C59D51A843EDC0086A1D1 /* ExploreTableViewController.swift */; };
 		501C59D81A843F250086A1D1 /* Charity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C59D71A843F250086A1D1 /* Charity.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		0B177FCA6D3ED9695BACE561 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		49D9D59348C0A667D35BB9B0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		50020E5F1A8EFD3C00711685 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		501C59D31A81D3C60086A1D1 /* DetailPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		501C59D51A843EDC0086A1D1 /* ExploreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreTableViewController.swift; sourceTree = "<group>"; };
 		501C59D71A843F250086A1D1 /* Charity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Charity.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				501C59D51A843EDC0086A1D1 /* ExploreTableViewController.swift */,
 				501C59D31A81D3C60086A1D1 /* DetailPageViewController.swift */,
 				501C59D71A843F250086A1D1 /* Charity.swift */,
+				50020E5F1A8EFD3C00711685 /* Constants.swift */,
 				501C59DD1A8865140086A1D1 /* MyApp-Bridging-Header.h */,
 			);
 			path = NavigationAndTabView;
@@ -292,6 +295,7 @@
 				501C59D81A843F250086A1D1 /* Charity.swift in Sources */,
 				5053C8351A7E0AC000431CAD /* ScanViewController.swift in Sources */,
 				5053C8331A7E0AC000431CAD /* AppDelegate.swift in Sources */,
+				50020E601A8EFD3C00711685 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
