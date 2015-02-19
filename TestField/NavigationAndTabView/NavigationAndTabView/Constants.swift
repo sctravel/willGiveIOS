@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
 let BaseGreen = UIColor(red :120/255.0, green : 220/255.0, blue : 150/255.0, alpha : 0.8)
 let BaseGray = UIColor(red: 210/255.0, green : 210/255.0, blue : 210/255.0, alpha : 1.0)
+
+let ServerAddress : String = "54.174.120.77"

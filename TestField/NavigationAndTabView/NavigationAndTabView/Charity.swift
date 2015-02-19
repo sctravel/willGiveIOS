@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 
 class Charity : NSObject {
@@ -45,4 +44,17 @@ class Charity : NSObject {
         self.name = "placeholder"
         super.init()
     }
+    
+    // https://github.com/RestKit/RestKit/issues/2155
+//    override func validateValue(ioValue: AutoreleasingUnsafeMutablePointer<AnyObject?>, forKeyPath inKeyPath: String, error outError: NSErrorPointer) -> Bool {
+//        NSLog("***********************  in validateValue")
+//        if let memory: AnyObject = ioValue.memory {
+//            if inKeyPath != "recipientId" && inKeyPath != "name" && ioValue.memory is NSNull {
+//                ioValue.memory = nil
+//                return true
+//            }
+//        }
+//        return super.validateValue(ioValue, forKeyPath: inKeyPath, error: outError)
+//    }
+    
 }

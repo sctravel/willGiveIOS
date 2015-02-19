@@ -27,50 +27,50 @@
 // RestKit
 #define COCOAPODS_POD_AVAILABLE_RestKit
 #define COCOAPODS_VERSION_MAJOR_RestKit 0
-#define COCOAPODS_VERSION_MINOR_RestKit 24
-#define COCOAPODS_VERSION_PATCH_RestKit 0
+#define COCOAPODS_VERSION_MINOR_RestKit 23
+#define COCOAPODS_VERSION_PATCH_RestKit 3
 
 // RestKit/Core
 #define COCOAPODS_POD_AVAILABLE_RestKit_Core
 #define COCOAPODS_VERSION_MAJOR_RestKit_Core 0
-#define COCOAPODS_VERSION_MINOR_RestKit_Core 24
-#define COCOAPODS_VERSION_PATCH_RestKit_Core 0
+#define COCOAPODS_VERSION_MINOR_RestKit_Core 23
+#define COCOAPODS_VERSION_PATCH_RestKit_Core 3
 
 // RestKit/CoreData
 #define COCOAPODS_POD_AVAILABLE_RestKit_CoreData
 #define COCOAPODS_VERSION_MAJOR_RestKit_CoreData 0
-#define COCOAPODS_VERSION_MINOR_RestKit_CoreData 24
-#define COCOAPODS_VERSION_PATCH_RestKit_CoreData 0
+#define COCOAPODS_VERSION_MINOR_RestKit_CoreData 23
+#define COCOAPODS_VERSION_PATCH_RestKit_CoreData 3
 
 // RestKit/Network
 #define COCOAPODS_POD_AVAILABLE_RestKit_Network
 #define COCOAPODS_VERSION_MAJOR_RestKit_Network 0
-#define COCOAPODS_VERSION_MINOR_RestKit_Network 24
-#define COCOAPODS_VERSION_PATCH_RestKit_Network 0
+#define COCOAPODS_VERSION_MINOR_RestKit_Network 23
+#define COCOAPODS_VERSION_PATCH_RestKit_Network 3
 
 // RestKit/ObjectMapping
 #define COCOAPODS_POD_AVAILABLE_RestKit_ObjectMapping
 #define COCOAPODS_VERSION_MAJOR_RestKit_ObjectMapping 0
-#define COCOAPODS_VERSION_MINOR_RestKit_ObjectMapping 24
-#define COCOAPODS_VERSION_PATCH_RestKit_ObjectMapping 0
+#define COCOAPODS_VERSION_MINOR_RestKit_ObjectMapping 23
+#define COCOAPODS_VERSION_PATCH_RestKit_ObjectMapping 3
 
 // RestKit/Search
 #define COCOAPODS_POD_AVAILABLE_RestKit_Search
 #define COCOAPODS_VERSION_MAJOR_RestKit_Search 0
-#define COCOAPODS_VERSION_MINOR_RestKit_Search 24
-#define COCOAPODS_VERSION_PATCH_RestKit_Search 0
+#define COCOAPODS_VERSION_MINOR_RestKit_Search 23
+#define COCOAPODS_VERSION_PATCH_RestKit_Search 3
 
 // RestKit/Support
 #define COCOAPODS_POD_AVAILABLE_RestKit_Support
 #define COCOAPODS_VERSION_MAJOR_RestKit_Support 0
-#define COCOAPODS_VERSION_MINOR_RestKit_Support 24
-#define COCOAPODS_VERSION_PATCH_RestKit_Support 0
+#define COCOAPODS_VERSION_MINOR_RestKit_Support 23
+#define COCOAPODS_VERSION_PATCH_RestKit_Support 3
 
 // RestKit/Testing
 #define COCOAPODS_POD_AVAILABLE_RestKit_Testing
 #define COCOAPODS_VERSION_MAJOR_RestKit_Testing 0
-#define COCOAPODS_VERSION_MINOR_RestKit_Testing 24
-#define COCOAPODS_VERSION_PATCH_RestKit_Testing 0
+#define COCOAPODS_VERSION_MINOR_RestKit_Testing 23
+#define COCOAPODS_VERSION_PATCH_RestKit_Testing 3
 
 // SOCKit
 #define COCOAPODS_POD_AVAILABLE_SOCKit

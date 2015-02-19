@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BVn-mz-UDj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QHz-QK-QH5">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -288,12 +288,87 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EvC-fn-O24" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1267.5" y="1219"/>
+            <point key="canvasLocation" x="1125" y="1207"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="8vn-tN-A5p">
+            <objects>
+                <navigationController id="QHz-QK-QH5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gbm-L9-W0n">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ysl-Dm-EVD" kind="relationship" relationship="rootViewController" id="2Jl-EM-P0j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="La2-Sc-tPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-944" y="1207"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="Q85-1M-WiF">
+            <objects>
+                <viewController id="Ysl-Dm-EVD" customClass="HomeViewController" customModule="NavigationAndTabView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M0O-Mc-8AH"/>
+                        <viewControllerLayoutGuide type="bottom" id="bBy-1i-4XS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lfw-bW-Bak">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="willGive" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yz-RM-seW">
+                                <rect key="frame" x="243" y="192" width="115" height="35"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                <color key="textColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAU-UV-jdX">
+                                <rect key="frame" x="250" y="327" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ii8-ot-iTg"/>
+                                </constraints>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="Ysl-Dm-EVD" eventType="touchUpInside" id="rtY-p9-gTO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3S3-gW-gpF">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SAU-UV-jdX" firstAttribute="centerX" secondItem="6yz-RM-seW" secondAttribute="centerX" constant="-0.5" id="A5C-dt-kct"/>
+                            <constraint firstItem="3S3-gW-gpF" firstAttribute="width" secondItem="lfw-bW-Bak" secondAttribute="width" id="IR7-Dr-8Sh"/>
+                            <constraint firstItem="3S3-gW-gpF" firstAttribute="centerX" secondItem="6yz-RM-seW" secondAttribute="centerX" constant="0.5" id="NtU-aI-aJ5"/>
+                            <constraint firstItem="3S3-gW-gpF" firstAttribute="top" secondItem="6yz-RM-seW" secondAttribute="bottom" constant="50" id="ZdK-LT-fg6"/>
+                            <constraint firstItem="SAU-UV-jdX" firstAttribute="top" secondItem="3S3-gW-gpF" secondAttribute="bottom" constant="50" id="ell-ue-Bay"/>
+                            <constraint firstAttribute="centerX" secondItem="6yz-RM-seW" secondAttribute="centerX" constant="-0.5" id="jTO-Tg-eUe"/>
+                            <constraint firstAttribute="centerY" secondItem="6yz-RM-seW" secondAttribute="centerY" constant="90" id="vvQ-TD-GmH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="2Nh-03-jxm"/>
+                    <connections>
+                        <outlet property="usernameLabel" destination="3S3-gW-gpF" id="iIl-S5-8St"/>
+                        <segue destination="BVn-mz-UDj" kind="modal" identifier="gotoLogin" id="lDF-a9-cuO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BiW-WE-0xD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-276" y="1207"/>
+        </scene>
+        <!--Login View Controller-->
         <scene sceneID="DbD-Qi-Cd2">
             <objects>
-                <viewController storyboardIdentifier="Login" id="BVn-mz-UDj" sceneMemberID="viewController">
+                <viewController id="BVn-mz-UDj" customClass="LoginViewController" customModule="NavigationAndTabView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BgC-Jg-c9P"/>
                         <viewControllerLayoutGuide type="bottom" id="6z9-3m-40y"/>
@@ -317,7 +392,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="1K6-Sa-vU4" kind="show" id="391-Oc-qX1"/>
+                                    <action selector="loginPressed:" destination="BVn-mz-UDj" eventType="touchUpInside" id="bYi-Qc-Is3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCh-93-3HD">
@@ -326,6 +401,9 @@
                                     <color key="titleColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebookPressed:" destination="BVn-mz-UDj" eventType="touchUpInside" id="1dL-Cf-ok8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKn-WD-eRO">
                                 <rect key="frame" x="480" y="295" width="54" height="30"/>
@@ -333,6 +411,9 @@
                                     <color key="titleColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgotPressed:" destination="BVn-mz-UDj" eventType="touchUpInside" id="RTB-QS-F9G"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vnx-qA-RVX">
                                 <rect key="frame" x="66" y="125" width="468" height="40"/>
@@ -376,15 +457,17 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="txtPassword" destination="avw-1O-IMS" id="FR1-SS-6c9"/>
+                        <outlet property="txtEmail" destination="vnx-qA-RVX" id="Ozi-KF-197"/>
+                        <outlet property="txtPassword" destination="avw-1O-IMS" id="L6A-rF-wXg"/>
+                        <segue destination="1K6-Sa-vU4" kind="show" identifier="gotoMainPage" id="8d6-FD-ydg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWk-GR-4gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="568" y="1219"/>
+            <point key="canvasLocation" x="393" y="1207"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qsG-yv-tCo"/>
+        <segue reference="ZDf-hd-g2i"/>
     </inferredMetricsTieBreakers>
 </document>

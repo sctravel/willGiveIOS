@@ -9,6 +9,4 @@
 #ifndef NavigationAndTabView_MyApp_Bridging_Header_h
 #define NavigationAndTabView_MyApp_Bridging_Header_h
 
-#import <RestKit/RestKit.h>
-
 #endif
