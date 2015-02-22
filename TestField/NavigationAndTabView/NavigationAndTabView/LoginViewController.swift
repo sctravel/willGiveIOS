@@ -20,7 +20,7 @@ class LoginViewController : UIViewController {
         self.txtEmail.resignFirstResponder()
         self.txtPassword.resignFirstResponder()
         
-        var email : String = self.txtEmail.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        var email : String = self.txtEmail.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).lowercaseString
         var password : String = self.txtPassword.text
        
         if ( email == "" || password == "" ) {
