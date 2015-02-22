@@ -412,13 +412,19 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signupPressed:" destination="CdQ-lw-zfs" eventType="touchUpInside" id="Jl1-pK-jq3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W52-fX-6gr">
                                 <rect key="frame" x="36" y="530" width="528" height="30"/>
-                                <state key="normal" title="Already have account? Sign in here">
+                                <state key="normal" title="Already have account? Log in here">
                                     <color key="titleColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="CdQ-lw-zfs" eventType="touchUpInside" id="92A-xy-kJ3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="willGive" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mu9-vM-e46">
                                 <rect key="frame" x="243" y="60" width="115" height="35"/>
@@ -462,6 +468,13 @@
                             <constraint firstItem="cIb-gT-hSw" firstAttribute="centerX" secondItem="IsQ-C2-SgE" secondAttribute="centerX" id="zIm-1E-XMY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="confirmPassword" destination="lPP-QE-o5W" id="ixH-jS-Igj"/>
+                        <outlet property="email" destination="cIb-gT-hSw" id="NIk-fb-Td7"/>
+                        <outlet property="firstName" destination="yZO-gD-O6r" id="Aou-TF-PUv"/>
+                        <outlet property="lastName" destination="yd3-Gj-AyL" id="Ac1-sW-A1W"/>
+                        <outlet property="password" destination="IsQ-C2-SgE" id="iLb-nn-0b9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k09-qc-OOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -538,6 +551,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signupPressed:" destination="BVn-mz-UDj" eventType="touchUpInside" id="nTn-DS-xeZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

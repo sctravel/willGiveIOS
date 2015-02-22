@@ -70,8 +70,12 @@ class LoginViewController : UIViewController {
         self.performSegueWithIdentifier("gotoMainPage", sender: self)
     }
     
-    
     @IBAction func forgotPressed(sender: AnyObject) {
         NSLog("Forgot button pressed")
     }
+    
+    @IBAction func signupPressed(sender: AnyObject) {
+        self.performSegueWithIdentifier("gotoSignUp", sender: self)
+    }
+    
 }
