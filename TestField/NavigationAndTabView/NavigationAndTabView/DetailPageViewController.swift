@@ -11,21 +11,33 @@ import UIKit
 
 class DetailPageViewController: UIViewController {
 
-    var charity = Charity(recipientId: 0, name: "PlaceHolder")
+    var charity : NSDictionary?
     
     @IBOutlet weak var IdLabel: UILabel!
     @IBOutlet weak var NameLabel: UILabel!
-    // @IBOutlet weak var Image: UIImageView!
     @IBOutlet weak var ImageView: UIImageView!
     
     override func viewDidLoad() {
+        
+        NSLog("in detail page - viewDidLoad")
+        
         super.viewDidLoad()
         
-        IdLabel.text = "\(charity.recipientId)"
-        NameLabel.text = charity.name
+        NSLog("in detail page - viewDidLoad - superview loaded")
         
-        let Image = UIImage(named: "charitable_giving.jpg")
-        ImageView.image = Image
+        if(charity != nil) {
+            var recipientId = charity!["recipient_id"] as Int?
+            var name = charity!["name"] as String?
+            
+            NSLog("recipientId: \(recipientId)")
+            NSLog("name: \(name)")
+            
+            IdLabel.text = "\(recipientId)"
+            NameLabel.text = name
+            
+            let Image = UIImage(named: "charitable_giving.jpg")
+            ImageView.image = Image
+        }
     }
     
     override func viewWillAppear(animated: Bool) {

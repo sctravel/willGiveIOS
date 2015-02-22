@@ -18,11 +18,13 @@
 		5053C83A1A7E0AC000431CAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5053C8391A7E0AC000431CAD /* Images.xcassets */; };
 		5053C83D1A7E0AC000431CAD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5053C83B1A7E0AC000431CAD /* LaunchScreen.xib */; };
 		5053C8491A7E0AC000431CAD /* NavigationAndTabViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5053C8481A7E0AC000431CAD /* NavigationAndTabViewTests.swift */; };
+		509E61A21A991B950042008C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509E61A11A991B950042008C /* SignupViewController.swift */; };
 		50CBB5151A94367A00DDEA85 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBB5141A94367A00DDEA85 /* HomeViewController.swift */; };
 		50CBB5171A9469D400DDEA85 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBB5161A9469D400DDEA85 /* User.swift */; };
-		50CBB5191A94760600DDEA85 /* UserCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBB5181A94760600DDEA85 /* UserCredential.swift */; };
 		50DE37011A968F67004599D3 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DE37001A968F67004599D3 /* Alamofire.swift */; };
 		50DE37041A96931F004599D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50DE37021A96931F004599D3 /* Main.storyboard */; };
+		50DE37061A96956E004599D3 /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DE37051A96956E004599D3 /* RegexHelper.swift */; };
+		50DE37081A96963A004599D3 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DE37071A96963A004599D3 /* AlertHelper.swift */; };
 		94BE285AB180748E64B7E1EF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A23F23AF5C8AFC6EB41F978 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,11 +57,13 @@
 		5053C8421A7E0AC000431CAD /* NavigationAndTabViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationAndTabViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5053C8471A7E0AC000431CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5053C8481A7E0AC000431CAD /* NavigationAndTabViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAndTabViewTests.swift; sourceTree = "<group>"; };
+		509E61A11A991B950042008C /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		50CBB5141A94367A00DDEA85 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		50CBB5161A9469D400DDEA85 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		50CBB5181A94760600DDEA85 /* UserCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCredential.swift; sourceTree = "<group>"; };
 		50DE37001A968F67004599D3 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Lib/Alamofire.swift; sourceTree = "<group>"; };
 		50DE37031A96931F004599D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		50DE37051A96956E004599D3 /* RegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexHelper.swift; sourceTree = "<group>"; };
+		50DE37071A96963A004599D3 /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		6A23F23AF5C8AFC6EB41F978 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -105,21 +109,23 @@
 		5053C82F1A7E0AC000431CAD /* NavigationAndTabView */ = {
 			isa = PBXGroup;
 			children = (
-				50DE37021A96931F004599D3 /* Main.storyboard */,
 				50DE37001A968F67004599D3 /* Alamofire.swift */,
 				5053C8321A7E0AC000431CAD /* AppDelegate.swift */,
+				50DE37021A96931F004599D3 /* Main.storyboard */,
 				5053C8391A7E0AC000431CAD /* Images.xcassets */,
 				5053C83B1A7E0AC000431CAD /* LaunchScreen.xib */,
 				5053C8301A7E0AC000431CAD /* Supporting Files */,
 				50CBB5141A94367A00DDEA85 /* HomeViewController.swift */,
 				50020E631A8FB86F00711685 /* LoginViewController.swift */,
+				509E61A11A991B950042008C /* SignupViewController.swift */,
 				5053C8341A7E0AC000431CAD /* ScanViewController.swift */,
 				501C59D51A843EDC0086A1D1 /* ExploreTableViewController.swift */,
 				501C59D31A81D3C60086A1D1 /* DetailPageViewController.swift */,
 				501C59D71A843F250086A1D1 /* Charity.swift */,
 				50CBB5161A9469D400DDEA85 /* User.swift */,
-				50CBB5181A94760600DDEA85 /* UserCredential.swift */,
 				50020E5F1A8EFD3C00711685 /* Constants.swift */,
+				50DE37051A96956E004599D3 /* RegexHelper.swift */,
+				50DE37071A96963A004599D3 /* AlertHelper.swift */,
 				501C59DD1A8865140086A1D1 /* MyApp-Bridging-Header.h */,
 			);
 			path = NavigationAndTabView;
@@ -305,17 +311,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50DE37081A96963A004599D3 /* AlertHelper.swift in Sources */,
 				50020E641A8FB86F00711685 /* LoginViewController.swift in Sources */,
 				501C59D61A843EDC0086A1D1 /* ExploreTableViewController.swift in Sources */,
 				501C59D41A81D3C60086A1D1 /* DetailPageViewController.swift in Sources */,
 				50CBB5151A94367A00DDEA85 /* HomeViewController.swift in Sources */,
 				501C59D81A843F250086A1D1 /* Charity.swift in Sources */,
-				50CBB5191A94760600DDEA85 /* UserCredential.swift in Sources */,
 				50CBB5171A9469D400DDEA85 /* User.swift in Sources */,
 				5053C8351A7E0AC000431CAD /* ScanViewController.swift in Sources */,
 				50DE37011A968F67004599D3 /* Alamofire.swift in Sources */,
+				509E61A21A991B950042008C /* SignupViewController.swift in Sources */,
 				5053C8331A7E0AC000431CAD /* AppDelegate.swift in Sources */,
 				50020E601A8EFD3C00711685 /* Constants.swift in Sources */,
+				50DE37061A96956E004599D3 /* RegexHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

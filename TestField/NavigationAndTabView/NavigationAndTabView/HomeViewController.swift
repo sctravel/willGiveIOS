@@ -21,14 +21,25 @@ class HomeViewController : UIViewController {
         if (isLoggedIn != 1) {
             self.performSegueWithIdentifier("gotoLogin", sender: self)
         } else {
-            self.usernameLabel.text = prefs.valueForKey("USERNAME") as NSString
+            var email = prefs.valueForKey("USERNAME") as NSString
+            self.usernameLabel.text = email
+            NSLog("Already logged in as: \(email)")
+            
+            sleep(1)
+            var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+            // prefs.setInteger(0, forKey: "ISLOGGEDIN")
+            
+            self.performSegueWithIdentifier("gotoMainPage", sender: self)
         }
     }
 
     @IBAction func logoutPressed(sender: AnyObject) {
+        clearUserSession()
+        self.performSegueWithIdentifier("gotoLogin", sender: self)
+    }
+    
+    func clearUserSession() {
         let appDomain = NSBundle.mainBundle().bundleIdentifier
         NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain!)
-        
-        self.performSegueWithIdentifier("gotoLogin", sender: self)
     }
 }

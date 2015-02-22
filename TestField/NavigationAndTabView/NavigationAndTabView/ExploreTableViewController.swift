@@ -11,7 +11,7 @@ import UIKit
 
 class ExploreTableViewController: UITableViewController {
     
-    var Charities = [Charity]()
+    var charities = [NSDictionary]()
     @IBOutlet weak var Label: UILabel!
     
     override func viewDidLoad() {
@@ -24,104 +24,49 @@ class ExploreTableViewController: UITableViewController {
         
         NSLog("******** in populateCharities ********")
         
-//        // mapping is "JsonPath":"AttributeInObject"
-//        let mapDict = [
-//            "recipient_id":"recipientId",
-//            "name":"name",
-//            "status":"status",
-//            "email":"email",
-//            "EIN":"EIN",
-//            "address":"address",
-//            "zipcode":"zipcode",
-//            "city":"city",
-//            "state":"state",
-//            "country":"country",
-//            "phone":"phone",
-//            "fax":"fax",
-//            "website":"website",
-//            "mission":"mission",
-//            "facebookUrl":"facebookUrl",
-//            "videoUrl":"videoUrl",
-//            "imageUrl":"imageUrl",
-//            "contactPersonName":"contactPersonName",
-//            "contactPersonTitle":"contactPersonTitle",
-//            "imagePath":"imagePath",
-//            "rating":"rating"]
-//        
-//        let charityMapping = RKObjectMapping(forClass: Charity.self)
-//        charityMapping.addAttributeMappingsFromDictionary(mapDict)
-//        NSLog("\(charityMapping.objectClass)")
-//        
-//        let responseDescriptor = RKResponseDescriptor(
-//            mapping: charityMapping,
-//            method: RKRequestMethod.GET,
-//            pathPattern: nil,
-//            keyPath: nil,
-//            statusCodes: nil
-//        )
-//        
-//        let request = NSURLRequest(URL: NSURL(scheme: "https", host: "54.174.120.77", path: "/services/charities/listAllCharity?start=1&count=10")!)
-//        
-//        let operation = RKObjectRequestOperation(request: request, responseDescriptors: [responseDescriptor])
-//        
-//        operation.setCompletionBlockWithSuccess(
-//            { (optration, result) -> Void in
-//                NSLog("in success")
-//                let data : [Charity] = result!.array() as [Charity]
-//                /* Here the data is the rest response mapped as an array of FlashCard objects */
-//                
-//                NSLog("retrieved \(data.count) records")
-//                
-//                self.Charities.append(data[0])
-//                self.Charities.append(data[1])
-//                self.Charities.append(data[2])
-//                self.Charities.append(data[3])
-//                self.Charities.append(data[4])
-//
-//                NSLog("records in self.Charities")
-//                
-//                self.tableView.reloadData()
-//                
-//                NSLog("tableView reloaded")
-//                
-//            }, failure: { (operation, error) -> Void in
-//                NSLog("ERRRRRRRRRROR: \(error)")
-//            })
-//        
-//        NSLog("******** starting GET request ********")
-//        
-//        operation.start()
-//        operation.waitUntilFinished()
-//        
-//        NSLog("******** finishing GET request ********")
+        request(.GET, ListCharityURL, parameters: ["start":0, "count":10])
+            .responseJSON { (request, response, JSON, error) in
+                println("request: \(request)")
+                println("response: \(response)")
+                // TODO furhter drill down of error scenarios, based on response.statusCode
+                if(error != nil || JSON == nil) {
+                    showAlert("Failed to retrieve data", "Please check your network connection", self)
+                    NSLog(error!.localizedDescription)
+                }
+                else {
+                    var resp = JSON! as [NSDictionary]
+                    resp.map({self.charities.append($0)})
+                    self.tableView.reloadData()
+                }
+        }
         
     }
     
     
     // missing this function will not properly render the cells
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Charities.count
+        return charities.count
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var Cell = self.tableView.dequeueReusableCellWithIdentifier("CharityCell", forIndexPath: indexPath) as UITableViewCell
-        
-        Cell.textLabel?.text = Charities[indexPath.row].name
-        
+        Cell.textLabel?.text = charities[indexPath.row]["name"] as? String
         return Cell
     }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
+        NSLog("prepare for segue")
+        
         var indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow()!
-        
-        NSLog("Getting in \(Charities[indexPath.row].name)")
-        
         var destView = segue.destinationViewController as DetailPageViewController
         
-        destView.charity = Charities[indexPath.row]
+        NSLog("Selected charity: \(charities[indexPath.row])")
+        
+        destView.charity = charities[indexPath.row]
+        
+        NSLog("destView.charity populated")
     }
 
     
