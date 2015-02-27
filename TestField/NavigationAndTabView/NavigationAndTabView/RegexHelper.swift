@@ -27,3 +27,10 @@ func matchesRegexInText(regex: String!, text: String!) -> Bool {
     }
     return false
 }
+
+func deleteRegexMatches(regex: String!, text: String!) -> String? {
+    let regex = NSRegularExpression(pattern: regex, options: nil, error: nil)
+    let nsString = text as NSString
+    let ret = regex?.stringByReplacingMatchesInString(nsString, options: nil, range: NSMakeRange(0, nsString.length), withTemplate: "")
+    return ret!
+}

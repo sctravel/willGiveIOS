@@ -11,7 +11,10 @@ import UIKit
 
 class ExploreTableViewController: UITableViewController {
     
+    let imageCache = NSCache()
     var charities = [NSDictionary]()
+    var didAnimateCell:[NSIndexPath: Bool] = [:]
+    
     @IBOutlet weak var Label: UILabel!
     
     override func viewDidLoad() {
@@ -42,6 +45,12 @@ class ExploreTableViewController: UITableViewController {
         
     }
     
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if didAnimateCell[indexPath] == nil || didAnimateCell[indexPath]! == false {
+            didAnimateCell[indexPath] = true
+            TipInCellAnimator.animate(cell)
+        }
+    }
     
     // missing this function will not properly render the cells
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,9 +59,39 @@ class ExploreTableViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var Cell = self.tableView.dequeueReusableCellWithIdentifier("CharityCell", forIndexPath: indexPath) as UITableViewCell
-        Cell.textLabel?.text = charities[indexPath.row]["name"] as? String
-        return Cell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("CharityCell", forIndexPath: indexPath) as CharityTableCell
+        
+        NSLog("Populating cell")
+        cell.populate(charities[indexPath.row])
+        
+        // add image for the cell view
+//        if let image = self.imageCache.objectForKey(imageURL!) as? UIImage {
+//            cell.imageView.image = image
+//        } else {
+//            // 3
+//            cell.imageView.image = nil
+//            
+//            // 4
+//            cell.request = Alamofire.request(.GET, imageURL).validate(contentType: ["image/*"]).responseImage() {
+//                (request, _, image, error) in
+//                if error == nil && image != nil {
+//                    // 5
+//                    self.imageCache.setObject(image!, forKey: request.URLString)
+//                    
+//                    // 6
+//                    if request.URLString == cell.request?.request.URLString {
+//                        cell.imageView.image = image
+//                    }
+//                } else {
+//                    /*
+//                    If the cell went off-screen before the image was downloaded, we cancel it and
+//                    an NSURLErrorDomain (-999: cancelled) is returned. This is a normal behavior.
+//                    */
+//                }
+//            }
+//        }
+        
+        return cell
     }
     
     

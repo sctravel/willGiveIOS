@@ -34,14 +34,14 @@ import Foundation
 //    var rating : Int?
 
 
-func getCharityRecipientId (charity : NSDictionary) -> String
+func getCharityRecipientId (charity : NSDictionary) -> Int?
 {
-    return charity["recipient_id"] as String
+    return doGetAttributeIntOptional(charity, "recipient_id")
 }
 
-func getCharityName (charity : NSDictionary) -> String
+func getCharityName (charity : NSDictionary?) -> String?
 {
-    return charity["name"] as String
+    return doGetAttributeStringOptional(charity, "name")
 }
 
 func getCharityStatus (charity : NSDictionary) -> String?
@@ -49,13 +49,43 @@ func getCharityStatus (charity : NSDictionary) -> String?
     return charity["status"] as String?
 }
 
-func getImageUrl (charity : NSDictionary) -> String?
+func getCharityImageUrl (charity : NSDictionary) -> String?
 {
     return charity["imageUrl"] as String?
 }
 
+func getCharityImagePath (charity : NSDictionary?) -> String?
+{
+    return doGetAttributeStringOptional(charity!, "imagePath")
+}
 
+func getCharityMissionText (charity : NSDictionary?) -> String?
+{
+    return doGetAttributeStringOptional(charity, "mission")
+}
 
+func getCharityUrl (charity : NSDictionary?) -> String?
+{
+    return doGetAttributeStringOptional(charity, "website")
+}
+
+func getCharityPhone (charity : NSDictionary?) -> String? {
+    let phone = doGetAttributeStringOptional(charity, "phone")
+    if phone != nil { return deleteRegexMatches("[^0-9]", phone) }
+    return nil
+}
+
+func doGetAttributeStringOptional(charity : NSDictionary?, attr : String) -> String?
+{
+    if(charity == nil) { return nil as String? }
+    return charity![attr] as String?
+}
+
+func doGetAttributeIntOptional(charity : NSDictionary?, attr : String) -> Int?
+{
+    if(charity == nil) { return nil as Int? }
+    return charity![attr] as Int?
+}
 
 
 

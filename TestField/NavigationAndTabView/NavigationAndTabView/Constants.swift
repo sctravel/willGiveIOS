@@ -17,3 +17,5 @@ let SignInURL : String = "https://" + ServerAddress + "/services/login/mobileSig
 let ListCharityURL : String = "https://" + ServerAddress + "/services/charities/listAllCharity"
 
 let EmailRegex = ".*@.*\\.[a-z]+"
+
+let ImageCache = NSCache()
