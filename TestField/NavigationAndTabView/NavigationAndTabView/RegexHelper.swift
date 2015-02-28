@@ -34,3 +34,4 @@ func deleteRegexMatches(regex: String!, text: String!) -> String? {
     let ret = regex?.stringByReplacingMatchesInString(nsString, options: nil, range: NSMakeRange(0, nsString.length), withTemplate: "")
     return ret!
 }
+

@@ -30,6 +30,8 @@
 		50E82AD31A9EFBB3003ECCA2 /* TipInCellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E82AD21A9EFBB3003ECCA2 /* TipInCellAnimator.swift */; };
 		50E82AD51A9EFC30003ECCA2 /* CharityTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E82AD41A9EFC30003ECCA2 /* CharityTableCell.swift */; };
 		50E82AD71A9F017A003ECCA2 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E82AD61A9F017A003ECCA2 /* ImageHelper.swift */; };
+		50E82AD91AA02B67003ECCA2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E82AD81AA02B67003ECCA2 /* StringExtension.swift */; };
+		50F41ECF1AA22DAD006ED7B2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F41ECE1AA22DAD006ED7B2 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		50E82AD21A9EFBB3003ECCA2 /* TipInCellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipInCellAnimator.swift; sourceTree = "<group>"; };
 		50E82AD41A9EFC30003ECCA2 /* CharityTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharityTableCell.swift; sourceTree = "<group>"; };
 		50E82AD61A9F017A003ECCA2 /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		50E82AD81AA02B67003ECCA2 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		50F41ECE1AA22DAD006ED7B2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 				501C59D51A843EDC0086A1D1 /* ExploreTableViewController.swift */,
 				50E82AD41A9EFC30003ECCA2 /* CharityTableCell.swift */,
 				50E82AD21A9EFBB3003ECCA2 /* TipInCellAnimator.swift */,
+				50F41ECE1AA22DAD006ED7B2 /* ProfileViewController.swift */,
 				501C59D31A81D3C60086A1D1 /* DetailPageViewController.swift */,
 				50E82AD01A9EE6F5003ECCA2 /* DetailWebViewController.swift */,
 				50020E5F1A8EFD3C00711685 /* Constants.swift */,
@@ -134,6 +139,7 @@
 				50E82AD61A9F017A003ECCA2 /* ImageHelper.swift */,
 				50DE37051A96956E004599D3 /* RegexHelper.swift */,
 				5055FD501A9D9C6200E4D6A4 /* AlamofireExtension.swift */,
+				50E82AD81AA02B67003ECCA2 /* StringExtension.swift */,
 				501C59DD1A8865140086A1D1 /* MyApp-Bridging-Header.h */,
 			);
 			path = NavigationAndTabView;
@@ -269,6 +275,7 @@
 			files = (
 				50DE37081A96963A004599D3 /* AlertHelper.swift in Sources */,
 				50E82AD31A9EFBB3003ECCA2 /* TipInCellAnimator.swift in Sources */,
+				50F41ECF1AA22DAD006ED7B2 /* ProfileViewController.swift in Sources */,
 				50020E641A8FB86F00711685 /* LoginViewController.swift in Sources */,
 				501C59D61A843EDC0086A1D1 /* ExploreTableViewController.swift in Sources */,
 				501C59D41A81D3C60086A1D1 /* DetailPageViewController.swift in Sources */,
@@ -284,6 +291,7 @@
 				5055FD511A9D9C6200E4D6A4 /* AlamofireExtension.swift in Sources */,
 				5053C8331A7E0AC000431CAD /* AppDelegate.swift in Sources */,
 				50020E601A8EFD3C00711685 /* Constants.swift in Sources */,
+				50E82AD91AA02B67003ECCA2 /* StringExtension.swift in Sources */,
 				50DE37061A96956E004599D3 /* RegexHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

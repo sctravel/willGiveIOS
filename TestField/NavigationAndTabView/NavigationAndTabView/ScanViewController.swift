@@ -14,10 +14,13 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var detailPageButton: UIButton!
     
+    
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
+    var charity:NSDictionary?
     
+    var qrStringOld : String?
     
     // Added to support different barcodes
     let supportedBarCodes = [AVMetadataObjectTypeQRCode, AVMetadataObjectTypeCode128Code, AVMetadataObjectTypeCode39Code, AVMetadataObjectTypeCode93Code, AVMetadataObjectTypeUPCECode, AVMetadataObjectTypePDF417Code, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeAztecCode]
@@ -34,14 +37,11 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         // Dispose of any resources that can be recreated.
     }
     
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var detailView : DetailPageViewController = segue.destinationViewController as DetailPageViewController
 
-        NSLog("Getting in detail page")
-        
-        // pass data into the detail page
-        detailView.charity = ["recipientId": 10, "name": "World's best charity"]
+        NSLog("prepareForSegue for detail page")
+        detailView.charity = self.charity
     }
 
     func showQRscanWindow() {
@@ -122,16 +122,74 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             let barCodeObject = videoPreviewLayer?.transformedMetadataObjectForMetadataObject(metadataObj as AVMetadataMachineReadableCodeObject) as AVMetadataMachineReadableCodeObject
             qrCodeFrameView?.frame = barCodeObject.bounds;
             
-            if metadataObj.stringValue != nil {
-                detailPageButton.setTitle(metadataObj.stringValue
-, forState: UIControlState.Normal)
-                detailPageButton.backgroundColor = UIColor.greenColor();
-                detailPageButton.enabled = true
+            if metadataObj.stringValue != nil && metadataObj != qrStringOld {
+                
+                qrStringOld = metadataObj.stringValue
+                
+                self.charity = parseQrCodeString(metadataObj.stringValue)
+                NSLog("parsed charity: \(self.charity)")
+                
+                if self.charity != nil {
+                    var name = self.charity!["name"] as String
+                    detailPageButton.setTitle("Go to \(name)", forState: UIControlState.Normal)
+                    
+                    detailPageButton.backgroundColor = UIColor.greenColor();
+                    detailPageButton.enabled = true
+                }
+                else {
+                    detailPageButton.setTitle("invalid QR code", forState: UIControlState.Normal)
+                }
+
+            }
+            else if metadataObj.stringValue != nil && metadataObj == qrStringOld {
+                NSLog("same old qr string... do nothing")
+            }
+            else {
+                NSLog("no qr string is detected anymore... resetting qrStringOld")
+                qrStringOld = nil
             }
         }
+        
     }
 
-    
+    func parseQrCodeString(input : String) -> NSDictionary?
+    {
+        NSLog(input)
+        
+        var pattern = "^" + QrPrefix + "([0-9]+)\\?n=(.*)&a=(.*)&p=.(.*)&m=(.*)$"
+        var regex = NSRegularExpression(pattern: pattern, options: nil, error: nil)
+        var result = regex?.firstMatchInString(input, options: nil, range : NSMakeRange(0,countElements(input)))
+        
+        if(result?.rangeAtIndex(1) != nil
+            && result?.rangeAtIndex(2) != nil
+            && result?.rangeAtIndex(3) != nil
+            && result?.rangeAtIndex(4) != nil
+            && result?.rangeAtIndex(5) != nil
+            ) {
+            
+            var ein = (input as NSString).substringWithRange(result!.rangeAtIndex(1))
+            var name = (input as NSString).substringWithRange(result!.rangeAtIndex(2))
+            var address = (input as NSString).substringWithRange(result!.rangeAtIndex(3))
+            var phone = (input as NSString).substringWithRange(result!.rangeAtIndex(4))
+            var mission = (input as NSString).substringWithRange(result!.rangeAtIndex(5))
+                
+            // process name, address, mission
+            let newname = name.replaceCharacterInString("^", replace: " ")
+            let newaddress = address.replaceCharacterInString("^", replace : " ")
+            let newmission = mission.replaceCharacterInString("^", replace: " ")
+            
+            var ret = [
+                "ein" : ein,
+                "name" : newname,
+                "address" : newaddress,
+                "phone" : phone,
+                "mission" : newmission
+            ]
+        
+            return NSDictionary(dictionary: ret)
+        }
+        return nil
+    }
     
 }
 

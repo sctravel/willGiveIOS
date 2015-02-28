@@ -19,3 +19,5 @@ let ListCharityURL : String = "https://" + ServerAddress + "/services/charities/
 let EmailRegex = ".*@.*\\.[a-z]+"
 
 let ImageCache = NSCache()
+
+let QrPrefix = "http://www.willgive.org/c/"

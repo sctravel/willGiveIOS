@@ -152,7 +152,7 @@
         <!--My Profile-->
         <scene sceneID="ZgJ-y9-d7f">
             <objects>
-                <viewController id="ZBc-u0-Df3" sceneMemberID="viewController">
+                <viewController id="ZBc-u0-Df3" customClass="ProfileViewController" customModule="NavigationAndTabView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RTG-hu-fux"/>
                         <viewControllerLayoutGuide type="bottom" id="P3v-lI-hbb"/>
@@ -160,9 +160,30 @@
                     <view key="view" contentMode="scaleToFill" id="9MW-HX-K41">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEO-DB-y6l">
+                                <rect key="frame" x="0.0" y="513" width="600" height="30"/>
+                                <color key="backgroundColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="ZBc-u0-Df3" eventType="touchUpInside" id="3pE-tb-qEZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="bEO-DB-y6l" secondAttribute="centerX" id="I5f-8T-BJO"/>
+                            <constraint firstItem="P3v-lI-hbb" firstAttribute="top" secondItem="bEO-DB-y6l" secondAttribute="bottom" constant="8" id="IVV-kt-hv1"/>
+                            <constraint firstItem="bEO-DB-y6l" firstAttribute="width" secondItem="9MW-HX-K41" secondAttribute="width" id="k3X-Fm-nMI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Profile" id="6IE-ck-UYT"/>
+                    <connections>
+                        <segue destination="BVn-mz-UDj" kind="presentation" identifier="loggedOut" id="qKZ-WE-nrt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pr0-8H-q7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -471,21 +492,7 @@
                                 <color key="textColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAU-UV-jdX">
-                                <rect key="frame" x="250" y="327" width="100" height="30"/>
-                                <color key="backgroundColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Ii8-ot-iTg"/>
-                                </constraints>
-                                <state key="normal" title="Logout">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logoutPressed:" destination="Ysl-Dm-EVD" eventType="touchUpInside" id="rtY-p9-gTO"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3S3-gW-gpF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3S3-gW-gpF">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -493,11 +500,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SAU-UV-jdX" firstAttribute="centerX" secondItem="6yz-RM-seW" secondAttribute="centerX" constant="-0.5" id="A5C-dt-kct"/>
                             <constraint firstItem="3S3-gW-gpF" firstAttribute="width" secondItem="lfw-bW-Bak" secondAttribute="width" id="IR7-Dr-8Sh"/>
                             <constraint firstItem="3S3-gW-gpF" firstAttribute="centerX" secondItem="6yz-RM-seW" secondAttribute="centerX" constant="0.5" id="NtU-aI-aJ5"/>
                             <constraint firstItem="3S3-gW-gpF" firstAttribute="top" secondItem="6yz-RM-seW" secondAttribute="bottom" constant="50" id="ZdK-LT-fg6"/>
-                            <constraint firstItem="SAU-UV-jdX" firstAttribute="top" secondItem="3S3-gW-gpF" secondAttribute="bottom" constant="50" id="ell-ue-Bay"/>
                             <constraint firstAttribute="centerX" secondItem="6yz-RM-seW" secondAttribute="centerX" constant="-0.5" id="jTO-Tg-eUe"/>
                             <constraint firstAttribute="centerY" secondItem="6yz-RM-seW" secondAttribute="centerY" constant="90" id="vvQ-TD-GmH"/>
                         </constraints>
@@ -739,10 +744,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWk-GR-4gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="441" y="865"/>
+            <point key="canvasLocation" x="441" y="1040"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="qsG-yv-tCo"/>
+        <segue reference="qKZ-WE-nrt"/>
     </inferredMetricsTieBreakers>
 </document>
