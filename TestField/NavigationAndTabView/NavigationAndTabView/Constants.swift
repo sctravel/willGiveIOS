@@ -14,6 +14,7 @@ let BaseGray = UIColor(red: 210/255.0, green : 210/255.0, blue : 210/255.0, alph
 
 let ServerAddress : String = "54.174.120.77"
 let SignInURL : String = "https://" + ServerAddress + "/services/login/mobileSignin"
+let SignUpURL : String = "https://" + ServerAddress + "/services/login/mobileSignup"
 let ListCharityURL : String = "https://" + ServerAddress + "/services/charities/listAllCharity"
 
 let EmailRegex = ".*@.*\\.[a-z]+"

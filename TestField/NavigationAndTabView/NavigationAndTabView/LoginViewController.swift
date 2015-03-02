@@ -13,6 +13,14 @@ class LoginViewController : UIViewController {
  
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+     
+        if isLoggedIn() {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
     
     @IBAction func loginPressed(sender: AnyObject) {
         
@@ -45,13 +53,7 @@ class LoginViewController : UIViewController {
                         var user = JSON! as NSDictionary
                         NSLog("Login SUCCESS");
 
-                        var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-                        prefs.setObject(email, forKey: "USERNAME")
-                        // set ID: prefs.setObject(ID, forKey: "USERID")
-                        prefs.setObject(user, forKey: "USEROBJ")
-                        prefs.setInteger(1, forKey: "ISLOGGEDIN")
-                        prefs.synchronize()
-                        // TODO save the credential for how long?
+                        saveUser(user)
                         
                         self.dismissViewControllerAnimated(true, completion: nil)
                     }
