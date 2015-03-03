@@ -201,20 +201,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J39-vm-7mo">
-                                <rect key="frame" x="0.0" y="506" width="600" height="50"/>
-                                <color key="backgroundColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="oDK-fd-xcT"/>
-                                </constraints>
-                                <state key="normal" title="Pledge">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pledgePressed:" destination="J0T-1u-Wiz" eventType="touchUpInside" id="zfT-1L-l9U"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XmS-ws-xIV" userLabel="ScrollView">
                                 <rect key="frame" x="0.0" y="64" width="600" height="442"/>
                                 <subviews>
@@ -302,6 +288,21 @@
                                     <constraint firstItem="Rvc-hW-pST" firstAttribute="leading" secondItem="XmS-ws-xIV" secondAttribute="leading" id="zju-AP-FeK"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J39-vm-7mo">
+                                <rect key="frame" x="0.0" y="506" width="600" height="50"/>
+                                <color key="backgroundColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="oDK-fd-xcT"/>
+                                </constraints>
+                                <state key="normal" title="Pledge">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pledgePressed:" destination="J0T-1u-Wiz" eventType="touchUpInside" id="zfT-1L-l9U"/>
+                                    <segue destination="4JT-tn-VtW" kind="show" identifier="showPledgeView" id="lec-zq-wic"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -359,7 +360,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ww-b7-NPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4334" y="752"/>
+            <point key="canvasLocation" x="4291" y="613"/>
+        </scene>
+        <!--Pledge View Controller-->
+        <scene sceneID="5bM-fg-TCj">
+            <objects>
+                <viewController id="4JT-tn-VtW" customClass="PledgeViewController" customModule="NavigationAndTabView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vuA-Ih-Kkj"/>
+                        <viewControllerLayoutGuide type="bottom" id="ao0-eH-o3o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oct-Xf-qPc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZa-MX-tey">
+                                <rect key="frame" x="36" y="235" width="528" height="30"/>
+                                <color key="backgroundColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmPressed:" destination="4JT-tn-VtW" eventType="touchUpInside" id="OdD-BM-GBb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1R-HY-OT9">
+                                <rect key="frame" x="290" y="174" width="20" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="lPA-3u-917">
+                                <rect key="frame" x="34" y="104" width="532" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="4JT-tn-VtW" eventType="valueChanged" id="FtU-gh-TKe"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M1R-HY-OT9" firstAttribute="top" secondItem="lPA-3u-917" secondAttribute="bottom" constant="40" id="2l7-IV-Ugy"/>
+                            <constraint firstItem="lPA-3u-917" firstAttribute="leading" secondItem="oct-Xf-qPc" secondAttribute="leadingMargin" constant="20" id="5gc-JT-heZ"/>
+                            <constraint firstItem="lZa-MX-tey" firstAttribute="width" secondItem="lPA-3u-917" secondAttribute="width" id="ASM-VZ-l5D"/>
+                            <constraint firstItem="lZa-MX-tey" firstAttribute="top" secondItem="M1R-HY-OT9" secondAttribute="bottom" constant="40" id="ITf-qB-Rq1"/>
+                            <constraint firstItem="M1R-HY-OT9" firstAttribute="centerX" secondItem="lPA-3u-917" secondAttribute="centerX" id="PnH-5D-CoL"/>
+                            <constraint firstItem="lPA-3u-917" firstAttribute="top" secondItem="vuA-Ih-Kkj" secondAttribute="bottom" constant="40" id="ZZ7-Va-s2w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lPA-3u-917" secondAttribute="trailing" constant="20" id="bfU-Xd-2CK"/>
+                            <constraint firstItem="lZa-MX-tey" firstAttribute="centerX" secondItem="lPA-3u-917" secondAttribute="centerX" id="fEM-kc-6Sm"/>
+                            <constraint firstAttribute="centerX" secondItem="lPA-3u-917" secondAttribute="centerX" id="zcA-89-q3D"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amount" destination="M1R-HY-OT9" id="OeC-C8-XX7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yC0-78-Vgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4291" y="1308"/>
         </scene>
         <!--Scan QR Code-->
         <scene sceneID="tne-QT-ifu">

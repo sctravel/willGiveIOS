@@ -34,7 +34,7 @@ import Foundation
 //    var rating : Int?
 
 
-func getCharityRecipientId (charity : NSDictionary) -> Int?
+func getCharityRecipientId (charity : NSDictionary?) -> Int?
 {
     return doGetAttributeIntOptional(charity, "recipient_id")
 }

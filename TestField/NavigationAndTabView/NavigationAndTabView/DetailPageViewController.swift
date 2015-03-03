@@ -74,6 +74,11 @@ class DetailPageViewController: UIViewController {
             // pass data into the detail page
             detailWebView.url = getCharityUrl(charity)
         }
+        if(segue.identifier != nil && segue.identifier! == "showPledgeView" ) {
+            var pledgeView : PledgeViewController = segue.destinationViewController as PledgeViewController
+            NSLog("pledging to \(getCharityRecipientId(charity))")
+            pledgeView.recipientId = getCharityRecipientId(charity)
+        }
     }
 
 }

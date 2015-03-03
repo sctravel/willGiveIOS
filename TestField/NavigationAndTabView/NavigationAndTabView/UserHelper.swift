@@ -47,3 +47,10 @@ func isLoggedIn() -> Bool {
     }
     return true
 }
+
+func getUserId() -> Int? {
+    let prefs : NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    let user:NSDictionary? = prefs.dictionaryForKey("USEROBJ")
+    if user != nil { return user!["userId"] as? Int}
+    return nil
+}

@@ -24,6 +24,7 @@ class HomeViewController : UIViewController {
             self.usernameLabel.text = "welcome back,\n" + email
             NSLog("Already logged in as: \(email)")
             
+            sleep(2)
             // prefs.setInteger(0, forKey: "ISLOGGEDIN")
             
             self.performSegueWithIdentifier("gotoMainPage", sender: self)

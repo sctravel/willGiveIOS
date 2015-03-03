@@ -32,6 +32,7 @@
 		50E82AD71A9F017A003ECCA2 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E82AD61A9F017A003ECCA2 /* ImageHelper.swift */; };
 		50E82AD91AA02B67003ECCA2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E82AD81AA02B67003ECCA2 /* StringExtension.swift */; };
 		50F41ECF1AA22DAD006ED7B2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F41ECE1AA22DAD006ED7B2 /* ProfileViewController.swift */; };
+		50F41ED11AA61E30006ED7B2 /* PledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F41ED01AA61E30006ED7B2 /* PledgeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		50E82AD61A9F017A003ECCA2 /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		50E82AD81AA02B67003ECCA2 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		50F41ECE1AA22DAD006ED7B2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		50F41ED01AA61E30006ED7B2 /* PledgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PledgeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				50F41ECE1AA22DAD006ED7B2 /* ProfileViewController.swift */,
 				501C59D31A81D3C60086A1D1 /* DetailPageViewController.swift */,
 				50E82AD01A9EE6F5003ECCA2 /* DetailWebViewController.swift */,
+				50F41ED01AA61E30006ED7B2 /* PledgeViewController.swift */,
 				50020E5F1A8EFD3C00711685 /* Constants.swift */,
 				50DE37071A96963A004599D3 /* AlertHelper.swift */,
 				501C59D71A843F250086A1D1 /* CharityHelper.swift */,
@@ -281,6 +284,7 @@
 				501C59D41A81D3C60086A1D1 /* DetailPageViewController.swift in Sources */,
 				50CBB5151A94367A00DDEA85 /* HomeViewController.swift in Sources */,
 				501C59D81A843F250086A1D1 /* CharityHelper.swift in Sources */,
+				50F41ED11AA61E30006ED7B2 /* PledgeViewController.swift in Sources */,
 				50CBB5171A9469D400DDEA85 /* UserHelper.swift in Sources */,
 				50E82AD51A9EFC30003ECCA2 /* CharityTableCell.swift in Sources */,
 				5053C8351A7E0AC000431CAD /* ScanViewController.swift in Sources */,
