@@ -16,8 +16,8 @@ class CharityTableCell : UITableViewCell {
 
     func populate(charity : NSDictionary? ) {
         NSLog("populate - setting up image")
-        let imagePath = getCharityImagePath(charity)
-        LoadImage(imagePath, self.profileImageView)
+        let imagePath = getCharityImagePath(charity)  // snapshot image
+        LoadImage(imagePath, "_small", self.profileImageView)
         
         NSLog("populate - setting up name")
         name.text = getCharityName(charity)

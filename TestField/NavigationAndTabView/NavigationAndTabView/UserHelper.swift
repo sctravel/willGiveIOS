@@ -28,7 +28,7 @@ import Foundation
 
 
 func saveUser(user : NSDictionary) {
-    
+    let email = user["email"] as String
     var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
     prefs.setObject(email, forKey: "USERNAME")
     // set ID: prefs.setObject(ID, forKey: "USERID")

@@ -14,9 +14,8 @@ class LoginViewController : UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
         if isLoggedIn() {
             self.dismissViewControllerAnimated(true, completion: nil)
         }

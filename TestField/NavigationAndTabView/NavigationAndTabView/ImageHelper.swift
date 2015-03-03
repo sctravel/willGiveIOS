@@ -9,23 +9,24 @@
 import Foundation
 import UIKit
 
-func LoadImage(imagePath : String?, imageView : UIImageView ) {
+func LoadImage(imagePath : String?, postfix : String, imageView : UIImageView ) {
     if imagePath != nil {  // imagePath is present
-        if let image = ImageCache.objectForKey(imagePath!) as? UIImage {
+        var path = imagePath! + postfix
+        if let image = ImageCache.objectForKey(path) as? UIImage {
             NSLog("Image found in cache")
             imageView.image = image
         } else {
-            NSLog("Image not found in cache; retrieving \(imagePath)")
+            NSLog("Image not found in cache; retrieving \(path)")
             // clear the image
             imageView.image  = nil
-            let url = "https://" + ServerAddress + imagePath!
+            let url = "https://" + ServerAddress + path
             
             request(.GET, url).validate(contentType: ["image/*"]).responseImage() {
                 (_, _, image, error) in
                 if error == nil && image != nil {
                     
                     // put into cache
-                    ImageCache.setObject(image!, forKey: imagePath!)
+                    ImageCache.setObject(image!, forKey: path)
                     
                     // display image
                     imageView.image = image

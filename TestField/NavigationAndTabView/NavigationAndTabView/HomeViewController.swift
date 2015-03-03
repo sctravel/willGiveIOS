@@ -16,14 +16,14 @@ class HomeViewController : UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
-        if isLoggedIn() == true {
+        if !isLoggedIn() {
             self.performSegueWithIdentifier("gotoLogin", sender: self)
         } else {
+            let prefs : NSUserDefaults = NSUserDefaults.standardUserDefaults()
             var email = prefs.valueForKey("USERNAME") as String
             self.usernameLabel.text = "welcome back,\n" + email
             NSLog("Already logged in as: \(email)")
             
-            var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
             // prefs.setInteger(0, forKey: "ISLOGGEDIN")
             
             self.performSegueWithIdentifier("gotoMainPage", sender: self)

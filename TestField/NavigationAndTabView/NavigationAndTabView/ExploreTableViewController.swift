@@ -22,7 +22,6 @@ class ExploreTableViewController: UITableViewController {
         populateCharities()
     }
     
-    
     func populateCharities(){
         
         NSLog("******** in populateCharities ********")
@@ -45,6 +44,7 @@ class ExploreTableViewController: UITableViewController {
         
     }
     
+    
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if didAnimateCell[indexPath] == nil || didAnimateCell[indexPath]! == false {
             didAnimateCell[indexPath] = true
@@ -64,35 +64,9 @@ class ExploreTableViewController: UITableViewController {
         NSLog("Populating cell")
         cell.populate(charities[indexPath.row])
         
-        // add image for the cell view
-//        if let image = self.imageCache.objectForKey(imageURL!) as? UIImage {
-//            cell.imageView.image = image
-//        } else {
-//            // 3
-//            cell.imageView.image = nil
-//            
-//            // 4
-//            cell.request = Alamofire.request(.GET, imageURL).validate(contentType: ["image/*"]).responseImage() {
-//                (request, _, image, error) in
-//                if error == nil && image != nil {
-//                    // 5
-//                    self.imageCache.setObject(image!, forKey: request.URLString)
-//                    
-//                    // 6
-//                    if request.URLString == cell.request?.request.URLString {
-//                        cell.imageView.image = image
-//                    }
-//                } else {
-//                    /*
-//                    If the cell went off-screen before the image was downloaded, we cancel it and
-//                    an NSURLErrorDomain (-999: cancelled) is returned. This is a normal behavior.
-//                    */
-//                }
-//            }
-//        }
-        
         return cell
     }
+    
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

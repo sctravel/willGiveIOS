@@ -29,9 +29,9 @@ class DetailPageViewController: UIViewController {
         nameButton.setTitle( getCharityName(charity), forState: UIControlState.Normal)
         mission.text = getCharityMissionText(charity)
         mission.sizeToFit()  // this is for label text to start from left right corner
-        let imagePath = getCharityImagePath(charity)
+        let imagePath = getCharityImagePath(charity) // medium sized profile image
         
-        LoadImage(imagePath, self.imageView)
+        LoadImage(imagePath, "_medium", self.imageView)
         
     }
     
