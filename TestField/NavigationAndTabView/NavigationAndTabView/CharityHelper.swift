@@ -36,7 +36,7 @@ import Foundation
 
 func getCharityRecipientId (charity : NSDictionary?) -> Int?
 {
-    return doGetAttributeIntOptional(charity, "recipient_id")
+    return doGetAttributeIntOptional(charity, "recipientId")
 }
 
 func getCharityName (charity : NSDictionary?) -> String?
