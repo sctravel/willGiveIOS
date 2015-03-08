@@ -28,6 +28,8 @@ class DetailPageViewController: UIViewController {
         
         if offlineStatus != nil && offlineStatus! {
             // get charity again
+            NSLog("offline data or QR scanned data")
+            NSLog("charity: \(charity)")
         }
         
         NSLog("Name: \(getCharityName(charity))")

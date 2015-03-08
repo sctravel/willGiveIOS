@@ -103,14 +103,13 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
         
-        NSLog("in captureOutput...")
-        
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRectZero
             detailPageButton.setTitle("No QR code is detected", forState: UIControlState.Normal)
             detailPageButton.backgroundColor = UIColor.grayColor();
             detailPageButton.enabled = false
+            qrStringOld = nil
             return
         }
         
@@ -122,7 +121,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             let barCodeObject = videoPreviewLayer?.transformedMetadataObjectForMetadataObject(metadataObj as AVMetadataMachineReadableCodeObject) as AVMetadataMachineReadableCodeObject
             qrCodeFrameView?.frame = barCodeObject.bounds;
             
-            if metadataObj.stringValue != nil && metadataObj != qrStringOld {
+            if metadataObj.stringValue != nil && metadataObj.stringValue != qrStringOld {
                 
                 qrStringOld = metadataObj.stringValue
                 
@@ -141,8 +140,8 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
                 }
 
             }
-            else if metadataObj.stringValue != nil && metadataObj == qrStringOld {
-                NSLog("same old qr string... do nothing")
+            else if metadataObj.stringValue != nil && metadataObj.stringValue == qrStringOld {
+                
             }
             else {
                 NSLog("no qr string is detected anymore... resetting qrStringOld")
@@ -180,9 +179,10 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             let newaddress = address.replaceCharacterInString("^", replace : " ")
             let newmission = mission.replaceCharacterInString("^", replace: " ")
             
+            // NSDictionary does not like optional values; it will complain about "cannot convert to type StringLiteralConvertible"
             var ret = [
                 "ein" : ein,
-                "recipientId" : recipientId,
+                "recipientId" : recipientId.toInt()!,
                 "name" : newname,
                 "address" : newaddress,
                 "phone" : phone,
