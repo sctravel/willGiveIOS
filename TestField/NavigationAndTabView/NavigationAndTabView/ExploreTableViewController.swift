@@ -13,7 +13,10 @@ class ExploreTableViewController: UITableViewController {
     
     let imageCache = NSCache()
     var charities = [NSDictionary]()
-    var didAnimateCell:[NSIndexPath: Bool] = [:]
+//    var didAnimateCell:[NSIndexPath: Bool] = [:]
+  
+    var currentLoadIndex = 0
+    let loadBatch = 10
     
     @IBOutlet weak var Label: UILabel!
     
@@ -22,20 +25,28 @@ class ExploreTableViewController: UITableViewController {
         populateCharities()
     }
     
+//    override func viewDidAppear(animated: Bool) {
+//        super.viewDidAppear(animated)
+//        populateCharities()
+//    }
+    
+    // everytime it gets called, it loads <loadBatch> more charities into the charity list
     func populateCharities(){
         
         NSLog("******** in populateCharities ********")
         
-        request(.GET, ListCharityURL, parameters: ["start":0, "count":10])
+        request(.GET, ListCharityURL, parameters: ["start" : currentLoadIndex, "count" : loadBatch])
             .responseJSON { (request, response, JSON, error) in
                 println("request: \(request)")
                 println("response: \(response)")
+                println("error: \(error)")
                 // TODO furhter drill down of error scenarios, based on response.statusCode
                 if(error != nil || JSON == nil) {
                     showAlert("Failed to retrieve data", "Please check your network connection", self)
                     NSLog(error!.localizedDescription)
                 }
                 else {
+                    self.currentLoadIndex += self.loadBatch
                     var resp = JSON! as [NSDictionary]
                     resp.map({self.charities.append($0)})
                     self.tableView.reloadData()
@@ -44,13 +55,13 @@ class ExploreTableViewController: UITableViewController {
         
     }
     
-    
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if didAnimateCell[indexPath] == nil || didAnimateCell[indexPath]! == false {
-            didAnimateCell[indexPath] = true
-            TipInCellAnimator.animate(cell)
-        }
-    }
+//  animation for loading table cells
+//    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+//        if didAnimateCell[indexPath] == nil || didAnimateCell[indexPath]! == false {
+//            didAnimateCell[indexPath] = true
+//            TipInCellAnimator.animate(cell)
+//        }
+//    }
     
     // missing this function will not properly render the cells
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,6 +79,26 @@ class ExploreTableViewController: UITableViewController {
     }
     
     
+    // add swipe and dismiss action
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            charities.removeAtIndex(indexPath.row)
+            self.tableView.reloadData()
+        }
+    }
+    
+    // swipe to the bottom and load more data
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        // when it's going to display the last charity
+        if(indexPath.row == charities.count - 1){
+            NSLog("hitting the talbe bottom... load more")
+            populateCharities()
+        }
+    }
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         NSLog("prepare for segue")
@@ -82,5 +113,6 @@ class ExploreTableViewController: UITableViewController {
         NSLog("destView.charity populated")
     }
 
+    
     
 }

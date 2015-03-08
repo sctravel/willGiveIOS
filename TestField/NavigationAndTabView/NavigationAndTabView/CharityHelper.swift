@@ -33,6 +33,10 @@ import Foundation
 //    var imagePath : String?
 //    var rating : Int?
 
+func getCharityOfflineStatus (charity : NSDictionary?) -> Bool?
+{
+    return doGetAttributeBoolOptional(charity, "offline")
+}
 
 func getCharityRecipientId (charity : NSDictionary?) -> Int?
 {
@@ -87,5 +91,9 @@ func doGetAttributeIntOptional(charity : NSDictionary?, attr : String) -> Int?
     return charity![attr] as Int?
 }
 
-
+func doGetAttributeBoolOptional(charity : NSDictionary?, attr : String) -> Bool?
+{
+    if(charity == nil) { return nil as Bool? }
+    return charity![attr] as Bool?
+}
 

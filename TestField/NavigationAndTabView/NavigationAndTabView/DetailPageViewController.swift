@@ -24,6 +24,12 @@ class DetailPageViewController: UIViewController {
         NSLog("in detail page - viewDidLoad")
         super.viewDidLoad()
         
+        var offlineStatus = getCharityOfflineStatus(charity)
+        
+        if offlineStatus != nil && offlineStatus! {
+            // get charity again
+        }
+        
         NSLog("Name: \(getCharityName(charity))")
         
         nameButton.setTitle( getCharityName(charity), forState: UIControlState.Normal)

@@ -156,7 +156,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     {
         NSLog(input)
         
-        var pattern = "^" + QrPrefix + "([0-9]+)\\?n=(.*)&a=(.*)&p=.(.*)&m=(.*)$"
+        var pattern = "^" + QrPrefix + "([0-9]+)\\?r=(.*)&n=(.*)&a=(.*)&p=.(.*)&m=(.*)$"
         var regex = NSRegularExpression(pattern: pattern, options: nil, error: nil)
         var result = regex?.firstMatchInString(input, options: nil, range : NSMakeRange(0,countElements(input)))
         
@@ -165,13 +165,15 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             && result?.rangeAtIndex(3) != nil
             && result?.rangeAtIndex(4) != nil
             && result?.rangeAtIndex(5) != nil
+            && result?.rangeAtIndex(6) != nil
             ) {
             
             var ein = (input as NSString).substringWithRange(result!.rangeAtIndex(1))
-            var name = (input as NSString).substringWithRange(result!.rangeAtIndex(2))
-            var address = (input as NSString).substringWithRange(result!.rangeAtIndex(3))
-            var phone = (input as NSString).substringWithRange(result!.rangeAtIndex(4))
-            var mission = (input as NSString).substringWithRange(result!.rangeAtIndex(5))
+            var recipientId = (input as NSString).substringWithRange(result!.rangeAtIndex(2))
+            var name = (input as NSString).substringWithRange(result!.rangeAtIndex(3))
+            var address = (input as NSString).substringWithRange(result!.rangeAtIndex(4))
+            var phone = (input as NSString).substringWithRange(result!.rangeAtIndex(5))
+            var mission = (input as NSString).substringWithRange(result!.rangeAtIndex(6))
                 
             // process name, address, mission
             let newname = name.replaceCharacterInString("^", replace: " ")
@@ -180,10 +182,12 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             
             var ret = [
                 "ein" : ein,
+                "recipientId" : recipientId,
                 "name" : newname,
                 "address" : newaddress,
                 "phone" : phone,
-                "mission" : newmission
+                "mission" : newmission,
+                "offline" : true
             ]
         
             return NSDictionary(dictionary: ret)
