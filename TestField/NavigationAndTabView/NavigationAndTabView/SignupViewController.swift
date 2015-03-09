@@ -17,7 +17,6 @@ class SingupViewController : UIViewController, UITextFieldDelegate {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var confirmPassword: UITextField!
     
-
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.view.endEditing(true)
@@ -62,6 +61,8 @@ class SingupViewController : UIViewController, UITextFieldDelegate {
                     var user = JSON! as NSDictionary
                     
                     NSLog(user.description)
+                    
+                    // sign in user as well
                     
                     saveUser(user)
                     self.dismissViewControllerAnimated(true, completion: nil)

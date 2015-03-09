@@ -19,6 +19,7 @@
 		5053C83D1A7E0AC000431CAD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5053C83B1A7E0AC000431CAD /* LaunchScreen.xib */; };
 		5053C8491A7E0AC000431CAD /* NavigationAndTabViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5053C8481A7E0AC000431CAD /* NavigationAndTabViewTests.swift */; };
 		5055FD511A9D9C6200E4D6A4 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055FD501A9D9C6200E4D6A4 /* AlamofireExtension.swift */; };
+		508AA7581AAD27B60088F011 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508AA7571AAD27B60088F011 /* SearchViewController.swift */; };
 		509E61A21A991B950042008C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509E61A11A991B950042008C /* SignupViewController.swift */; };
 		50CBB5151A94367A00DDEA85 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBB5141A94367A00DDEA85 /* HomeViewController.swift */; };
 		50CBB5171A9469D400DDEA85 /* UserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBB5161A9469D400DDEA85 /* UserHelper.swift */; };
@@ -63,6 +64,7 @@
 		5053C8471A7E0AC000431CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5053C8481A7E0AC000431CAD /* NavigationAndTabViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAndTabViewTests.swift; sourceTree = "<group>"; };
 		5055FD501A9D9C6200E4D6A4 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
+		508AA7571AAD27B60088F011 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		509E61A11A991B950042008C /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		50CBB5141A94367A00DDEA85 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		50CBB5161A9469D400DDEA85 /* UserHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHelper.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				501C59D31A81D3C60086A1D1 /* DetailPageViewController.swift */,
 				50E82AD01A9EE6F5003ECCA2 /* DetailWebViewController.swift */,
 				50F41ED01AA61E30006ED7B2 /* PledgeViewController.swift */,
+				508AA7571AAD27B60088F011 /* SearchViewController.swift */,
 				50020E5F1A8EFD3C00711685 /* Constants.swift */,
 				50DE37071A96963A004599D3 /* AlertHelper.swift */,
 				501C59D71A843F250086A1D1 /* CharityHelper.swift */,
@@ -288,6 +291,7 @@
 				50CBB5171A9469D400DDEA85 /* UserHelper.swift in Sources */,
 				50E82AD51A9EFC30003ECCA2 /* CharityTableCell.swift in Sources */,
 				5053C8351A7E0AC000431CAD /* ScanViewController.swift in Sources */,
+				508AA7581AAD27B60088F011 /* SearchViewController.swift in Sources */,
 				50DE37011A968F67004599D3 /* Alamofire.swift in Sources */,
 				50E82AD71A9F017A003ECCA2 /* ImageHelper.swift in Sources */,
 				50E82AD11A9EE6F5003ECCA2 /* DetailWebViewController.swift in Sources */,

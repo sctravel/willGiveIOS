@@ -73,7 +73,7 @@
                                 <connections>
                                     <outlet property="name" destination="vQ9-DO-6jA" id="9yx-Sh-Eqc"/>
                                     <outlet property="profileImageView" destination="X5P-Fm-IUy" id="1Ca-wY-ivL"/>
-                                    <segue destination="J0T-1u-Wiz" kind="show" id="qsG-yv-tCo"/>
+                                    <segue destination="J0T-1u-Wiz" kind="show" identifier="exploreToDetailPage" id="qsG-yv-tCo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -82,7 +82,14 @@
                             <outlet property="delegate" destination="hbb-Fd-xdN" id="tUX-L2-MTZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Explore Charities" id="ykN-07-wpY"/>
+                    <navigationItem key="navigationItem" title="Explore Charities" id="ykN-07-wpY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="5Ei-RH-1uT">
+                            <color key="tintColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="VFd-9j-J52" kind="show" identifier="searchExploreTab" id="azA-su-4OP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sei-33-zU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,7 +116,14 @@
                             <outlet property="delegate" destination="bOA-e3-ylL" id="HOg-CV-y5f"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="More" id="bU4-8w-Ap7"/>
+                    <navigationItem key="navigationItem" title="More" id="bU4-8w-Ap7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="pHD-uW-q3L">
+                            <color key="tintColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="VFd-9j-J52" kind="show" id="pqW-VK-84S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GzW-Rx-LrZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,7 +194,14 @@
                             <constraint firstItem="bEO-DB-y6l" firstAttribute="width" secondItem="9MW-HX-K41" secondAttribute="width" id="k3X-Fm-nMI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Profile" id="6IE-ck-UYT"/>
+                    <navigationItem key="navigationItem" title="My Profile" id="6IE-ck-UYT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="hzA-eq-NBq">
+                            <color key="tintColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="VFd-9j-J52" kind="show" id="U0p-6z-1L4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="BVn-mz-UDj" kind="presentation" identifier="loggedOut" id="qKZ-WE-nrt"/>
                     </connections>
@@ -327,7 +348,79 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJl-fF-bOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3577" y="914"/>
+            <point key="canvasLocation" x="3391" y="946"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="Rjg-EF-BzD">
+            <objects>
+                <tableViewController id="VFd-9j-J52" customClass="SearchViewController" customModule="NavigationAndTabView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="erN-PJ-sLK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Tap here to search" id="Q7o-VB-jLi">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="VFd-9j-J52" id="i1h-wC-DPZ"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharityCell" rowHeight="75" id="3hI-vT-Si9" customClass="CharityTableCell" customModule="NavigationAndTabView" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3hI-vT-Si9" id="0bq-eJ-9zB">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dgb-gq-wHC" userLabel="main view">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T3R-na-Plx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="D1s-4R-G8E"/>
+                                                        <constraint firstAttribute="height" constant="75" id="blA-4F-U9v"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IO9-ge-bkH">
+                                                    <rect key="frame" x="115" y="27" width="40" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="T3R-na-Plx" secondAttribute="bottom" id="118-Zu-XG7"/>
+                                                <constraint firstItem="IO9-ge-bkH" firstAttribute="leading" secondItem="T3R-na-Plx" secondAttribute="trailing" constant="15" id="B1Y-ej-EIU"/>
+                                                <constraint firstItem="T3R-na-Plx" firstAttribute="centerY" secondItem="IO9-ge-bkH" secondAttribute="centerY" constant="0.5" id="V67-Ah-Kct"/>
+                                                <constraint firstItem="T3R-na-Plx" firstAttribute="leading" secondItem="Dgb-gq-wHC" secondAttribute="leading" id="VmI-Wh-5X2"/>
+                                                <constraint firstAttribute="centerY" secondItem="T3R-na-Plx" secondAttribute="centerY" id="c7E-Ln-Hm4"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Dgb-gq-wHC" firstAttribute="top" secondItem="0bq-eJ-9zB" secondAttribute="top" id="VEV-YW-awb"/>
+                                        <constraint firstAttribute="trailing" secondItem="Dgb-gq-wHC" secondAttribute="trailing" id="aJO-2X-58m"/>
+                                        <constraint firstItem="Dgb-gq-wHC" firstAttribute="leading" secondItem="0bq-eJ-9zB" secondAttribute="leading" id="yp0-9F-q4S"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="IO9-ge-bkH" id="RMm-rY-CUx"/>
+                                    <outlet property="profileImageView" destination="T3R-na-Plx" id="sOW-bQ-Nkc"/>
+                                    <segue destination="J0T-1u-Wiz" kind="show" identifier="searchToDetailPage" id="TGg-Qe-egt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VFd-9j-J52" id="Dwk-PQ-TGZ"/>
+                            <outlet property="delegate" destination="VFd-9j-J52" id="fBd-Ps-d9k"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1f-2i-FbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3357" y="1671"/>
         </scene>
         <!--Detail Web View Controller-->
         <scene sceneID="atk-vD-nF3">
@@ -446,7 +539,7 @@
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="J0T-1u-Wiz" kind="show" id="ZDf-hd-g2i"/>
+                                            <segue destination="J0T-1u-Wiz" kind="show" identifier="scanToDetailPage" id="ZDf-hd-g2i"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -466,7 +559,14 @@
                             <constraint firstItem="miF-cl-w5N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z4v-y9-458"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Scan QR Code" id="lOE-gt-Dhp"/>
+                    <navigationItem key="navigationItem" title="Scan QR Code" id="lOE-gt-Dhp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="J4h-yT-Bpe">
+                            <color key="tintColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="VFd-9j-J52" kind="show" identifier="searchScanTab" id="Pg8-xH-c8l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="DetailPageButton" destination="1mh-aF-Hrd" id="S9Z-1K-Ogj"/>
                         <outlet property="detailPageButton" destination="1mh-aF-Hrd" id="FnY-MO-JKE"/>
@@ -807,7 +907,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qsG-yv-tCo"/>
         <segue reference="qKZ-WE-nrt"/>
+        <segue reference="Pg8-xH-c8l"/>
+        <segue reference="TGg-Qe-egt"/>
     </inferredMetricsTieBreakers>
 </document>

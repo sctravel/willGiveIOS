@@ -17,6 +17,7 @@ let SignInURL : String = "https://" + ServerAddress + "/services/login/mobileSig
 let SignUpURL : String = "https://" + ServerAddress + "/services/login/mobileSignup"
 let ListCharityURL : String = "https://" + ServerAddress + "/services/charities/listAllCharity"
 let PledgeURL : String = "https://" + ServerAddress + "/payment/pledge"
+let SearchURL : String = "https://" + ServerAddress + "/services/charities/searchCharity"
 
 let EmailRegex = ".*@.*\\.[a-z]+"
 

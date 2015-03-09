@@ -38,10 +38,13 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var detailView : DetailPageViewController = segue.destinationViewController as DetailPageViewController
 
-        NSLog("prepareForSegue for detail page")
-        detailView.charity = self.charity
+        if(segue.identifier != nil && segue.identifier! == "scanToDetailPage") {
+            var detailView : DetailPageViewController = segue.destinationViewController as DetailPageViewController
+            NSLog("prepareForSegue for detail page")
+            detailView.charity = self.charity
+        }
+        
     }
 
     func showQRscanWindow() {

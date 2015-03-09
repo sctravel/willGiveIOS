@@ -11,12 +11,11 @@ import UIKit
 
 class ExploreTableViewController: UITableViewController {
     
-    let imageCache = NSCache()
     var charities = [NSDictionary]()
 //    var didAnimateCell:[NSIndexPath: Bool] = [:]
   
     var currentLoadIndex = 0
-    let loadBatch = 10
+    let loadBatch = 5
     
     @IBOutlet weak var Label: UILabel!
     
@@ -100,17 +99,23 @@ class ExploreTableViewController: UITableViewController {
     }
 
     
+    // add search functionality
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        NSLog("prepare for segue")
         
-        var indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow()!
-        var destView = segue.destinationViewController as DetailPageViewController
-        
-        NSLog("Selected charity: \(charities[indexPath.row])")
-        
-        destView.charity = charities[indexPath.row]
-        
-        NSLog("destView.charity populated")
+         if(segue.identifier != nil && segue.identifier! == "exploreToDetailPage") {
+            
+            NSLog("prepare for segue")
+            
+            var indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow()!
+            var destView = segue.destinationViewController as DetailPageViewController
+            
+            NSLog("Selected charity: \(charities[indexPath.row])")
+            
+            destView.charity = charities[indexPath.row]
+            
+            NSLog("destView.charity populated")
+        }
     }
 
     
