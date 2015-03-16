@@ -21,15 +21,17 @@ class DetailPageViewController: UIViewController {
     @IBOutlet weak var mission: UILabel!
 
     override func viewDidLoad() {
+        
+        var logger = getLogger()
+        
         NSLog("in detail page - viewDidLoad")
         super.viewDidLoad()
         
         var offlineStatus = getCharityOfflineStatus(charity)
-        
         if offlineStatus != nil && offlineStatus! {
             // get charity again
-            NSLog("offline data or QR scanned data")
-            NSLog("charity: \(charity)")
+            NSLog("offline data or QR scanned data; try to load via network again")
+            
         }
         
         NSLog("Name: \(getCharityName(charity))")

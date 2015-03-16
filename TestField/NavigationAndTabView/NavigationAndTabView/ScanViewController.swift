@@ -48,7 +48,8 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     }
 
     func showQRscanWindow() {
-        NSLog("showing QR scan window...")
+        var logger = getLogger()
+        logger.log("showing QR scan window...")
         
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
         // as the media type parameter.

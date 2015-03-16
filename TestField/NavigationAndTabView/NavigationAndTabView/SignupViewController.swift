@@ -54,20 +54,32 @@ class SingupViewController : UIViewController, UITextFieldDelegate {
             request(.POST, SignUpURL, parameters: info)
                .responseJSON { (request, response, JSON, error) in
                 if(error != nil || JSON == nil) {
-                    showAlert("Sign up Failed!", "Please check your info", self)
+                    showAlert("Sign Up Failed!", "Please check your info", self)
                     NSLog(error!.localizedDescription)
                 }
                 else {
                     var user = JSON! as NSDictionary
-                    
+                    showAlert("Sign Up Succeeded!", "Please log in", self)
                     NSLog(user.description)
                     
                     // sign in user as well
-                    
-                    saveUser(user)
-                    self.dismissViewControllerAnimated(true, completion: nil)
-                    
+//                    var credential = ["username" : eml, "password" : pswd]
+//                    request(.POST, SignInURL, parameters: credential)
+//                        .responseJSON { (request, response, JSON, error) in
+//                            if(error != nil || JSON == nil) {
+//                                showAlert("Sign in Failed!", "Please check your Email/Password", self)
+//                                NSLog(error!.localizedDescription)
+//                            }
+//                            else {
+//                                var user = JSON! as NSDictionary
+//                                NSLog("Login SUCCESS");
+//                                saveUser(user)
+//                                
+//                            }
+//                        }
                 }
+                
+                self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
         // /services/login/mobileSignup

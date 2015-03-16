@@ -9,13 +9,25 @@
 import UIKit
 import Foundation
 
-class LoginViewController : UIViewController {
+class LoginViewController : UIViewController, FBLoginViewDelegate {
  
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    
+    
+    @IBOutlet var btnLogin: UIButton!
+    @IBOutlet var btnFacebook: UIButton!
+    @IBOutlet var btnForgot: UIButton!
+    @IBOutlet var btnSignup: UIButton!
+    
 
     override func viewDidAppear(animated: Bool) {
+        
+        var logger = getLogger()
+        logger.log("hello log entries")
+        
         super.viewDidAppear(true)
+        toggleHiddenState(false)
         if isLoggedIn() {
             self.dismissViewControllerAnimated(true, completion: nil)
         }
@@ -51,15 +63,14 @@ class LoginViewController : UIViewController {
                     else {
                         var user = JSON! as NSDictionary
                         NSLog("Login SUCCESS");
-
                         saveUser(user)
-                        
                         self.dismissViewControllerAnimated(true, completion: nil)
                     }
-            }
-            
+                }
+
         }
     }
+    
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.view.endEditing(true)
@@ -68,7 +79,52 @@ class LoginViewController : UIViewController {
     
     @IBAction func facebookPressed(sender: AnyObject) {
         NSLog("Facebook button pressed")
-        self.performSegueWithIdentifier("gotoMainPage", sender: self)
+        
+        var loginView = FBLoginView()
+        loginView.center = self.view.center
+        self.view.addSubview(loginView)
+        loginView.delegate = self
+    
+        toggleHiddenState(true)
+        
+    }
+    
+    func toggleHiddenState(shouldHide : Bool){
+        txtEmail.hidden = shouldHide
+        txtPassword.hidden = shouldHide
+        
+        btnFacebook.hidden = shouldHide
+        btnForgot.hidden = shouldHide
+        btnLogin.hidden = shouldHide
+        btnSignup.hidden = shouldHide
+    }
+    
+    func loginViewShowingLoggedInUser(loginView: FBLoginView!) {
+        
+        //get session data; send it to server; and carry on
+        
+        var parameters = ["access_token" : FBSession.activeSession().accessTokenData.accessToken, "refresh_token" : ""]
+        NSLog("\(parameters)")
+        request(.POST, FbSignInURL, parameters: parameters)
+            .responseJSON { (request, response, JSON, error) in
+                println("request: \(request)")
+                println("response: \(response)")
+                // TODO furhter drill down of error scenarios, based on response.statusCode
+                if(error != nil || JSON == nil) {
+                    showAlert("FB Sign In Failed!", "Please try again", self)
+                    NSLog(error!.localizedDescription)
+                }
+                else {
+                    var user = JSON! as NSDictionary
+                    NSLog("Login SUCCESS");
+                    saveUser(user)
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+        }
+    }
+    
+    func loginView(loginView: FBLoginView!, handleError error: NSError!) {
+        NSLog("\(error.description)")
     }
     
     @IBAction func forgotPressed(sender: AnyObject) {

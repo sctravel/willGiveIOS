@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QHz-QK-QH5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QHz-QK-QH5">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -186,12 +186,62 @@
                                     <action selector="logoutPressed:" destination="ZBc-u0-Df3" eventType="touchUpInside" id="3pE-tb-qEZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CI-Fk-2th">
+                                <rect key="frame" x="156" y="84" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMF-a8-j0d">
+                                <rect key="frame" x="156" y="125" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3m-kV-AWG">
+                                <rect key="frame" x="0.0" y="194" width="600" height="30"/>
+                                <color key="backgroundColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Favorites">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZU-Jx-oPg">
+                                <rect key="frame" x="0.0" y="244" width="600" height="30"/>
+                                <color key="backgroundColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Previous donations">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cht-HY-mCB" kind="show" identifier="showUserHistory" id="36d-Hs-GLm"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dn4-RW-wlu">
+                                <rect key="frame" x="16" y="84" width="120" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="PDM-eF-tqL"/>
+                                    <constraint firstAttribute="width" constant="120" id="zap-lz-nvf"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Dn4-RW-wlu" firstAttribute="bottom" secondItem="S3m-kV-AWG" secondAttribute="top" constant="-20" id="FI6-Qj-2oQ"/>
+                            <constraint firstItem="OZU-Jx-oPg" firstAttribute="top" secondItem="S3m-kV-AWG" secondAttribute="bottom" constant="20" id="GOu-ig-5Gt"/>
                             <constraint firstAttribute="centerX" secondItem="bEO-DB-y6l" secondAttribute="centerX" id="I5f-8T-BJO"/>
                             <constraint firstItem="P3v-lI-hbb" firstAttribute="top" secondItem="bEO-DB-y6l" secondAttribute="bottom" constant="8" id="IVV-kt-hv1"/>
+                            <constraint firstItem="2CI-Fk-2th" firstAttribute="leading" secondItem="Dn4-RW-wlu" secondAttribute="trailing" constant="20" id="Ltj-h8-mbw"/>
+                            <constraint firstAttribute="width" secondItem="S3m-kV-AWG" secondAttribute="width" id="dbN-GW-cfR"/>
+                            <constraint firstItem="2CI-Fk-2th" firstAttribute="top" secondItem="Dn4-RW-wlu" secondAttribute="top" id="hSu-8S-jLR"/>
+                            <constraint firstItem="VMF-a8-j0d" firstAttribute="top" secondItem="2CI-Fk-2th" secondAttribute="bottom" constant="20" id="huH-1k-27j"/>
+                            <constraint firstItem="Dn4-RW-wlu" firstAttribute="top" secondItem="RTG-hu-fux" secondAttribute="bottom" constant="20" id="jXu-hu-Vtx"/>
+                            <constraint firstAttribute="centerX" secondItem="S3m-kV-AWG" secondAttribute="centerX" id="jvs-Ps-AQf"/>
                             <constraint firstItem="bEO-DB-y6l" firstAttribute="width" secondItem="9MW-HX-K41" secondAttribute="width" id="k3X-Fm-nMI"/>
+                            <constraint firstItem="VMF-a8-j0d" firstAttribute="leading" secondItem="Dn4-RW-wlu" secondAttribute="trailing" constant="20" id="ssM-Y7-cNK"/>
+                            <constraint firstItem="Dn4-RW-wlu" firstAttribute="leading" secondItem="9MW-HX-K41" secondAttribute="leadingMargin" id="wwx-a8-dy0"/>
+                            <constraint firstItem="OZU-Jx-oPg" firstAttribute="width" secondItem="9MW-HX-K41" secondAttribute="width" id="yYI-dm-xZN"/>
+                            <constraint firstAttribute="centerX" secondItem="OZU-Jx-oPg" secondAttribute="centerX" id="zrL-2E-wUt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Profile" id="6IE-ck-UYT">
@@ -203,6 +253,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="email" destination="VMF-a8-j0d" id="qoe-4r-acI"/>
+                        <outlet property="name" destination="2CI-Fk-2th" id="I3m-9P-aa8"/>
+                        <outlet property="profileImage" destination="Dn4-RW-wlu" id="J9w-9U-mEk"/>
                         <segue destination="BVn-mz-UDj" kind="presentation" identifier="loggedOut" id="qKZ-WE-nrt"/>
                     </connections>
                 </viewController>
@@ -421,6 +474,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1f-2i-FbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3357" y="1671"/>
+        </scene>
+        <!--User History View Controller-->
+        <scene sceneID="dJl-hP-38C">
+            <objects>
+                <tableViewController id="cht-HY-mCB" customClass="UserHistoryViewController" customModule="NavigationAndTabView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="EO0-tY-P7K">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fDo-pW-MRK">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fDo-pW-MRK" id="zna-ls-xxy">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cht-HY-mCB" id="GER-CD-88V"/>
+                            <outlet property="delegate" destination="cht-HY-mCB" id="g2h-ZP-hfO"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H74-Pv-3fp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3379" y="2353"/>
         </scene>
         <!--Detail Web View Controller-->
         <scene sceneID="atk-vD-nF3">
@@ -653,7 +732,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3S3-gW-gpF">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -896,6 +975,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnFacebook" destination="gCh-93-3HD" id="4ec-di-ZZf"/>
+                        <outlet property="btnForgot" destination="sKn-WD-eRO" id="pMt-Xk-zkP"/>
+                        <outlet property="btnLogin" destination="VUK-Zb-6aS" id="Cn1-rZ-58Z"/>
+                        <outlet property="btnSignup" destination="INY-Ue-xAF" id="JVp-pP-nrX"/>
                         <outlet property="txtEmail" destination="vnx-qA-RVX" id="Ozi-KF-197"/>
                         <outlet property="txtPassword" destination="avw-1O-IMS" id="L6A-rF-wXg"/>
                         <segue destination="CdQ-lw-zfs" kind="presentation" identifier="gotoSignUp" id="ySf-FU-47T"/>
@@ -908,7 +991,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="qKZ-WE-nrt"/>
-        <segue reference="Pg8-xH-c8l"/>
+        <segue reference="U0p-6z-1L4"/>
         <segue reference="TGg-Qe-egt"/>
     </inferredMetricsTieBreakers>
 </document>

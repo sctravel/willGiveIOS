@@ -11,6 +11,30 @@ import UIKit
 
 class ProfileViewController : UIViewController {
     
+    @IBOutlet var profileImage: UIImageView!
+    @IBOutlet var name: UILabel!
+    @IBOutlet var email: UILabel!
+    
+    
+    
+    override func viewDidAppear(animated: Bool) {
+    
+        NSLog("\(getUserObj())")
+        
+        var user = getUserObj()
+        
+        if user != nil {
+            var firstname = user!["firstName"] as? String
+            var lastname = user!["lastName"] as? String
+            name.text = "\(firstname!) \(lastname!)"
+            email.text = user!["email"] as? String
+            
+            var imagepath = user!["imageIconUrl"] as? String
+            LoadImage(imagepath, "", self.profileImage)
+        }
+    
+    }
+    
     @IBAction func logoutPressed(sender: AnyObject) {
         clearUserSession()
         self.performSegueWithIdentifier("loggedOut", sender: self)
@@ -20,4 +44,5 @@ class ProfileViewController : UIViewController {
         let appDomain = NSBundle.mainBundle().bundleIdentifier
         NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain!)
     }
+    
 }

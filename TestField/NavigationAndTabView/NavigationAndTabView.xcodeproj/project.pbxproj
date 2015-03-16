@@ -13,12 +13,26 @@
 		501C59D61A843EDC0086A1D1 /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C59D51A843EDC0086A1D1 /* ExploreTableViewController.swift */; };
 		501C59D81A843F250086A1D1 /* CharityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C59D71A843F250086A1D1 /* CharityHelper.swift */; };
 		501C59DC1A84499E0086A1D1 /* charitable_giving.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 501C59DB1A84499E0086A1D1 /* charitable_giving.jpg */; };
+		5022448F1AB78FC7002D6DFB /* LEBackgroundThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 502244821AB78FC7002D6DFB /* LEBackgroundThread.m */; };
+		502244901AB78FC7002D6DFB /* lecore.m in Sources */ = {isa = PBXBuildFile; fileRef = 502244841AB78FC7002D6DFB /* lecore.m */; };
+		502244911AB78FC7002D6DFB /* LELog.m in Sources */ = {isa = PBXBuildFile; fileRef = 502244881AB78FC7002D6DFB /* LELog.m */; };
+		502244921AB78FC7002D6DFB /* LeNetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 5022448A1AB78FC7002D6DFB /* LeNetworkStatus.m */; };
+		502244931AB78FC7002D6DFB /* LogFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5022448C1AB78FC7002D6DFB /* LogFile.m */; };
+		502244941AB78FC7002D6DFB /* LogFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 5022448E1AB78FC7002D6DFB /* LogFiles.m */; };
+		502244961AB790A0002D6DFB /* LogEntriesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502244951AB790A0002D6DFB /* LogEntriesHelper.swift */; };
+		5031305E1AAD68240075C70E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50312F431AAD68230075C70E /* FacebookSDK.framework */; };
+		5031305F1AAD68240075C70E /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50312F441AAD68230075C70E /* FBAudienceNetwork.framework */; };
+		503130601AAD68240075C70E /* FBAudienceNetwork.README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 50312F451AAD68230075C70E /* FBAudienceNetwork.README.txt */; };
+		503130611AAD68240075C70E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 50312F461AAD68230075C70E /* LICENSE */; };
+		503130621AAD68240075C70E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 50312F471AAD68230075C70E /* README.txt */; };
 		5053C8331A7E0AC000431CAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5053C8321A7E0AC000431CAD /* AppDelegate.swift */; };
 		5053C8351A7E0AC000431CAD /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5053C8341A7E0AC000431CAD /* ScanViewController.swift */; };
 		5053C83A1A7E0AC000431CAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5053C8391A7E0AC000431CAD /* Images.xcassets */; };
 		5053C83D1A7E0AC000431CAD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5053C83B1A7E0AC000431CAD /* LaunchScreen.xib */; };
 		5053C8491A7E0AC000431CAD /* NavigationAndTabViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5053C8481A7E0AC000431CAD /* NavigationAndTabViewTests.swift */; };
 		5055FD511A9D9C6200E4D6A4 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055FD501A9D9C6200E4D6A4 /* AlamofireExtension.swift */; };
+		506489F71AB7743C00DD0D41 /* UserHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506489F61AB7743C00DD0D41 /* UserHistoryViewController.swift */; };
+		506489F91AB7751300DD0D41 /* UserFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506489F81AB7751300DD0D41 /* UserFavoritesViewController.swift */; };
 		508AA7581AAD27B60088F011 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508AA7571AAD27B60088F011 /* SearchViewController.swift */; };
 		509E61A21A991B950042008C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509E61A11A991B950042008C /* SignupViewController.swift */; };
 		50CBB5151A94367A00DDEA85 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBB5141A94367A00DDEA85 /* HomeViewController.swift */; };
@@ -54,6 +68,26 @@
 		501C59D71A843F250086A1D1 /* CharityHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharityHelper.swift; sourceTree = "<group>"; };
 		501C59DB1A84499E0086A1D1 /* charitable_giving.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = charitable_giving.jpg; sourceTree = "<group>"; };
 		501C59DD1A8865140086A1D1 /* MyApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		502244811AB78FC7002D6DFB /* LEBackgroundThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEBackgroundThread.h; sourceTree = "<group>"; };
+		502244821AB78FC7002D6DFB /* LEBackgroundThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEBackgroundThread.m; sourceTree = "<group>"; };
+		502244831AB78FC7002D6DFB /* lecore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lecore.h; sourceTree = "<group>"; };
+		502244841AB78FC7002D6DFB /* lecore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lecore.m; sourceTree = "<group>"; };
+		502244851AB78FC7002D6DFB /* lelib-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "lelib-Prefix.pch"; sourceTree = "<group>"; };
+		502244861AB78FC7002D6DFB /* lelib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lelib.h; sourceTree = "<group>"; };
+		502244871AB78FC7002D6DFB /* LELog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LELog.h; sourceTree = "<group>"; };
+		502244881AB78FC7002D6DFB /* LELog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LELog.m; sourceTree = "<group>"; };
+		502244891AB78FC7002D6DFB /* LeNetworkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeNetworkStatus.h; sourceTree = "<group>"; };
+		5022448A1AB78FC7002D6DFB /* LeNetworkStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeNetworkStatus.m; sourceTree = "<group>"; };
+		5022448B1AB78FC7002D6DFB /* LogFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogFile.h; sourceTree = "<group>"; };
+		5022448C1AB78FC7002D6DFB /* LogFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogFile.m; sourceTree = "<group>"; };
+		5022448D1AB78FC7002D6DFB /* LogFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogFiles.h; sourceTree = "<group>"; };
+		5022448E1AB78FC7002D6DFB /* LogFiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogFiles.m; sourceTree = "<group>"; };
+		502244951AB790A0002D6DFB /* LogEntriesHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEntriesHelper.swift; sourceTree = "<group>"; };
+		50312F431AAD68230075C70E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		50312F441AAD68230075C70E /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		50312F451AAD68230075C70E /* FBAudienceNetwork.README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FBAudienceNetwork.README.txt; sourceTree = "<group>"; };
+		50312F461AAD68230075C70E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		50312F471AAD68230075C70E /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		5053C82D1A7E0AC000431CAD /* NavigationAndTabView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationAndTabView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5053C8311A7E0AC000431CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5053C8321A7E0AC000431CAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +98,8 @@
 		5053C8471A7E0AC000431CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5053C8481A7E0AC000431CAD /* NavigationAndTabViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAndTabViewTests.swift; sourceTree = "<group>"; };
 		5055FD501A9D9C6200E4D6A4 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
+		506489F61AB7743C00DD0D41 /* UserHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHistoryViewController.swift; sourceTree = "<group>"; };
+		506489F81AB7751300DD0D41 /* UserFavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFavoritesViewController.swift; sourceTree = "<group>"; };
 		508AA7571AAD27B60088F011 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		509E61A11A991B950042008C /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		50CBB5141A94367A00DDEA85 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5031305F1AAD68240075C70E /* FBAudienceNetwork.framework in Frameworks */,
+				5031305E1AAD68240075C70E /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +137,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		502244801AB78FC7002D6DFB /* lelib */ = {
+			isa = PBXGroup;
+			children = (
+				502244811AB78FC7002D6DFB /* LEBackgroundThread.h */,
+				502244821AB78FC7002D6DFB /* LEBackgroundThread.m */,
+				502244831AB78FC7002D6DFB /* lecore.h */,
+				502244841AB78FC7002D6DFB /* lecore.m */,
+				502244851AB78FC7002D6DFB /* lelib-Prefix.pch */,
+				502244861AB78FC7002D6DFB /* lelib.h */,
+				502244871AB78FC7002D6DFB /* LELog.h */,
+				502244881AB78FC7002D6DFB /* LELog.m */,
+				502244891AB78FC7002D6DFB /* LeNetworkStatus.h */,
+				5022448A1AB78FC7002D6DFB /* LeNetworkStatus.m */,
+				5022448B1AB78FC7002D6DFB /* LogFile.h */,
+				5022448C1AB78FC7002D6DFB /* LogFile.m */,
+				5022448D1AB78FC7002D6DFB /* LogFiles.h */,
+				5022448E1AB78FC7002D6DFB /* LogFiles.m */,
+			);
+			name = lelib;
+			path = NavigationAndTabView/lelib;
+			sourceTree = "<group>";
+		};
+		50312F401AAD680A0075C70E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				502244801AB78FC7002D6DFB /* lelib */,
+				50312F411AAD68230075C70E /* FacebookSDK */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50312F411AAD68230075C70E /* FacebookSDK */ = {
+			isa = PBXGroup;
+			children = (
+				50312F431AAD68230075C70E /* FacebookSDK.framework */,
+				50312F441AAD68230075C70E /* FBAudienceNetwork.framework */,
+				50312F451AAD68230075C70E /* FBAudienceNetwork.README.txt */,
+				50312F461AAD68230075C70E /* LICENSE */,
+				50312F471AAD68230075C70E /* README.txt */,
+			);
+			path = FacebookSDK;
+			sourceTree = "<group>";
+		};
 		5053C8241A7E0AC000431CAD = {
 			isa = PBXGroup;
 			children = (
+				50312F401AAD680A0075C70E /* Frameworks */,
 				5053C82F1A7E0AC000431CAD /* NavigationAndTabView */,
 				5053C8451A7E0AC000431CAD /* NavigationAndTabViewTests */,
 				5053C82E1A7E0AC000431CAD /* Products */,
@@ -120,8 +202,8 @@
 		5053C82F1A7E0AC000431CAD /* NavigationAndTabView */ = {
 			isa = PBXGroup;
 			children = (
-				50DE37001A968F67004599D3 /* Alamofire.swift */,
 				5053C8321A7E0AC000431CAD /* AppDelegate.swift */,
+				501C59DD1A8865140086A1D1 /* MyApp-Bridging-Header.h */,
 				50DE37021A96931F004599D3 /* Main.storyboard */,
 				5053C8391A7E0AC000431CAD /* Images.xcassets */,
 				5053C83B1A7E0AC000431CAD /* LaunchScreen.xib */,
@@ -134,6 +216,8 @@
 				50E82AD41A9EFC30003ECCA2 /* CharityTableCell.swift */,
 				50E82AD21A9EFBB3003ECCA2 /* TipInCellAnimator.swift */,
 				50F41ECE1AA22DAD006ED7B2 /* ProfileViewController.swift */,
+				506489F61AB7743C00DD0D41 /* UserHistoryViewController.swift */,
+				506489F81AB7751300DD0D41 /* UserFavoritesViewController.swift */,
 				501C59D31A81D3C60086A1D1 /* DetailPageViewController.swift */,
 				50E82AD01A9EE6F5003ECCA2 /* DetailWebViewController.swift */,
 				50F41ED01AA61E30006ED7B2 /* PledgeViewController.swift */,
@@ -144,9 +228,10 @@
 				50CBB5161A9469D400DDEA85 /* UserHelper.swift */,
 				50E82AD61A9F017A003ECCA2 /* ImageHelper.swift */,
 				50DE37051A96956E004599D3 /* RegexHelper.swift */,
+				50DE37001A968F67004599D3 /* Alamofire.swift */,
 				5055FD501A9D9C6200E4D6A4 /* AlamofireExtension.swift */,
 				50E82AD81AA02B67003ECCA2 /* StringExtension.swift */,
-				501C59DD1A8865140086A1D1 /* MyApp-Bridging-Header.h */,
+				502244951AB790A0002D6DFB /* LogEntriesHelper.swift */,
 			);
 			path = NavigationAndTabView;
 			sourceTree = "<group>";
@@ -241,6 +326,7 @@
 			knownRegions = (
 				en,
 				Base,
+				he,
 			);
 			mainGroup = 5053C8241A7E0AC000431CAD;
 			productRefGroup = 5053C82E1A7E0AC000431CAD /* Products */;
@@ -258,9 +344,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				503130611AAD68240075C70E /* LICENSE in Resources */,
 				5053C83D1A7E0AC000431CAD /* LaunchScreen.xib in Resources */,
 				501C59DC1A84499E0086A1D1 /* charitable_giving.jpg in Resources */,
 				5053C83A1A7E0AC000431CAD /* Images.xcassets in Resources */,
+				503130601AAD68240075C70E /* FBAudienceNetwork.README.txt in Resources */,
+				503130621AAD68240075C70E /* README.txt in Resources */,
 				50DE37041A96931F004599D3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,28 +368,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502244961AB790A0002D6DFB /* LogEntriesHelper.swift in Sources */,
+				502244911AB78FC7002D6DFB /* LELog.m in Sources */,
 				50DE37081A96963A004599D3 /* AlertHelper.swift in Sources */,
 				50E82AD31A9EFBB3003ECCA2 /* TipInCellAnimator.swift in Sources */,
 				50F41ECF1AA22DAD006ED7B2 /* ProfileViewController.swift in Sources */,
 				50020E641A8FB86F00711685 /* LoginViewController.swift in Sources */,
+				5022448F1AB78FC7002D6DFB /* LEBackgroundThread.m in Sources */,
 				501C59D61A843EDC0086A1D1 /* ExploreTableViewController.swift in Sources */,
 				501C59D41A81D3C60086A1D1 /* DetailPageViewController.swift in Sources */,
 				50CBB5151A94367A00DDEA85 /* HomeViewController.swift in Sources */,
 				501C59D81A843F250086A1D1 /* CharityHelper.swift in Sources */,
 				50F41ED11AA61E30006ED7B2 /* PledgeViewController.swift in Sources */,
 				50CBB5171A9469D400DDEA85 /* UserHelper.swift in Sources */,
+				502244901AB78FC7002D6DFB /* lecore.m in Sources */,
 				50E82AD51A9EFC30003ECCA2 /* CharityTableCell.swift in Sources */,
 				5053C8351A7E0AC000431CAD /* ScanViewController.swift in Sources */,
 				508AA7581AAD27B60088F011 /* SearchViewController.swift in Sources */,
 				50DE37011A968F67004599D3 /* Alamofire.swift in Sources */,
 				50E82AD71A9F017A003ECCA2 /* ImageHelper.swift in Sources */,
+				506489F91AB7751300DD0D41 /* UserFavoritesViewController.swift in Sources */,
 				50E82AD11A9EE6F5003ECCA2 /* DetailWebViewController.swift in Sources */,
 				509E61A21A991B950042008C /* SignupViewController.swift in Sources */,
+				506489F71AB7743C00DD0D41 /* UserHistoryViewController.swift in Sources */,
 				5055FD511A9D9C6200E4D6A4 /* AlamofireExtension.swift in Sources */,
 				5053C8331A7E0AC000431CAD /* AppDelegate.swift in Sources */,
+				502244931AB78FC7002D6DFB /* LogFile.m in Sources */,
 				50020E601A8EFD3C00711685 /* Constants.swift in Sources */,
+				502244941AB78FC7002D6DFB /* LogFiles.m in Sources */,
 				50E82AD91AA02B67003ECCA2 /* StringExtension.swift in Sources */,
 				50DE37061A96956E004599D3 /* RegexHelper.swift in Sources */,
+				502244921AB78FC7002D6DFB /* LeNetworkStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +525,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookSDK",
+				);
 				INFOPLIST_FILE = NavigationAndTabView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -442,6 +544,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookSDK",
+				);
 				INFOPLIST_FILE = NavigationAndTabView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
