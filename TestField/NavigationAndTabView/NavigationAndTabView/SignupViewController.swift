@@ -67,7 +67,6 @@ class SingupViewController : UIViewController, UITextFieldDelegate {
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
-        // /services/login/mobileSignup
         
     }
     

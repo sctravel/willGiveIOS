@@ -34,6 +34,7 @@ class UserHistoryViewController : UITableViewController {
                         NSLog("\(resp)")
                         resp.map({self.history.append($0)})
                         NSLog("Operation SUCCESS");
+                        self.tableView.reloadData()
                     }
             }
         }
@@ -41,15 +42,21 @@ class UserHistoryViewController : UITableViewController {
     
     // missing this function will not properly render the cells
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        NSLog("Count of history entries: \(history.count)")
         return history.count
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("CharityCell", forIndexPath: indexPath) as CharityTableCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("TransactionCell", forIndexPath: indexPath) as UITableViewCell
+        
+        var transaction = history[indexPath.row]
         
         NSLog("Populating cell")
-        cell.populate(history[indexPath.row])
+        var name = transaction["name"] as String
+        var amt = transaction["amount"] as NSNumber
+        var time = transaction["settleTime"] as String
+        cell.textLabel!.text = "$\(amt), \(name), \(time)"
         
         return cell
     }
