@@ -61,22 +61,7 @@ class SingupViewController : UIViewController, UITextFieldDelegate {
                     var user = JSON! as NSDictionary
                     showAlert("Sign Up Succeeded!", "Please log in", self)
                     NSLog(user.description)
-                    
-                    // sign in user as well
-//                    var credential = ["username" : eml, "password" : pswd]
-//                    request(.POST, SignInURL, parameters: credential)
-//                        .responseJSON { (request, response, JSON, error) in
-//                            if(error != nil || JSON == nil) {
-//                                showAlert("Sign in Failed!", "Please check your Email/Password", self)
-//                                NSLog(error!.localizedDescription)
-//                            }
-//                            else {
-//                                var user = JSON! as NSDictionary
-//                                NSLog("Login SUCCESS");
-//                                saveUser(user)
-//                                
-//                            }
-//                        }
+                    saveUser(user, pswd, false)
                 }
                 
                 self.dismissViewControllerAnimated(true, completion: nil)

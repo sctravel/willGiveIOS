@@ -27,16 +27,17 @@ import Foundation
 //}
 
 
-func saveUser(user : NSDictionary) {
+func saveUser(user : NSDictionary, pswd : String, fblogin : Bool) {
     let email = user["email"] as String
     var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
     prefs.setObject(email, forKey: "USERNAME")
     // set ID: prefs.setObject(ID, forKey: "USERID")
     prefs.setObject(user, forKey: "USEROBJ")
+    prefs.setBool(fblogin, forKey: "FBLOGIN")
+    prefs.setObject(pswd, forKey: "PASSWORD" )
     prefs.setInteger(1, forKey: "ISLOGGEDIN")
     prefs.synchronize()
     // TODO save the credential for how long?
-    
 }
 
 func isLoggedIn() -> Bool {
@@ -46,6 +47,16 @@ func isLoggedIn() -> Bool {
         return false
     }
     return true
+}
+
+func isFacebookLoggedIn() -> Bool {
+    let prefs : NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    let isLoggedIn:Int = prefs.integerForKey("ISLOGGEDIN") as Int
+    let isFblogin:Bool = prefs.boolForKey("FBLOGIN") as Bool
+    if isLoggedIn == 1 && isFblogin {
+        return true
+    }
+    return false
 }
 
 func getUserId() -> Int? {

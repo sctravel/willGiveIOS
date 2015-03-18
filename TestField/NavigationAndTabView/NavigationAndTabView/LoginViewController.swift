@@ -63,7 +63,7 @@ class LoginViewController : UIViewController, FBLoginViewDelegate {
                     else {
                         var user = JSON! as NSDictionary
                         NSLog("Login SUCCESS");
-                        saveUser(user)
+                        saveUser(user, password, false)
                         self.dismissViewControllerAnimated(true, completion: nil)
                     }
                 }
@@ -117,7 +117,7 @@ class LoginViewController : UIViewController, FBLoginViewDelegate {
                 else {
                     var user = JSON! as NSDictionary
                     NSLog("Login SUCCESS");
-                    saveUser(user)
+                    saveUser(user, "", true)
                     self.dismissViewControllerAnimated(true, completion: nil)
                 }
         }

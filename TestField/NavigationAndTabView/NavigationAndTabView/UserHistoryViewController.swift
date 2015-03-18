@@ -31,6 +31,7 @@ class UserHistoryViewController : UITableViewController {
                     }
                     else {
                         var resp = JSON! as [NSDictionary]
+                        NSLog("\(resp)")
                         resp.map({self.history.append($0)})
                         NSLog("Operation SUCCESS");
                     }
