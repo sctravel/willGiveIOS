@@ -19,7 +19,14 @@ func LoadImage(imagePath : String?, postfix : String, imageView : UIImageView ) 
             NSLog("Image not found in cache; retrieving \(path)")
             // clear the image
             imageView.image  = nil
-            let url = "https://" + ServerAddress + path
+            
+            var url : String
+            if path.rangeOfString("http")?.startIndex == path.startIndex {
+                url = path
+            }
+            else {
+                url = "https://" + ServerAddress + path
+            }
             
             request(.GET, url).validate(contentType: ["image/*"]).responseImage() {
                 (_, _, image, error) in
