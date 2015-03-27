@@ -59,6 +59,11 @@ func isFacebookLoggedIn() -> Bool {
     return false
 }
 
+func isFacebookCredential() -> Bool {
+    let prefs : NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    return prefs.boolForKey("FBLOGIN") as Bool
+}
+
 func getUserId() -> Int? {
     let user = getUserObj()
     if user != nil { return user!["userId"] as? Int}
@@ -70,3 +75,5 @@ func getUserObj() -> NSDictionary? {
     let user:NSDictionary? = prefs.dictionaryForKey("USEROBJ")
     return user
 }
+
+var fblogin : FBSDKLoginManager = FBSDKLoginManager()

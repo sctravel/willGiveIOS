@@ -9,7 +9,8 @@
 #ifndef NavigationAndTabView_MyApp_Bridging_Header_h
 #define NavigationAndTabView_MyApp_Bridging_Header_h
 
-#import <FacebookSDK/FacebookSDK.h>
 #import "lelib/lelib.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 #endif

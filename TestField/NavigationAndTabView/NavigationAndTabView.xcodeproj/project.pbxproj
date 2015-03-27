@@ -20,11 +20,6 @@
 		502244931AB78FC7002D6DFB /* LogFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5022448C1AB78FC7002D6DFB /* LogFile.m */; };
 		502244941AB78FC7002D6DFB /* LogFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 5022448E1AB78FC7002D6DFB /* LogFiles.m */; };
 		502244961AB790A0002D6DFB /* LogEntriesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502244951AB790A0002D6DFB /* LogEntriesHelper.swift */; };
-		5031305E1AAD68240075C70E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50312F431AAD68230075C70E /* FacebookSDK.framework */; };
-		5031305F1AAD68240075C70E /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50312F441AAD68230075C70E /* FBAudienceNetwork.framework */; };
-		503130601AAD68240075C70E /* FBAudienceNetwork.README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 50312F451AAD68230075C70E /* FBAudienceNetwork.README.txt */; };
-		503130611AAD68240075C70E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 50312F461AAD68230075C70E /* LICENSE */; };
-		503130621AAD68240075C70E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 50312F471AAD68230075C70E /* README.txt */; };
 		5053C8331A7E0AC000431CAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5053C8321A7E0AC000431CAD /* AppDelegate.swift */; };
 		5053C8351A7E0AC000431CAD /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5053C8341A7E0AC000431CAD /* ScanViewController.swift */; };
 		5053C83A1A7E0AC000431CAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5053C8391A7E0AC000431CAD /* Images.xcassets */; };
@@ -48,6 +43,8 @@
 		50E82AD91AA02B67003ECCA2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E82AD81AA02B67003ECCA2 /* StringExtension.swift */; };
 		50F41ECF1AA22DAD006ED7B2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F41ECE1AA22DAD006ED7B2 /* ProfileViewController.swift */; };
 		50F41ED11AA61E30006ED7B2 /* PledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F41ED01AA61E30006ED7B2 /* PledgeViewController.swift */; };
+		50FDA4DA1AC4D87C0054AF86 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FDA4D91AC4D87C0054AF86 /* FBSDKLoginKit.framework */; };
+		50FDA4DC1AC4DA520054AF86 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FDA4DB1AC4DA520054AF86 /* FBSDKCoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,11 +80,6 @@
 		5022448D1AB78FC7002D6DFB /* LogFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogFiles.h; sourceTree = "<group>"; };
 		5022448E1AB78FC7002D6DFB /* LogFiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogFiles.m; sourceTree = "<group>"; };
 		502244951AB790A0002D6DFB /* LogEntriesHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEntriesHelper.swift; sourceTree = "<group>"; };
-		50312F431AAD68230075C70E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		50312F441AAD68230075C70E /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
-		50312F451AAD68230075C70E /* FBAudienceNetwork.README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FBAudienceNetwork.README.txt; sourceTree = "<group>"; };
-		50312F461AAD68230075C70E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		50312F471AAD68230075C70E /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		5053C82D1A7E0AC000431CAD /* NavigationAndTabView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationAndTabView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5053C8311A7E0AC000431CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5053C8321A7E0AC000431CAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +107,8 @@
 		50E82AD81AA02B67003ECCA2 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		50F41ECE1AA22DAD006ED7B2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		50F41ED01AA61E30006ED7B2 /* PledgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PledgeViewController.swift; sourceTree = "<group>"; };
+		50FDA4D91AC4D87C0054AF86 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		50FDA4DB1AC4DA520054AF86 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +116,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5031305F1AAD68240075C70E /* FBAudienceNetwork.framework in Frameworks */,
-				5031305E1AAD68240075C70E /* FacebookSDK.framework in Frameworks */,
+				50FDA4DC1AC4DA520054AF86 /* FBSDKCoreKit.framework in Frameworks */,
+				50FDA4DA1AC4D87C0054AF86 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,11 +165,8 @@
 		50312F411AAD68230075C70E /* FacebookSDK */ = {
 			isa = PBXGroup;
 			children = (
-				50312F431AAD68230075C70E /* FacebookSDK.framework */,
-				50312F441AAD68230075C70E /* FBAudienceNetwork.framework */,
-				50312F451AAD68230075C70E /* FBAudienceNetwork.README.txt */,
-				50312F461AAD68230075C70E /* LICENSE */,
-				50312F471AAD68230075C70E /* README.txt */,
+				50FDA4DB1AC4DA520054AF86 /* FBSDKCoreKit.framework */,
+				50FDA4D91AC4D87C0054AF86 /* FBSDKLoginKit.framework */,
 			);
 			path = FacebookSDK;
 			sourceTree = "<group>";
@@ -344,12 +335,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				503130611AAD68240075C70E /* LICENSE in Resources */,
 				5053C83D1A7E0AC000431CAD /* LaunchScreen.xib in Resources */,
 				501C59DC1A84499E0086A1D1 /* charitable_giving.jpg in Resources */,
 				5053C83A1A7E0AC000431CAD /* Images.xcassets in Resources */,
-				503130601AAD68240075C70E /* FBAudienceNetwork.README.txt in Resources */,
-				503130621AAD68240075C70E /* README.txt in Resources */,
 				50DE37041A96931F004599D3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

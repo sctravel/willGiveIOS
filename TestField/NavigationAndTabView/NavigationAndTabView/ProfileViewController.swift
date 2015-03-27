@@ -36,7 +36,11 @@ class ProfileViewController : UIViewController {
     }
     
     @IBAction func logoutPressed(sender: AnyObject) {
+        if isFacebookCredential() {
+            fblogin.logOut()
+        }
         clearUserSession()
+        
         self.performSegueWithIdentifier("loggedOut", sender: self)
     }
     

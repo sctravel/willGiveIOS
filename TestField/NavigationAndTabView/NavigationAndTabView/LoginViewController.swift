@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class LoginViewController : UIViewController, FBLoginViewDelegate {
+class LoginViewController : UIViewController {
  
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
@@ -27,7 +27,6 @@ class LoginViewController : UIViewController, FBLoginViewDelegate {
         logger.log("hello log entries")
         
         super.viewDidAppear(true)
-        toggleHiddenState(false)
         if isLoggedIn() {
             self.dismissViewControllerAnimated(true, completion: nil)
         }
@@ -80,51 +79,30 @@ class LoginViewController : UIViewController, FBLoginViewDelegate {
     @IBAction func facebookPressed(sender: AnyObject) {
         NSLog("Facebook button pressed")
         
-        var loginView = FBLoginView()
-        loginView.center = self.view.center
-        self.view.addSubview(loginView)
-        loginView.delegate = self
-    
-        toggleHiddenState(true)
-        
-    }
-    
-    func toggleHiddenState(shouldHide : Bool){
-        txtEmail.hidden = shouldHide
-        txtPassword.hidden = shouldHide
-        
-        btnFacebook.hidden = shouldHide
-        btnForgot.hidden = shouldHide
-        btnLogin.hidden = shouldHide
-        btnSignup.hidden = shouldHide
-    }
-    
-    func loginViewShowingLoggedInUser(loginView: FBLoginView!) {
-        
-        //get session data; send it to server; and carry on
-        
-        var parameters = ["access_token" : FBSession.activeSession().accessTokenData.accessToken, "refresh_token" : ""]
-        NSLog("\(parameters)")
-        request(.POST, FbSignInURL, parameters: parameters)
-            .responseJSON { (request, response, JSON, error) in
-                println("request: \(request)")
-                println("response: \(response)")
-                // TODO furhter drill down of error scenarios, based on response.statusCode
-                if(error != nil || JSON == nil) {
-                    showAlert("FB Sign In Failed!", "Please try again", self)
-                    NSLog(error!.localizedDescription)
-                }
-                else {
-                    var user = JSON! as NSDictionary
-                    NSLog("Login SUCCESS");
-                    saveUser(user, "", true)
-                    self.dismissViewControllerAnimated(true, completion: nil)
-                }
-        }
-    }
-    
-    func loginView(loginView: FBLoginView!, handleError error: NSError!) {
-        NSLog("\(error.description)")
+        var permissions = ["public_profile", "email"]  // email permission is necessary for willGive user id
+        fblogin.logInWithReadPermissions(permissions, handler: { (result, error) -> Void in
+            NSLog("result: \(result)")
+            NSLog("error: \(error)")
+            var parameters = ["access_token" :FBSDKAccessToken.currentAccessToken().tokenString, "refresh_token" : ""]
+            NSLog("\(parameters)")
+            request(.POST, FbSignInURL, parameters: parameters)
+                .responseJSON { (request, response, JSON, error) in
+                    println("request: \(request)")
+                    println("response: \(response)")
+                    // TODO furhter drill down of error scenarios, based on response.statusCode
+                    if(error != nil || JSON == nil) {
+                        showAlert("FB Sign In Failed!", "Please try again", self)
+                        NSLog(error!.localizedDescription)
+                    }
+                    else {
+                        var user = JSON! as NSDictionary
+                        NSLog("Login SUCCESS");
+                        saveUser(user, "", true)
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    }
+            }
+            
+        })        
     }
     
     @IBAction func forgotPressed(sender: AnyObject) {

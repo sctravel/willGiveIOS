@@ -16,9 +16,25 @@ class HomeViewController : UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         
-        if !isLoggedIn() || isFacebookLoggedIn() {
+        if !isLoggedIn() && !isFacebookLoggedIn() {
             self.performSegueWithIdentifier("gotoLogin", sender: self)
-        } else {
+        } else if isFacebookCredential() {
+            // what does fb need for access token
+//            fblogin.logInWithReadPermissions(["public_profile", "email"], handler: { (result, error) -> Void in
+//                NSLog("fb login result \(result)")
+//                NSLog("fb login erorr \(error)")
+//            })
+            
+            self.usernameLabel.text = "welcome back\n"
+            // NSLog("Already logged in as: \(email)")
+            
+            sleep(2)
+            // prefs.setInteger(0, forKey: "ISLOGGEDIN")
+            
+            self.performSegueWithIdentifier("gotoMainPage", sender: self)
+            
+        } else
+        {
             // try to login in with saved credentials
             let prefs : NSUserDefaults = NSUserDefaults.standardUserDefaults()
             var email = prefs.valueForKey("USERNAME") as String
