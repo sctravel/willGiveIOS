@@ -20,6 +20,7 @@ let PledgeURL : String = "https://" + ServerAddress + "/payment/pledge"
 let SearchURL : String = "https://" + ServerAddress + "/services/charities/searchCharity"
 let FbSignInURL : String = "https://" + ServerAddress + "/auth/facebook/token"
 let UserHistoryURL : String = "https://" + ServerAddress + "/services/user/getTransactionHistory"
+let UserFavoritesURL : String = "https://" + ServerAddress + "/services/user/getFavoriteCharity"
 let CharityHistoryURL : String = "https://" + ServerAddress + "/services/transactionsByCharityId"
 
 

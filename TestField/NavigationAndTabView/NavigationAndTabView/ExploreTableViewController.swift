@@ -97,9 +97,6 @@ class ExploreTableViewController: UITableViewController {
             populateCharities()
         }
     }
-
-    
-    // add search functionality
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
