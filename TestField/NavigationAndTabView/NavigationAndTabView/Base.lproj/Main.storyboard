@@ -6,11 +6,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Explore-->
+        <!--Navigation Controller-->
         <scene sceneID="6ZG-ww-PIf">
             <objects>
                 <navigationController storyboardIdentifier="ExploreNC" id="BDV-IM-6XV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explore" id="TzV-n1-Ysi"/>
+                    <tabBarItem key="tabBarItem" title="" image="Glasses-32.png" id="TzV-n1-Ysi"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qet-2D-pIu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -28,7 +28,7 @@
             <objects>
                 <tableViewController id="hbb-Fd-xdN" customClass="ExploreTableViewController" customModule="NavigationAndTabView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="cjw-U0-xsn">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -96,11 +96,11 @@
             </objects>
             <point key="canvasLocation" x="2654" y="912"/>
         </scene>
-        <!--Favorites-->
+        <!--Navigation Controller-->
         <scene sceneID="XGj-ET-yCv">
             <objects>
                 <navigationController storyboardIdentifier="MoreNC" id="YfN-aw-6Ve" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" id="Aae-fj-Fkm"/>
+                    <tabBarItem key="tabBarItem" title="" image="Like-32.png" id="Aae-fj-Fkm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SOT-oH-hIc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -113,11 +113,13 @@
             </objects>
             <point key="canvasLocation" x="1954.5" y="2272"/>
         </scene>
-        <!--My Profile-->
+        <!--Navigation Controller-->
         <scene sceneID="L2j-e4-NdL">
             <objects>
                 <navigationController storyboardIdentifier="ProfileNC" id="DuE-F4-4IU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Profile" id="zxA-16-5O5"/>
+                    <tabBarItem key="tabBarItem" tag="8" title="" image="User Male 3-32.png" id="zxA-16-5O5">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aE7-40-rFi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -139,7 +141,7 @@
                         <viewControllerLayoutGuide type="bottom" id="P3v-lI-hbb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9MW-HX-K41">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEO-DB-y6l">
@@ -168,19 +170,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3m-kV-AWG">
-                                <rect key="frame" x="0.0" y="194" width="600" height="50"/>
-                                <color key="backgroundColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="rWm-7x-n88"/>
-                                </constraints>
-                                <state key="normal" title="Favorites">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZU-Jx-oPg">
-                                <rect key="frame" x="0.0" y="252" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="194" width="600" height="50"/>
                                 <color key="backgroundColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="NEh-zJ-r3H"/>
@@ -203,16 +194,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Dn4-RW-wlu" firstAttribute="bottom" secondItem="S3m-kV-AWG" secondAttribute="top" constant="-20" id="FI6-Qj-2oQ"/>
-                            <constraint firstItem="OZU-Jx-oPg" firstAttribute="top" secondItem="S3m-kV-AWG" secondAttribute="bottom" constant="8" id="GOu-ig-5Gt"/>
+                            <constraint firstItem="OZU-Jx-oPg" firstAttribute="top" secondItem="Dn4-RW-wlu" secondAttribute="bottom" constant="20" id="H2M-49-Dmg"/>
                             <constraint firstAttribute="centerX" secondItem="bEO-DB-y6l" secondAttribute="centerX" id="I5f-8T-BJO"/>
                             <constraint firstItem="P3v-lI-hbb" firstAttribute="top" secondItem="bEO-DB-y6l" secondAttribute="bottom" id="IVV-kt-hv1"/>
                             <constraint firstItem="2CI-Fk-2th" firstAttribute="leading" secondItem="Dn4-RW-wlu" secondAttribute="trailing" constant="20" id="Ltj-h8-mbw"/>
-                            <constraint firstAttribute="width" secondItem="S3m-kV-AWG" secondAttribute="width" id="dbN-GW-cfR"/>
                             <constraint firstItem="2CI-Fk-2th" firstAttribute="top" secondItem="Dn4-RW-wlu" secondAttribute="top" id="hSu-8S-jLR"/>
                             <constraint firstItem="VMF-a8-j0d" firstAttribute="top" secondItem="2CI-Fk-2th" secondAttribute="bottom" constant="20" id="huH-1k-27j"/>
                             <constraint firstItem="Dn4-RW-wlu" firstAttribute="top" secondItem="RTG-hu-fux" secondAttribute="bottom" constant="20" id="jXu-hu-Vtx"/>
-                            <constraint firstAttribute="centerX" secondItem="S3m-kV-AWG" secondAttribute="centerX" id="jvs-Ps-AQf"/>
                             <constraint firstItem="bEO-DB-y6l" firstAttribute="width" secondItem="9MW-HX-K41" secondAttribute="width" id="k3X-Fm-nMI"/>
                             <constraint firstItem="VMF-a8-j0d" firstAttribute="leading" secondItem="Dn4-RW-wlu" secondAttribute="trailing" constant="20" id="ssM-Y7-cNK"/>
                             <constraint firstItem="Dn4-RW-wlu" firstAttribute="leading" secondItem="9MW-HX-K41" secondAttribute="leadingMargin" id="wwx-a8-dy0"/>
@@ -385,7 +373,7 @@
             <objects>
                 <tableViewController id="VFd-9j-J52" customClass="SearchViewController" customModule="NavigationAndTabView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="erN-PJ-sLK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Tap here to search" id="Q7o-VB-jLi">
@@ -457,7 +445,7 @@
             <objects>
                 <tableViewController id="0I0-Gj-cyE" customClass="UserFavoritesViewController" customModule="NavigationAndTabView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="IZd-t4-8kd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -522,7 +510,7 @@
             <objects>
                 <tableViewController id="cht-HY-mCB" customClass="UserHistoryViewController" customModule="NavigationAndTabView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="EO0-tY-P7K">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -652,7 +640,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="miF-cl-w5N" userLabel="innerView">
@@ -708,11 +696,11 @@
             </objects>
             <point key="canvasLocation" x="2654" y="195"/>
         </scene>
-        <!--Scan-->
+        <!--Navigation Controller-->
         <scene sceneID="Ayc-rv-GC4">
             <objects>
                 <navigationController storyboardIdentifier="ScanNC" automaticallyAdjustsScrollViewInsets="NO" id="uki-z0-L6t" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Scan" id="nIx-Uz-9pY"/>
+                    <tabBarItem key="tabBarItem" title="" image="QR Code-32.png" id="nIx-Uz-9pY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kuf-K2-ewn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -727,13 +715,13 @@
             </objects>
             <point key="canvasLocation" x="1954.5" y="252"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="Nbu-aE-nUv">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1K6-Sa-vU4" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1K6-Sa-vU4" customClass="MainTabBarController" customModule="NavigationAndTabView" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="rUI-lP-Bhs">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="rUI-lP-Bhs">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -1041,9 +1029,16 @@
             <point key="canvasLocation" x="441" y="1040"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Glasses-32.png" width="32" height="32"/>
+        <image name="Like-32.png" width="32" height="32"/>
+        <image name="QR Code-32.png" width="32" height="32"/>
+        <image name="User Male 3-32.png" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QAX-eY-p74"/>
         <segue reference="qKZ-WE-nrt"/>
         <segue reference="U0p-6z-1L4"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

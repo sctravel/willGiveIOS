@@ -12,7 +12,6 @@
 		501C59D41A81D3C60086A1D1 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C59D31A81D3C60086A1D1 /* DetailPageViewController.swift */; };
 		501C59D61A843EDC0086A1D1 /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C59D51A843EDC0086A1D1 /* ExploreTableViewController.swift */; };
 		501C59D81A843F250086A1D1 /* CharityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C59D71A843F250086A1D1 /* CharityHelper.swift */; };
-		501C59DC1A84499E0086A1D1 /* charitable_giving.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 501C59DB1A84499E0086A1D1 /* charitable_giving.jpg */; };
 		5022448F1AB78FC7002D6DFB /* LEBackgroundThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 502244821AB78FC7002D6DFB /* LEBackgroundThread.m */; };
 		502244901AB78FC7002D6DFB /* lecore.m in Sources */ = {isa = PBXBuildFile; fileRef = 502244841AB78FC7002D6DFB /* lecore.m */; };
 		502244911AB78FC7002D6DFB /* LELog.m in Sources */ = {isa = PBXBuildFile; fileRef = 502244881AB78FC7002D6DFB /* LELog.m */; };
@@ -32,6 +31,15 @@
 		509E61A21A991B950042008C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509E61A11A991B950042008C /* SignupViewController.swift */; };
 		50CBB5151A94367A00DDEA85 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBB5141A94367A00DDEA85 /* HomeViewController.swift */; };
 		50CBB5171A9469D400DDEA85 /* UserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBB5161A9469D400DDEA85 /* UserHelper.swift */; };
+		50CDCA331AE093FC000C509D /* Glasses-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50CDCA2F1AE093FC000C509D /* Glasses-50.png */; };
+		50CDCA341AE093FC000C509D /* QR Code-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50CDCA301AE093FC000C509D /* QR Code-50.png */; };
+		50CDCA361AE093FC000C509D /* Like-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50CDCA321AE093FC000C509D /* Like-50.png */; };
+		50CDCA3C1AE094F1000C509D /* Like-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 50CDCA371AE094F1000C509D /* Like-32.png */; };
+		50CDCA3D1AE094F1000C509D /* QR Code-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 50CDCA381AE094F1000C509D /* QR Code-32.png */; };
+		50CDCA3E1AE094F1000C509D /* User Male 3-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 50CDCA391AE094F1000C509D /* User Male 3-32.png */; };
+		50CDCA3F1AE094F1000C509D /* User Male 3-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50CDCA3A1AE094F1000C509D /* User Male 3-50.png */; };
+		50CDCA401AE094F1000C509D /* Glasses-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 50CDCA3B1AE094F1000C509D /* Glasses-32.png */; };
+		50CDCA421AE098FE000C509D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CDCA411AE098FE000C509D /* MainTabBarController.swift */; };
 		50DE37011A968F67004599D3 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DE37001A968F67004599D3 /* Alamofire.swift */; };
 		50DE37041A96931F004599D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50DE37021A96931F004599D3 /* Main.storyboard */; };
 		50DE37061A96956E004599D3 /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DE37051A96956E004599D3 /* RegexHelper.swift */; };
@@ -63,7 +71,6 @@
 		501C59D31A81D3C60086A1D1 /* DetailPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		501C59D51A843EDC0086A1D1 /* ExploreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreTableViewController.swift; sourceTree = "<group>"; };
 		501C59D71A843F250086A1D1 /* CharityHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharityHelper.swift; sourceTree = "<group>"; };
-		501C59DB1A84499E0086A1D1 /* charitable_giving.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = charitable_giving.jpg; sourceTree = "<group>"; };
 		501C59DD1A8865140086A1D1 /* MyApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		502244811AB78FC7002D6DFB /* LEBackgroundThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEBackgroundThread.h; sourceTree = "<group>"; };
 		502244821AB78FC7002D6DFB /* LEBackgroundThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEBackgroundThread.m; sourceTree = "<group>"; };
@@ -96,6 +103,15 @@
 		509E61A11A991B950042008C /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		50CBB5141A94367A00DDEA85 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		50CBB5161A9469D400DDEA85 /* UserHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHelper.swift; sourceTree = "<group>"; };
+		50CDCA2F1AE093FC000C509D /* Glasses-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Glasses-50.png"; sourceTree = "<group>"; };
+		50CDCA301AE093FC000C509D /* QR Code-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QR Code-50.png"; sourceTree = "<group>"; };
+		50CDCA321AE093FC000C509D /* Like-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Like-50.png"; sourceTree = "<group>"; };
+		50CDCA371AE094F1000C509D /* Like-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Like-32.png"; sourceTree = "<group>"; };
+		50CDCA381AE094F1000C509D /* QR Code-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QR Code-32.png"; sourceTree = "<group>"; };
+		50CDCA391AE094F1000C509D /* User Male 3-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User Male 3-32.png"; sourceTree = "<group>"; };
+		50CDCA3A1AE094F1000C509D /* User Male 3-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User Male 3-50.png"; sourceTree = "<group>"; };
+		50CDCA3B1AE094F1000C509D /* Glasses-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Glasses-32.png"; sourceTree = "<group>"; };
+		50CDCA411AE098FE000C509D /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		50DE37001A968F67004599D3 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Lib/Alamofire.swift; sourceTree = "<group>"; };
 		50DE37031A96931F004599D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50DE37051A96956E004599D3 /* RegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexHelper.swift; sourceTree = "<group>"; };
@@ -202,6 +218,7 @@
 				50CBB5141A94367A00DDEA85 /* HomeViewController.swift */,
 				50020E631A8FB86F00711685 /* LoginViewController.swift */,
 				509E61A11A991B950042008C /* SignupViewController.swift */,
+				50CDCA411AE098FE000C509D /* MainTabBarController.swift */,
 				5053C8341A7E0AC000431CAD /* ScanViewController.swift */,
 				501C59D51A843EDC0086A1D1 /* ExploreTableViewController.swift */,
 				50E82AD41A9EFC30003ECCA2 /* CharityTableCell.swift */,
@@ -230,7 +247,14 @@
 		5053C8301A7E0AC000431CAD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				501C59DB1A84499E0086A1D1 /* charitable_giving.jpg */,
+				50CDCA371AE094F1000C509D /* Like-32.png */,
+				50CDCA321AE093FC000C509D /* Like-50.png */,
+				50CDCA391AE094F1000C509D /* User Male 3-32.png */,
+				50CDCA3A1AE094F1000C509D /* User Male 3-50.png */,
+				50CDCA3B1AE094F1000C509D /* Glasses-32.png */,
+				50CDCA2F1AE093FC000C509D /* Glasses-50.png */,
+				50CDCA381AE094F1000C509D /* QR Code-32.png */,
+				50CDCA301AE093FC000C509D /* QR Code-50.png */,
 				5053C8311A7E0AC000431CAD /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -336,9 +360,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5053C83D1A7E0AC000431CAD /* LaunchScreen.xib in Resources */,
-				501C59DC1A84499E0086A1D1 /* charitable_giving.jpg in Resources */,
 				5053C83A1A7E0AC000431CAD /* Images.xcassets in Resources */,
+				50CDCA341AE093FC000C509D /* QR Code-50.png in Resources */,
+				50CDCA331AE093FC000C509D /* Glasses-50.png in Resources */,
+				50CDCA361AE093FC000C509D /* Like-50.png in Resources */,
+				50CDCA401AE094F1000C509D /* Glasses-32.png in Resources */,
+				50CDCA3C1AE094F1000C509D /* Like-32.png in Resources */,
+				50CDCA3F1AE094F1000C509D /* User Male 3-50.png in Resources */,
 				50DE37041A96931F004599D3 /* Main.storyboard in Resources */,
+				50CDCA3E1AE094F1000C509D /* User Male 3-32.png in Resources */,
+				50CDCA3D1AE094F1000C509D /* QR Code-32.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +397,7 @@
 				501C59D61A843EDC0086A1D1 /* ExploreTableViewController.swift in Sources */,
 				501C59D41A81D3C60086A1D1 /* DetailPageViewController.swift in Sources */,
 				50CBB5151A94367A00DDEA85 /* HomeViewController.swift in Sources */,
+				50CDCA421AE098FE000C509D /* MainTabBarController.swift in Sources */,
 				501C59D81A843F250086A1D1 /* CharityHelper.swift in Sources */,
 				50F41ED11AA61E30006ED7B2 /* PledgeViewController.swift in Sources */,
 				50CBB5171A9469D400DDEA85 /* UserHelper.swift in Sources */,
