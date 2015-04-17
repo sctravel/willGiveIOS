@@ -83,6 +83,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Explore Charities" id="ykN-07-wpY">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="tWp-0L-c14"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="5Ei-RH-1uT">
                             <color key="tintColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -95,51 +96,17 @@
             </objects>
             <point key="canvasLocation" x="2654" y="912"/>
         </scene>
-        <!--More-->
-        <scene sceneID="aAF-WF-H4R">
-            <objects>
-                <tableViewController id="bOA-e3-ylL" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8D9-qj-V58">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4ZX-QX-tSl">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4ZX-QX-tSl" id="neK-SX-pxb">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="bOA-e3-ylL" id="6qp-Un-7Z0"/>
-                            <outlet property="delegate" destination="bOA-e3-ylL" id="HOg-CV-y5f"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="More" id="bU4-8w-Ap7">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="pHD-uW-q3L">
-                            <color key="tintColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="VFd-9j-J52" kind="show" id="pqW-VK-84S"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GzW-Rx-LrZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2654" y="2272"/>
-        </scene>
-        <!--More-->
+        <!--Favorites-->
         <scene sceneID="XGj-ET-yCv">
             <objects>
                 <navigationController storyboardIdentifier="MoreNC" id="YfN-aw-6Ve" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" id="Aae-fj-Fkm"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" id="Aae-fj-Fkm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SOT-oH-hIc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="bOA-e3-ylL" kind="relationship" relationship="rootViewController" id="Bqj-yQ-TQQ"/>
+                        <segue destination="0I0-Gj-cyE" kind="relationship" relationship="rootViewController" id="M0h-qW-gkC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gs2-dm-P6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -211,9 +178,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="0I0-Gj-cyE" kind="show" identifier="showUserFavorite" id="s4t-Sy-5nG"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZU-Jx-oPg">
                                 <rect key="frame" x="0.0" y="252" width="600" height="50"/>
@@ -257,6 +221,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Profile" id="6IE-ck-UYT">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="iNd-GJ-zwF"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="hzA-eq-NBq">
                             <color key="tintColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -487,7 +452,7 @@
             </objects>
             <point key="canvasLocation" x="3357" y="1671"/>
         </scene>
-        <!--User Favorites View Controller-->
+        <!--My Favorites-->
         <scene sceneID="V8O-0R-3sR">
             <objects>
                 <tableViewController id="0I0-Gj-cyE" customClass="UserFavoritesViewController" customModule="NavigationAndTabView" customModuleProvider="target" sceneMemberID="viewController">
@@ -546,10 +511,11 @@
                             <outlet property="delegate" destination="0I0-Gj-cyE" id="EJA-dO-C1T"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="My Favorites" id="320-su-bqp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBh-f2-MQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4291" y="1980"/>
+            <point key="canvasLocation" x="2654" y="2272"/>
         </scene>
         <!--User History View Controller-->
         <scene sceneID="dJl-hP-38C">
@@ -622,17 +588,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZa-MX-tey">
-                                <rect key="frame" x="36" y="235" width="528" height="30"/>
-                                <color key="backgroundColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Confirm">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="confirmPressed:" destination="4JT-tn-VtW" eventType="touchUpInside" id="OdD-BM-GBb"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1R-HY-OT9">
                                 <rect key="frame" x="290" y="174" width="20" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -646,22 +601,42 @@
                                     <action selector="sliderChanged:" destination="4JT-tn-VtW" eventType="valueChanged" id="FtU-gh-TKe"/>
                                 </connections>
                             </slider>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGD-Am-lfm">
+                                <rect key="frame" x="36" y="235" width="528" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZa-MX-tey">
+                                <rect key="frame" x="36" y="305" width="528" height="30"/>
+                                <color key="backgroundColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmPressed:" destination="4JT-tn-VtW" eventType="touchUpInside" id="OdD-BM-GBb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="M1R-HY-OT9" firstAttribute="top" secondItem="lPA-3u-917" secondAttribute="bottom" constant="40" id="2l7-IV-Ugy"/>
+                            <constraint firstAttribute="centerX" secondItem="aGD-Am-lfm" secondAttribute="centerX" id="4sL-i4-VHZ"/>
                             <constraint firstItem="lPA-3u-917" firstAttribute="leading" secondItem="oct-Xf-qPc" secondAttribute="leadingMargin" constant="20" id="5gc-JT-heZ"/>
                             <constraint firstItem="lZa-MX-tey" firstAttribute="width" secondItem="lPA-3u-917" secondAttribute="width" id="ASM-VZ-l5D"/>
-                            <constraint firstItem="lZa-MX-tey" firstAttribute="top" secondItem="M1R-HY-OT9" secondAttribute="bottom" constant="40" id="ITf-qB-Rq1"/>
+                            <constraint firstItem="lZa-MX-tey" firstAttribute="top" secondItem="aGD-Am-lfm" secondAttribute="bottom" constant="40" id="KXf-ON-1HD"/>
                             <constraint firstItem="M1R-HY-OT9" firstAttribute="centerX" secondItem="lPA-3u-917" secondAttribute="centerX" id="PnH-5D-CoL"/>
+                            <constraint firstItem="aGD-Am-lfm" firstAttribute="top" secondItem="M1R-HY-OT9" secondAttribute="bottom" constant="40" id="ZPp-tk-f8x"/>
                             <constraint firstItem="lPA-3u-917" firstAttribute="top" secondItem="vuA-Ih-Kkj" secondAttribute="bottom" constant="40" id="ZZ7-Va-s2w"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lPA-3u-917" secondAttribute="trailing" constant="20" id="bfU-Xd-2CK"/>
                             <constraint firstItem="lZa-MX-tey" firstAttribute="centerX" secondItem="lPA-3u-917" secondAttribute="centerX" id="fEM-kc-6Sm"/>
+                            <constraint firstItem="lPA-3u-917" firstAttribute="width" secondItem="aGD-Am-lfm" secondAttribute="width" id="gAe-yR-j4g"/>
                             <constraint firstAttribute="centerX" secondItem="lPA-3u-917" secondAttribute="centerX" id="zcA-89-q3D"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="amount" destination="M1R-HY-OT9" id="OeC-C8-XX7"/>
+                        <outlet property="note" destination="aGD-Am-lfm" id="jBD-Iw-LHM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yC0-78-Vgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -715,6 +690,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Scan QR Code" id="lOE-gt-Dhp">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="gzp-Pj-Zfa"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="J4h-yT-Bpe">
                             <color key="tintColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -764,8 +740,8 @@
                     <connections>
                         <segue destination="uki-z0-L6t" kind="relationship" relationship="viewControllers" id="Gkx-nB-iVb"/>
                         <segue destination="BDV-IM-6XV" kind="relationship" relationship="viewControllers" id="sdz-ul-VcT"/>
-                        <segue destination="DuE-F4-4IU" kind="relationship" relationship="viewControllers" id="LkN-qF-7at"/>
                         <segue destination="YfN-aw-6Ve" kind="relationship" relationship="viewControllers" id="avG-Ko-cfC"/>
+                        <segue destination="DuE-F4-4IU" kind="relationship" relationship="viewControllers" id="LkN-qF-7at"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EvC-fn-O24" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1066,8 +1042,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qKZ-WE-nrt"/>
-        <segue reference="azA-su-4OP"/>
         <segue reference="QAX-eY-p74"/>
+        <segue reference="qKZ-WE-nrt"/>
+        <segue reference="U0p-6z-1L4"/>
     </inferredMetricsTieBreakers>
 </document>

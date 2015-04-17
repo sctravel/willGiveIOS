@@ -14,6 +14,11 @@ class PledgeViewController : UIViewController {
     var recipientId : Int?
     
     @IBOutlet var amount: UILabel!
+    @IBOutlet var note: UITextField!
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
     
     @IBAction func sliderChanged(sender: AnyObject) {
         var sliderValue = getNearestAmount(lroundf(sender.value))
@@ -33,7 +38,7 @@ class PledgeViewController : UIViewController {
     @IBAction func confirmPressed(sender: AnyObject) {
         var userId = getUserId()
         if recipientId != nil && userId != nil {
-            var pledgeInfo : [String:AnyObject] = ["userId" : userId!, "recipientId" : recipientId!, "amount" : amount.text!]
+            var pledgeInfo : [String:AnyObject] = ["userId" : userId!, "recipientId" : recipientId!, "amount" : amount.text!, "note" : note.text!]
             request(.POST, PledgeURL, parameters: pledgeInfo)
                 .responseJSON { (request, response, JSON, error) in
                     println("request: \(request)")

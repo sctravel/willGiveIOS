@@ -14,7 +14,12 @@ class UserFavoritesViewController : UITableViewController {
     var user : NSDictionary?
     var favorites = [NSDictionary]()
     
-    override func viewDidLoad() {
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        
+        favorites.removeAll(keepCapacity: true)
         
         // user can be fetched from user defaults
         user = getUserObj()

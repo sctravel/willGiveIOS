@@ -25,13 +25,48 @@ class HomeViewController : UIViewController {
 //                NSLog("fb login erorr \(error)")
 //            })
             
-            self.usernameLabel.text = "welcome back\n"
-            // NSLog("Already logged in as: \(email)")
+            if FBSDKAccessToken.currentAccessToken().expirationDate.compare(NSDate()) == NSComparisonResult.OrderedDescending {
+                // fb credential not expired
+                
+                var name : String = getUserObj()!["firstName"] as String
+                self.usernameLabel.text = "welcome back\n" + name
+                // NSLog("Already logged in as: \(email)")
+                    
+                sleep(2)
+                // prefs.setInteger(0, forKey: "ISLOGGEDIN")
             
-            sleep(2)
-            // prefs.setInteger(0, forKey: "ISLOGGEDIN")
+                self.performSegueWithIdentifier("gotoMainPage", sender: self)
+                
+            } else {
+                // fb credential expired; re log in
+                
+                var permissions = ["public_profile", "email"]  // email permission is necessary for willGive user id
+                fblogin.logInWithReadPermissions(permissions, handler: { (result, error) -> Void in
+                    NSLog("result: \(result)")
+                    NSLog("error: \(error)")
+                    var parameters = ["access_token" :FBSDKAccessToken.currentAccessToken().tokenString, "refresh_token" : ""]
+                    NSLog("\(parameters)")
+                    request(.POST, FbSignInURL, parameters: parameters)
+                        .responseJSON { (request, response, JSON, error) in
+                            println("request: \(request)")
+                            println("response: \(response)")
+                            // TODO furhter drill down of error scenarios, based on response.statusCode
+                            if(error != nil || JSON == nil) {
+                                showAlert("FB Sign In Failed!", "Please try again", self)
+                                NSLog(error!.localizedDescription)
+                            }
+                            else {
+                                var user = JSON! as NSDictionary
+                                NSLog("Login SUCCESS \(user)")
+                                saveUser(user, "", true)
+                                self.performSegueWithIdentifier("gotoMainPage", sender: self)
+                            }
+                    }
+                    
+                })
+
+            }
             
-            self.performSegueWithIdentifier("gotoMainPage", sender: self)
             
         } else
         {

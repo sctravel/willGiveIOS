@@ -14,8 +14,13 @@ class UserHistoryViewController : UITableViewController {
     var user : NSDictionary?
     var history = [NSDictionary]()
     
-    override func viewDidLoad(){
     
+    override func viewDidAppear(animated: Bool) {
+    
+        super.viewDidAppear(animated)
+        
+        history.removeAll(keepCapacity: true)
+        
         // user can be fetched from user defaults
         user = getUserObj()
         

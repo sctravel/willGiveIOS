@@ -78,7 +78,6 @@ class LoginViewController : UIViewController {
     
     @IBAction func facebookPressed(sender: AnyObject) {
         NSLog("Facebook button pressed")
-        
         var permissions = ["public_profile", "email"]  // email permission is necessary for willGive user id
         fblogin.logInWithReadPermissions(permissions, handler: { (result, error) -> Void in
             NSLog("result: \(result)")
@@ -96,13 +95,15 @@ class LoginViewController : UIViewController {
                     }
                     else {
                         var user = JSON! as NSDictionary
-                        NSLog("Login SUCCESS");
+                        NSLog("Login SUCCESS \(user)")
                         saveUser(user, "", true)
                         self.dismissViewControllerAnimated(true, completion: nil)
                     }
             }
             
-        })        
+        })
+
+
     }
     
     @IBAction func forgotPressed(sender: AnyObject) {

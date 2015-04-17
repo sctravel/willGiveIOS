@@ -77,3 +77,30 @@ func getUserObj() -> NSDictionary? {
 }
 
 var fblogin : FBSDKLoginManager = FBSDKLoginManager()
+
+func loginFacebook(view : UIViewController) {
+    var permissions = ["public_profile", "email"]  // email permission is necessary for willGive user id
+    fblogin.logInWithReadPermissions(permissions, handler: { (result, error) -> Void in
+        NSLog("result: \(result)")
+        NSLog("error: \(error)")
+        var parameters = ["access_token" :FBSDKAccessToken.currentAccessToken().tokenString, "refresh_token" : ""]
+        NSLog("\(parameters)")
+        request(.POST, FbSignInURL, parameters: parameters)
+            .responseJSON { (request, response, JSON, error) in
+                println("request: \(request)")
+                println("response: \(response)")
+                // TODO furhter drill down of error scenarios, based on response.statusCode
+                if(error != nil || JSON == nil) {
+                    showAlert("FB Sign In Failed!", "Please try again", view)
+                    NSLog(error!.localizedDescription)
+                }
+                else {
+                    var user = JSON! as NSDictionary
+                    NSLog("Login SUCCESS \(user)")
+                    saveUser(user, "", true)
+                    view.dismissViewControllerAnimated(true, completion: nil)
+                }
+        }
+        
+    })
+}
