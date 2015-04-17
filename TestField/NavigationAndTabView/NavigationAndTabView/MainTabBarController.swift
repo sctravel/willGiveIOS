@@ -17,7 +17,7 @@ class MainTabBarController : UITabBarController {
         NSLog("MainTabBarController")
         
         // change the tint
-        self.tabBar.tintColor = UIColor.greenColor()
+        self.tabBar.tintColor = BaseGreen
 
     }
     
