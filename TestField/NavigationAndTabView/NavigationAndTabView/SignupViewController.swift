@@ -18,7 +18,7 @@ class SingupViewController : UIViewController, UITextFieldDelegate {
     @IBOutlet weak var confirmPassword: UITextField!
     
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.view.endEditing(true)
     }
     
@@ -52,13 +52,13 @@ class SingupViewController : UIViewController, UITextFieldDelegate {
                 "lastName" : ln,
                 "password" : pswd ]
             request(.POST, SignUpURL, parameters: info)
-               .responseJSON { (request, response, JSON, error) in
+               .responseJSON {(request, response, JSON, error) in
                 if(error != nil || JSON == nil) {
                     showAlert("Sign Up Failed!", "Please check your info", self)
                     NSLog(error!.localizedDescription)
                 }
                 else {
-                    var user = JSON! as NSDictionary
+                    var user = JSON as! NSDictionary
                     showAlert("Sign Up Succeeded!", "Please log in", self)
                     NSLog(user.description)
                     saveUser(user, pswd, false)

@@ -16,7 +16,7 @@ class PledgeViewController : UIViewController {
     @IBOutlet var amount: UILabel!
     @IBOutlet var note: UITextField!
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.view.endEditing(true)
     }
     
@@ -40,7 +40,7 @@ class PledgeViewController : UIViewController {
         if recipientId != nil && userId != nil {
             var pledgeInfo : [String:AnyObject] = ["userId" : userId!, "recipientId" : recipientId!, "amount" : amount.text!, "note" : note.text!]
             request(.POST, PledgeURL, parameters: pledgeInfo)
-                .responseJSON { (request, response, JSON, error) in
+                .responseJSON {(request, response, JSON, error) in
                     println("request: \(request)")
                     println("response: \(response)")
                     // TODO furhter drill down of error scenarios, based on response.statusCode
@@ -52,7 +52,7 @@ class PledgeViewController : UIViewController {
                         NSLog("Pledge SUCCESS");
                         showAlert("Pledge Success!", "Thanks for your contribution!", self)
                     }
-            }
+                }
             
         }
     }

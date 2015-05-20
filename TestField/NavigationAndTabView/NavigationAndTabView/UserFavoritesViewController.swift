@@ -35,13 +35,13 @@ class UserFavoritesViewController : UITableViewController {
                         NSLog(error!.localizedDescription)
                     }
                     else {
-                        var resp = JSON! as [NSDictionary]
+                        var resp = JSON! as! [NSDictionary]
                         NSLog("\(resp)")
                         resp.map({self.favorites.append($0)})
                         NSLog("Operation SUCCESS");
                         self.tableView.reloadData()
                     }
-            }
+                }
         }
 
     }
@@ -54,7 +54,7 @@ class UserFavoritesViewController : UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("CharityCell", forIndexPath: indexPath) as CharityTableCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("CharityCell", forIndexPath: indexPath) as! CharityTableCell
         
         NSLog("Populating cell")
         cell.populate(favorites[indexPath.row])
@@ -69,7 +69,7 @@ class UserFavoritesViewController : UITableViewController {
             NSLog("prepare for segue")
             
             var indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow()!
-            var destView = segue.destinationViewController as DetailPageViewController
+            var destView = segue.destinationViewController as! DetailPageViewController
             
             NSLog("Selected charity: \(favorites[indexPath.row])")
             

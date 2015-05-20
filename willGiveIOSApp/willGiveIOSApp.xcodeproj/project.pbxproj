@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5050F8201B0C5174001E5760 /* FacebookSDK in Resources */ = {isa = PBXBuildFile; fileRef = 5050F81F1B0C5174001E5760 /* FacebookSDK */; };
 		508909371A74311B00844EAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508909361A74311B00844EAC /* AppDelegate.swift */; };
 		508909391A74311B00844EAC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508909381A74311B00844EAC /* FirstViewController.swift */; };
 		5089093B1A74311B00844EAC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5089093A1A74311B00844EAC /* SecondViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5050F81F1B0C5174001E5760 /* FacebookSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FacebookSDK; path = ../TestField/NavigationAndTabView/FacebookSDK; sourceTree = "<group>"; };
 		508909311A74311B00844EAC /* willGiveIOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = willGiveIOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		508909351A74311B00844EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		508909361A74311B00844EAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,9 +60,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5050F81E1B0C5161001E5760 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5050F81F1B0C5174001E5760 /* FacebookSDK */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		508909281A74311B00844EAC = {
 			isa = PBXGroup;
 			children = (
+				5050F81E1B0C5161001E5760 /* Frameworks */,
 				508909331A74311B00844EAC /* willGiveIOSApp */,
 				5089094B1A74311B00844EAC /* willGiveIOSAppTests */,
 				508909321A74311B00844EAC /* Products */,
@@ -198,6 +209,7 @@
 				5089093E1A74311B00844EAC /* Main.storyboard in Resources */,
 				508909431A74311B00844EAC /* LaunchScreen.xib in Resources */,
 				508909401A74311B00844EAC /* Images.xcassets in Resources */,
+				5050F8201B0C5174001E5760 /* FacebookSDK in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +423,7 @@
 				508909541A74311B00844EAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		508909551A74311B00844EAC /* Build configuration list for PBXNativeTarget "willGiveIOSAppTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +432,7 @@
 				508909571A74311B00844EAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

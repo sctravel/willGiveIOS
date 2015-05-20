@@ -79,13 +79,13 @@ class DetailPageViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         NSLog("prepare for segue")
         if(segue.identifier != nil && segue.identifier! == "showWebView") {
-            var detailWebView : DetailWebViewController = segue.destinationViewController as DetailWebViewController
+            var detailWebView : DetailWebViewController = segue.destinationViewController as! DetailWebViewController
             NSLog("url is \(getCharityUrl(charity))")
             // pass data into the detail page
             detailWebView.url = getCharityUrl(charity)
         }
         if(segue.identifier != nil && segue.identifier! == "showPledgeView" ) {
-            var pledgeView : PledgeViewController = segue.destinationViewController as PledgeViewController
+            var pledgeView : PledgeViewController = segue.destinationViewController as! PledgeViewController
             NSLog("pledging to \(getCharityRecipientId(charity))")
             pledgeView.recipientId = getCharityRecipientId(charity)
         }

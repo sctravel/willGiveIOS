@@ -40,7 +40,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
         if(segue.identifier != nil && segue.identifier! == "scanToDetailPage") {
-            var detailView : DetailPageViewController = segue.destinationViewController as DetailPageViewController
+            var detailView : DetailPageViewController = segue.destinationViewController as! DetailPageViewController
             NSLog("prepareForSegue for detail page")
             detailView.charity = self.charity
         }
@@ -68,7 +68,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         // Initialize the captureSession object.
         captureSession = AVCaptureSession()
         // Set the input device on the capture session.
-        captureSession?.addInput(input as AVCaptureInput)
+        captureSession?.addInput(input as! AVCaptureInput)
         
         // Initialize a AVCaptureMetadataOutput object and set it as the output device to the capture session.
         let captureMetadataOutput = AVCaptureMetadataOutput()
@@ -118,11 +118,11 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         }
         
         // Get the metadata object.
-        let metadataObj = metadataObjects[0] as AVMetadataMachineReadableCodeObject
+        let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         
         if metadataObj.type == AVMetadataObjectTypeQRCode {
             // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
-            let barCodeObject = videoPreviewLayer?.transformedMetadataObjectForMetadataObject(metadataObj as AVMetadataMachineReadableCodeObject) as AVMetadataMachineReadableCodeObject
+            let barCodeObject = videoPreviewLayer?.transformedMetadataObjectForMetadataObject(metadataObj as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
             qrCodeFrameView?.frame = barCodeObject.bounds;
             
             if metadataObj.stringValue != nil && metadataObj.stringValue != qrStringOld {
@@ -133,7 +133,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
                 NSLog("parsed charity: \(self.charity)")
                 
                 if self.charity != nil {
-                    var name = self.charity!["name"] as String
+                    var name = self.charity!["name"] as! String
                     detailPageButton.setTitle("Go to \(name)", forState: UIControlState.Normal)
                     
                     detailPageButton.backgroundColor = UIColor.greenColor();
@@ -161,7 +161,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         
         var pattern = "^" + QrPrefix + "([0-9]+)\\?r=(.*)&n=(.*)&a=(.*)&p=.(.*)&m=(.*)$"
         var regex = NSRegularExpression(pattern: pattern, options: nil, error: nil)
-        var result = regex?.firstMatchInString(input, options: nil, range : NSMakeRange(0,countElements(input)))
+        var result = regex?.firstMatchInString(input, options: nil, range : NSMakeRange(0,count(input)))
         
         if(result?.rangeAtIndex(1) != nil
             && result?.rangeAtIndex(2) != nil

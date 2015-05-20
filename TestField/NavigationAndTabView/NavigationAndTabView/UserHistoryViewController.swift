@@ -26,7 +26,7 @@ class UserHistoryViewController : UITableViewController {
         
         if user != nil {
             request(.GET, UserHistoryURL)
-                .responseJSON { (request, response, JSON, error) in
+                .responseJSON {(request, response, JSON, error) in
                     println("request: \(request)")
                     println("response: \(response)")
                     // TODO furhter drill down of error scenarios, based on response.statusCode
@@ -35,13 +35,13 @@ class UserHistoryViewController : UITableViewController {
                         NSLog(error!.localizedDescription)
                     }
                     else {
-                        var resp = JSON! as [NSDictionary]
+                        var resp = JSON as! [NSDictionary]
                         NSLog("\(resp)")
                         resp.map({self.history.append($0)})
                         NSLog("Operation SUCCESS");
                         self.tableView.reloadData()
                     }
-            }
+                }
         }
     }
     
@@ -53,14 +53,14 @@ class UserHistoryViewController : UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("TransactionCell", forIndexPath: indexPath) as UITableViewCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("TransactionCell", forIndexPath: indexPath)as! UITableViewCell
         
         var transaction = history[indexPath.row]
         
         NSLog("Populating cell")
-        var name = transaction["name"] as String
-        var amt = transaction["amount"] as NSNumber
-        var time = transaction["settleTime"] as String
+        var name = transaction["name"] as! String
+        var amt = transaction["amount"] as! NSNumber
+        var time = transaction["settleTime"] as! String
         cell.textLabel!.text = "$\(amt), \(name), \(time)"
         
         return cell

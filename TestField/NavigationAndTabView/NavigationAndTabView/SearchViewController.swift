@@ -20,7 +20,7 @@ class SearchViewController : UITableViewController, UISearchBarDelegate
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("CharityCell", forIndexPath: indexPath) as CharityTableCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("CharityCell", forIndexPath: indexPath) as! CharityTableCell
         
         NSLog("Populating cell")
         cell.populate(charities[indexPath.row])
@@ -41,13 +41,13 @@ class SearchViewController : UITableViewController, UISearchBarDelegate
                     NSLog(error!.localizedDescription)
                 }
                 else {
-                    var resp = JSON! as [NSDictionary]
+                    var resp = JSON as! [NSDictionary]
                     NSLog("reloading data... search returned \(resp.count) entries")
                     resp.map({self.charities.append($0)})
                     self.tableView.reloadData()
                     self.view.endEditing(true)
                 }
-        }
+            }
         
     }
     
@@ -58,7 +58,7 @@ class SearchViewController : UITableViewController, UISearchBarDelegate
             NSLog("prepare for segue")
             
             var indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow()!
-            var destView = segue.destinationViewController as DetailPageViewController
+            var destView = segue.destinationViewController as! DetailPageViewController
             
             NSLog("Selected charity: \(charities[indexPath.row])")
             

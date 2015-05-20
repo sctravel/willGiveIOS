@@ -50,12 +50,12 @@ func getCharityName (charity : NSDictionary?) -> String?
 
 func getCharityStatus (charity : NSDictionary) -> String?
 {
-    return charity["status"] as String?
+    return charity["status"] as! String?
 }
 
 func getCharityImageUrl (charity : NSDictionary) -> String?
 {
-    return charity["imageUrl"] as String?
+    return charity["imageUrl"] as! String?
 }
 
 func getCharityImagePath (charity : NSDictionary?) -> String?
@@ -82,18 +82,18 @@ func getCharityPhone (charity : NSDictionary?) -> String? {
 func doGetAttributeStringOptional(charity : NSDictionary?, attr : String) -> String?
 {
     if(charity == nil) { return nil as String? }
-    return charity![attr] as String?
+    return charity![attr] as! String?
 }
 
 func doGetAttributeIntOptional(charity : NSDictionary?, attr : String) -> Int?
 {
     if(charity == nil) { return nil as Int? }
-    return charity![attr] as Int?
+    return charity![attr] as! Int?
 }
 
 func doGetAttributeBoolOptional(charity : NSDictionary?, attr : String) -> Bool?
 {
     if(charity == nil) { return nil as Bool? }
-    return charity![attr] as Bool?
+    return charity![attr] as! Bool?
 }
 

@@ -28,7 +28,7 @@ class HomeViewController : UIViewController {
             if FBSDKAccessToken.currentAccessToken().expirationDate.compare(NSDate()) == NSComparisonResult.OrderedDescending {
                 // fb credential not expired
                 
-                var name : String = getUserObj()!["firstName"] as String
+                var name : String = getFirstName()!
                 self.usernameLabel.text = "welcome back\n" + name
                 // NSLog("Already logged in as: \(email)")
                     
@@ -56,12 +56,12 @@ class HomeViewController : UIViewController {
                                 NSLog(error!.localizedDescription)
                             }
                             else {
-                                var user = JSON! as NSDictionary
+                                var user = JSON as! NSDictionary
                                 NSLog("Login SUCCESS \(user)")
                                 saveUser(user, "", true)
                                 self.performSegueWithIdentifier("gotoMainPage", sender: self)
                             }
-                    }
+                        }
                     
                 })
 
@@ -72,12 +72,12 @@ class HomeViewController : UIViewController {
         {
             // try to login in with saved credentials
             let prefs : NSUserDefaults = NSUserDefaults.standardUserDefaults()
-            var email = prefs.valueForKey("USERNAME") as String
-            var pswd = prefs.valueForKey("PASSWORD") as String
+            var email = prefs.valueForKey("USERNAME") as! String
+            var pswd = prefs.valueForKey("PASSWORD") as! String
             
             var credential = ["username" : email, "password" : pswd]
             request(.POST, SignInURL, parameters: credential)
-                .responseJSON { (request, response, JSON, error) in
+                .responseJSON {(request, response, JSON, error) in
                     println("request: \(request)")
                     println("response: \(response)")
                     if(error != nil || JSON == nil) {
@@ -87,7 +87,7 @@ class HomeViewController : UIViewController {
                     else {
                         NSLog("Saved credential login SUCCESS")
                     }
-            }
+                }
             
             self.usernameLabel.text = "welcome back,\n" + email
             NSLog("Already logged in as: \(email)")

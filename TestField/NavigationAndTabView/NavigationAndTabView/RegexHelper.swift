@@ -14,9 +14,9 @@ func matchesForRegexInText(regex: String!, text: String!) -> [String] {
     let regex = NSRegularExpression(pattern: regex,
         options: nil, error: nil)!
     let nsString = text as NSString
-    let results = regex.matchesInString(nsString,
+    let results = regex.matchesInString(nsString as String,
         options: nil, range: NSMakeRange(0, nsString.length))
-        as [NSTextCheckingResult]
+        as! [NSTextCheckingResult]
     return map(results) { nsString.substringWithRange($0.range)}
 }
 
@@ -31,7 +31,7 @@ func matchesRegexInText(regex: String!, text: String!) -> Bool {
 func deleteRegexMatches(regex: String!, text: String!) -> String? {
     let regex = NSRegularExpression(pattern: regex, options: nil, error: nil)
     let nsString = text as NSString
-    let ret = regex?.stringByReplacingMatchesInString(nsString, options: nil, range: NSMakeRange(0, nsString.length), withTemplate: "")
+    let ret = regex?.stringByReplacingMatchesInString(nsString as String, options: nil, range: NSMakeRange(0, nsString.length), withTemplate: "")
     return ret!
 }
 

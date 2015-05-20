@@ -35,7 +35,7 @@ class ExploreTableViewController: UITableViewController {
         NSLog("******** in populateCharities ********")
         
         request(.GET, ListCharityURL, parameters: ["start" : currentLoadIndex, "count" : loadBatch])
-            .responseJSON { (request, response, JSON, error) in
+            .responseJSON {(request, response, JSON, error) in
                 println("request: \(request)")
                 println("response: \(response)")
                 println("error: \(error)")
@@ -46,13 +46,13 @@ class ExploreTableViewController: UITableViewController {
                 }
                 else {
                     self.currentLoadIndex += self.loadBatch
-                    var resp = JSON! as [NSDictionary]
+                    var resp = JSON as! [NSDictionary]
                     resp.map({self.charities.append($0)})
                     self.tableView.reloadData()
                 }
-        }
+            }
         
-    }
+        }
     
 //  animation for loading table cells
 //    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -69,7 +69,7 @@ class ExploreTableViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("CharityCell", forIndexPath: indexPath) as CharityTableCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("CharityCell", forIndexPath: indexPath) as!CharityTableCell
         
         NSLog("Populating cell")
         cell.populate(charities[indexPath.row])
@@ -105,7 +105,7 @@ class ExploreTableViewController: UITableViewController {
             NSLog("prepare for segue")
             
             var indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow()!
-            var destView = segue.destinationViewController as DetailPageViewController
+            var destView = segue.destinationViewController as! DetailPageViewController
             
             NSLog("Selected charity: \(charities[indexPath.row])")
             

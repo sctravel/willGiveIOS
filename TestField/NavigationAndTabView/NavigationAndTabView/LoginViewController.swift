@@ -51,7 +51,7 @@ class LoginViewController : UIViewController {
             
             var credential = ["username" : email, "password" : password]
             request(.POST, SignInURL, parameters: credential)
-                .responseJSON { (request, response, JSON, error) in
+                .responseJSON {(request, response, JSON, error) in
                     println("request: \(request)")
                     println("response: \(response)")
                     // TODO furhter drill down of error scenarios, based on response.statusCode
@@ -60,7 +60,7 @@ class LoginViewController : UIViewController {
                         NSLog(error!.localizedDescription)
                     }
                     else {
-                        var user = JSON! as NSDictionary
+                        var user = JSON as! NSDictionary
                         NSLog("Login SUCCESS");
                         saveUser(user, password, false)
                         self.dismissViewControllerAnimated(true, completion: nil)
@@ -71,10 +71,10 @@ class LoginViewController : UIViewController {
     }
     
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.view.endEditing(true)
     }
-    
+
     
     @IBAction func facebookPressed(sender: AnyObject) {
         NSLog("Facebook button pressed")
@@ -85,7 +85,8 @@ class LoginViewController : UIViewController {
             var parameters = ["access_token" :FBSDKAccessToken.currentAccessToken().tokenString, "refresh_token" : ""]
             NSLog("\(parameters)")
             request(.POST, FbSignInURL, parameters: parameters)
-                .responseJSON { (request, response, JSON, error) in
+                .responseJSON {
+                    (request, response, JSON, error) in
                     println("request: \(request)")
                     println("response: \(response)")
                     // TODO furhter drill down of error scenarios, based on response.statusCode
@@ -94,15 +95,14 @@ class LoginViewController : UIViewController {
                         NSLog(error!.localizedDescription)
                     }
                     else {
-                        var user = JSON! as NSDictionary
+                        var user = JSON as! NSDictionary
                         NSLog("Login SUCCESS \(user)")
                         saveUser(user, "", true)
                         self.dismissViewControllerAnimated(true, completion: nil)
                     }
-            }
+                }
             
-        })
-
+            })
 
     }
     

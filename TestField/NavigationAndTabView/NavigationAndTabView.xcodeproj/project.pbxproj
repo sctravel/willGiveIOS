@@ -29,6 +29,14 @@
 		506489F91AB7751300DD0D41 /* UserFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506489F81AB7751300DD0D41 /* UserFavoritesViewController.swift */; };
 		508AA7581AAD27B60088F011 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508AA7571AAD27B60088F011 /* SearchViewController.swift */; };
 		509E61A21A991B950042008C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509E61A11A991B950042008C /* SignupViewController.swift */; };
+		50BBEA751B0CF5D300FA7D28 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BBEA6D1B0CF5D300FA7D28 /* Alamofire.swift */; };
+		50BBEA761B0CF5D300FA7D28 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BBEA6E1B0CF5D300FA7D28 /* Download.swift */; };
+		50BBEA771B0CF5D300FA7D28 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BBEA6F1B0CF5D300FA7D28 /* Manager.swift */; };
+		50BBEA781B0CF5D300FA7D28 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BBEA701B0CF5D300FA7D28 /* ParameterEncoding.swift */; };
+		50BBEA791B0CF5D300FA7D28 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BBEA711B0CF5D300FA7D28 /* Request.swift */; };
+		50BBEA7A1B0CF5D300FA7D28 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BBEA721B0CF5D300FA7D28 /* ResponseSerialization.swift */; };
+		50BBEA7B1B0CF5D300FA7D28 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BBEA731B0CF5D300FA7D28 /* Upload.swift */; };
+		50BBEA7C1B0CF5D300FA7D28 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BBEA741B0CF5D300FA7D28 /* Validation.swift */; };
 		50CBB5151A94367A00DDEA85 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBB5141A94367A00DDEA85 /* HomeViewController.swift */; };
 		50CBB5171A9469D400DDEA85 /* UserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBB5161A9469D400DDEA85 /* UserHelper.swift */; };
 		50CDCA331AE093FC000C509D /* Glasses-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50CDCA2F1AE093FC000C509D /* Glasses-50.png */; };
@@ -40,7 +48,6 @@
 		50CDCA3F1AE094F1000C509D /* User Male 3-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50CDCA3A1AE094F1000C509D /* User Male 3-50.png */; };
 		50CDCA401AE094F1000C509D /* Glasses-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 50CDCA3B1AE094F1000C509D /* Glasses-32.png */; };
 		50CDCA421AE098FE000C509D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CDCA411AE098FE000C509D /* MainTabBarController.swift */; };
-		50DE37011A968F67004599D3 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DE37001A968F67004599D3 /* Alamofire.swift */; };
 		50DE37041A96931F004599D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50DE37021A96931F004599D3 /* Main.storyboard */; };
 		50DE37061A96956E004599D3 /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DE37051A96956E004599D3 /* RegexHelper.swift */; };
 		50DE37081A96963A004599D3 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DE37071A96963A004599D3 /* AlertHelper.swift */; };
@@ -101,6 +108,14 @@
 		506489F81AB7751300DD0D41 /* UserFavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFavoritesViewController.swift; sourceTree = "<group>"; };
 		508AA7571AAD27B60088F011 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		509E61A11A991B950042008C /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		50BBEA6D1B0CF5D300FA7D28 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		50BBEA6E1B0CF5D300FA7D28 /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		50BBEA6F1B0CF5D300FA7D28 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		50BBEA701B0CF5D300FA7D28 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		50BBEA711B0CF5D300FA7D28 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		50BBEA721B0CF5D300FA7D28 /* ResponseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
+		50BBEA731B0CF5D300FA7D28 /* Upload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
+		50BBEA741B0CF5D300FA7D28 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		50CBB5141A94367A00DDEA85 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		50CBB5161A9469D400DDEA85 /* UserHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHelper.swift; sourceTree = "<group>"; };
 		50CDCA2F1AE093FC000C509D /* Glasses-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Glasses-50.png"; sourceTree = "<group>"; };
@@ -112,7 +127,6 @@
 		50CDCA3A1AE094F1000C509D /* User Male 3-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User Male 3-50.png"; sourceTree = "<group>"; };
 		50CDCA3B1AE094F1000C509D /* Glasses-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Glasses-32.png"; sourceTree = "<group>"; };
 		50CDCA411AE098FE000C509D /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		50DE37001A968F67004599D3 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Lib/Alamofire.swift; sourceTree = "<group>"; };
 		50DE37031A96931F004599D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50DE37051A96956E004599D3 /* RegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexHelper.swift; sourceTree = "<group>"; };
 		50DE37071A96963A004599D3 /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
@@ -236,7 +250,7 @@
 				50CBB5161A9469D400DDEA85 /* UserHelper.swift */,
 				50E82AD61A9F017A003ECCA2 /* ImageHelper.swift */,
 				50DE37051A96956E004599D3 /* RegexHelper.swift */,
-				50DE37001A968F67004599D3 /* Alamofire.swift */,
+				50BBEA6C1B0CF50700FA7D28 /* Alamofire */,
 				5055FD501A9D9C6200E4D6A4 /* AlamofireExtension.swift */,
 				50E82AD81AA02B67003ECCA2 /* StringExtension.swift */,
 				502244951AB790A0002D6DFB /* LogEntriesHelper.swift */,
@@ -275,6 +289,21 @@
 				5053C8471A7E0AC000431CAD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50BBEA6C1B0CF50700FA7D28 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				50BBEA6D1B0CF5D300FA7D28 /* Alamofire.swift */,
+				50BBEA6E1B0CF5D300FA7D28 /* Download.swift */,
+				50BBEA6F1B0CF5D300FA7D28 /* Manager.swift */,
+				50BBEA701B0CF5D300FA7D28 /* ParameterEncoding.swift */,
+				50BBEA711B0CF5D300FA7D28 /* Request.swift */,
+				50BBEA721B0CF5D300FA7D28 /* ResponseSerialization.swift */,
+				50BBEA731B0CF5D300FA7D28 /* Upload.swift */,
+				50BBEA741B0CF5D300FA7D28 /* Validation.swift */,
+			);
+			name = Alamofire;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,9 +420,11 @@
 				502244911AB78FC7002D6DFB /* LELog.m in Sources */,
 				50DE37081A96963A004599D3 /* AlertHelper.swift in Sources */,
 				50E82AD31A9EFBB3003ECCA2 /* TipInCellAnimator.swift in Sources */,
+				50BBEA7C1B0CF5D300FA7D28 /* Validation.swift in Sources */,
 				50F41ECF1AA22DAD006ED7B2 /* ProfileViewController.swift in Sources */,
 				50020E641A8FB86F00711685 /* LoginViewController.swift in Sources */,
 				5022448F1AB78FC7002D6DFB /* LEBackgroundThread.m in Sources */,
+				50BBEA781B0CF5D300FA7D28 /* ParameterEncoding.swift in Sources */,
 				501C59D61A843EDC0086A1D1 /* ExploreTableViewController.swift in Sources */,
 				501C59D41A81D3C60086A1D1 /* DetailPageViewController.swift in Sources */,
 				50CBB5151A94367A00DDEA85 /* HomeViewController.swift in Sources */,
@@ -405,20 +436,25 @@
 				50E82AD51A9EFC30003ECCA2 /* CharityTableCell.swift in Sources */,
 				5053C8351A7E0AC000431CAD /* ScanViewController.swift in Sources */,
 				508AA7581AAD27B60088F011 /* SearchViewController.swift in Sources */,
-				50DE37011A968F67004599D3 /* Alamofire.swift in Sources */,
+				50BBEA7A1B0CF5D300FA7D28 /* ResponseSerialization.swift in Sources */,
 				50E82AD71A9F017A003ECCA2 /* ImageHelper.swift in Sources */,
 				506489F91AB7751300DD0D41 /* UserFavoritesViewController.swift in Sources */,
 				50E82AD11A9EE6F5003ECCA2 /* DetailWebViewController.swift in Sources */,
 				509E61A21A991B950042008C /* SignupViewController.swift in Sources */,
+				50BBEA7B1B0CF5D300FA7D28 /* Upload.swift in Sources */,
 				506489F71AB7743C00DD0D41 /* UserHistoryViewController.swift in Sources */,
 				5055FD511A9D9C6200E4D6A4 /* AlamofireExtension.swift in Sources */,
+				50BBEA791B0CF5D300FA7D28 /* Request.swift in Sources */,
+				50BBEA761B0CF5D300FA7D28 /* Download.swift in Sources */,
 				5053C8331A7E0AC000431CAD /* AppDelegate.swift in Sources */,
 				502244931AB78FC7002D6DFB /* LogFile.m in Sources */,
+				50BBEA751B0CF5D300FA7D28 /* Alamofire.swift in Sources */,
 				50020E601A8EFD3C00711685 /* Constants.swift in Sources */,
 				502244941AB78FC7002D6DFB /* LogFiles.m in Sources */,
 				50E82AD91AA02B67003ECCA2 /* StringExtension.swift in Sources */,
 				50DE37061A96956E004599D3 /* RegexHelper.swift in Sources */,
 				502244921AB78FC7002D6DFB /* LeNetworkStatus.m in Sources */,
+				50BBEA771B0CF5D300FA7D28 /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,7 +586,7 @@
 					"$(PROJECT_DIR)/FacebookSDK",
 				);
 				INFOPLIST_FILE = NavigationAndTabView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -569,7 +605,7 @@
 					"$(PROJECT_DIR)/FacebookSDK",
 				);
 				INFOPLIST_FILE = NavigationAndTabView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

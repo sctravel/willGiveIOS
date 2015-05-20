@@ -28,7 +28,7 @@ import Foundation
 
 
 func saveUser(user : NSDictionary, pswd : String, fblogin : Bool) {
-    let email = user["email"] as String
+    let email = user["email"] as! String
     var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
     prefs.setObject(email, forKey: "USERNAME")
     // set ID: prefs.setObject(ID, forKey: "USERID")
@@ -76,6 +76,11 @@ func getUserObj() -> NSDictionary? {
     return user
 }
 
+func getFirstName() -> String? {
+    let user = getUserObj()!
+    return user["firstName"] as? String
+}
+
 var fblogin : FBSDKLoginManager = FBSDKLoginManager()
 
 func loginFacebook(view : UIViewController) {
@@ -86,7 +91,7 @@ func loginFacebook(view : UIViewController) {
         var parameters = ["access_token" :FBSDKAccessToken.currentAccessToken().tokenString, "refresh_token" : ""]
         NSLog("\(parameters)")
         request(.POST, FbSignInURL, parameters: parameters)
-            .responseJSON { (request, response, JSON, error) in
+            .responseJSON {(request, response, JSON, error) in
                 println("request: \(request)")
                 println("response: \(response)")
                 // TODO furhter drill down of error scenarios, based on response.statusCode
@@ -95,12 +100,12 @@ func loginFacebook(view : UIViewController) {
                     NSLog(error!.localizedDescription)
                 }
                 else {
-                    var user = JSON! as NSDictionary
+                    var user = JSON as! NSDictionary
                     NSLog("Login SUCCESS \(user)")
                     saveUser(user, "", true)
                     view.dismissViewControllerAnimated(true, completion: nil)
                 }
-        }
+            }
         
     })
 }
