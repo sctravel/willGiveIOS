@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QHz-QK-QH5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QHz-QK-QH5">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -720,7 +719,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1K6-Sa-vU4" customClass="MainTabBarController" customModule="NavigationAndTabView" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="rUI-lP-Bhs">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -955,16 +954,6 @@
                                     <action selector="facebookPressed:" destination="BVn-mz-UDj" eventType="touchUpInside" id="1dL-Cf-ok8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKn-WD-eRO">
-                                <rect key="frame" x="510" y="305" width="54" height="30"/>
-                                <state key="normal" title="Forgot?">
-                                    <color key="titleColor" red="0.47058823529999999" green="0.86274509799999999" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="forgotPressed:" destination="BVn-mz-UDj" eventType="touchUpInside" id="RTB-QS-F9G"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vnx-qA-RVX">
                                 <rect key="frame" x="36" y="135" width="528" height="40"/>
                                 <constraints>
@@ -1003,9 +992,7 @@
                             <constraint firstItem="VUK-Zb-6aS" firstAttribute="width" secondItem="avw-1O-IMS" secondAttribute="width" id="IKs-Ys-xwR"/>
                             <constraint firstItem="avw-1O-IMS" firstAttribute="top" secondItem="vnx-qA-RVX" secondAttribute="bottom" constant="20" id="LIp-Zf-BNq"/>
                             <constraint firstAttribute="centerX" secondItem="vnx-qA-RVX" secondAttribute="centerX" constant="-0.5" id="PC1-m4-sCC"/>
-                            <constraint firstItem="sKn-WD-eRO" firstAttribute="centerY" secondItem="gCh-93-3HD" secondAttribute="centerY" id="TKW-hd-z75"/>
                             <constraint firstItem="VUK-Zb-6aS" firstAttribute="trailing" secondItem="avw-1O-IMS" secondAttribute="trailing" id="Wjv-WC-GEK"/>
-                            <constraint firstItem="sKn-WD-eRO" firstAttribute="trailing" secondItem="vnx-qA-RVX" secondAttribute="trailing" id="b0T-jW-cE9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vnx-qA-RVX" secondAttribute="trailing" constant="20" id="f8b-Ha-pI0"/>
                             <constraint firstItem="INY-Ue-xAF" firstAttribute="centerX" secondItem="VUK-Zb-6aS" secondAttribute="centerX" id="jGa-zD-1nV"/>
                             <constraint firstItem="gCh-93-3HD" firstAttribute="leading" secondItem="avw-1O-IMS" secondAttribute="leading" id="o1E-9L-eZy"/>
@@ -1016,7 +1003,6 @@
                     </view>
                     <connections>
                         <outlet property="btnFacebook" destination="gCh-93-3HD" id="4ec-di-ZZf"/>
-                        <outlet property="btnForgot" destination="sKn-WD-eRO" id="pMt-Xk-zkP"/>
                         <outlet property="btnLogin" destination="VUK-Zb-6aS" id="Cn1-rZ-58Z"/>
                         <outlet property="btnSignup" destination="INY-Ue-xAF" id="JVp-pP-nrX"/>
                         <outlet property="txtEmail" destination="vnx-qA-RVX" id="Ozi-KF-197"/>
